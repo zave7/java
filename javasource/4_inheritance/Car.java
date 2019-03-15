@@ -26,7 +26,7 @@ public class Car {
         this.maker = maker;
     }
 
-    int speedUp(int speed) {
+   int speedUp(int speed) {
         this.speed += speed;
         return this.speed;
     }
@@ -47,5 +47,13 @@ public class Car {
     }
     public String toString() {
         return maker + "에서 만든 " + color + " " + carName;
+    }
+    @Override   
+    public boolean equals(Object obj) {
+        Car car = (Car)obj;
+        //if (carName == car.carName)  "" 경우에는  true  new String() 일경우는 false
+        if (carName.equals(car.carName))
+            return true;
+        return false;
     }
 }

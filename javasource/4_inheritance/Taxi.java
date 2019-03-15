@@ -49,4 +49,16 @@ public class Taxi extends Car{
         price += km * incPerKm;
         return price;
     }
+    // annotation 주석은 @뒤의 내용에 따라서 의미가 부여된다
+    @Override //Override의 강제성 부여
+    public int speedUp(int speed) { //메소드 오버라이드에서 접근제어자는 넓은 의미로 변경 가능하다
+        speed = super.speedUp(speed); // 상위 클래스가 가지고 있는 오버라이드 한 메소드를 호출해라 (굳이 중복하지 않아도 된다)
+        if(speed > 150)
+            this.speed = 150;
+        return this.speed;
+    }
+    @Override
+    public String toString() {
+        return super.toString() + " 택시";
+    }
 }

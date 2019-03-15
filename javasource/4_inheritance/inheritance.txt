@@ -18,7 +18,7 @@
    this()
    super() : 상위 클래스의 생성자 호출
 
-7. 다형성 : 하위 클래스를 참조하여 상위 클래스의 객체를 생성
+7. 다형성 : 하위 클래스를 참조하여 상위 클래스의 객체를 생성 // 상속시에 상위클래스들을 각각 생성하기 때문에 
 	A.class상위 B.class하위
 	A a = new A();
 	B b = new B();
@@ -31,7 +31,7 @@
 	상위	자동차 - 차이름, 색상, 제조사, 속도
 				가속(), 감속(), 정지()
 	
-	하위	택시(Taxi)		버스(Bus)		트럭(Truck)
+	하위	택시(Taxi) 150		버스(Bus) 110		트럭(Truck) 100
 		요금 int price		승객수 int pcount	중량 int weight, 총중량 maxWeight
 		요금계산()		타다() 			상차() 
 		calcPrice(int km)	getOn(int pcount)	loadUp(int weight)
