@@ -1,1 +1,4 @@
-javase/.metadata/
+/**/.metadata/
+/**/*.class
+/**/*.classpath
+/**/*.project
