@@ -10,7 +10,7 @@
         (어떤 버스가 될지 모르기 때문에 일단은 생성할때 정해준다. 또 정원이 없는 버스는 없기 때문에 디폴트 생성자는 미구현)
 */
 public class Bus extends Car{
-    int pcount; //탑승 시도 인원
+    int pcount; //현재 탑승 인원
     int maxPcount; //버스 정원
     int startBusStop; //첫번째 버스 정류장
     int lastBusStop; //마지막 버스 정류장
