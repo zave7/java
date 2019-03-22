@@ -29,7 +29,61 @@
  		x[0] = 10;
  		x[1] = 20;
  		x[2] = 40;
+ 		int len = x.length;
  		
  		>>>>>>>>>> a, b, c 를 동시에
  		public int x[] = {10,20,30}; // 리터럴 값만 넣을 수 있다 (메소드 호출 불가)
  2-2. RDT 배열
+ 		형식)
+ 	a. 선언
+ 		접근제어자 RDT[] 배열명; or 접근제어자 RDT[] 배열명[];
+ 		예) 
+			public String str; or public String str[];
+			Car car[];
+			
+ 		
+ 	b. 생성
+ 		배열명 = new RDT[길이(크기)];
+ 		예)
+ 			str = new String[3];
+ 			car = new Car[5];
+ 		
+ 		>>>>>>>>>> a, b 동시에
+ 		접근제어자 RDT[] 배열명 = new RDT[크기];
+ 		public String x[] = new String[3];
+ 		public Car car[] = new Car[4];
+ 		
+ 	c. 사용
+ 		배열명[index] = 주소값(reference); new RDT();
+ 		str[0] = "hello";
+ 		str[1] = "java";
+ 		str[2] = new String("!!!");
+ 		
+ 		car[0] = new Car();
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

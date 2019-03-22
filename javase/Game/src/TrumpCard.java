@@ -1,137 +1,114 @@
 
 public class TrumpCard extends Card {
-	private int sizeOfClubs = 12;
-	private int sizeOfDiamonds = 12;
-	private int sizeOfHeart = 12;
-	private int sizeOfSpade = 12;
-	private boolean check = false;
+	private int sizeOfClubs = 13;
+	private int sizeOfDiamonds = 13;
+	private int sizeOfHeart = 13;
+	private int sizeOfSpade = 13;
 	private char[] clubs = {'A','2','3','4','5','6','7','8','9','T','J','Q','K'};
 	private char[] diamonds = {'A','2','3','4','5','6','7','8','9','T','J','Q','K'};
 	private char[] heart = {'A','2','3','4','5','6','7','8','9','T','J','Q','K'};
 	private char[] spade = {'A','2','3','4','5','6','7','8','9','T','J','Q','K'};
-
 	public TrumpCard() {
 		setTypeCard("Trump");
 	}
 	public char[] getTrumpCard() {
-		char[] returnCard = new char[2];
-		int[] selectCard = getRandomCard(4); //카드 타입 1~4
-		int selectNum;
-		while(true) { 
+		char[] returnCard = {'\u0000','\u0000'};
+		int type; //카드 타입 1~4
+		boolean check = false;
+		while(true) {
+			type = getRandomType(4);
 			switch(type) {
-				case 0: 	if(sizeOfClubs==)
-							selectNum = getRandomCard(sizeOfClubs);
-							returnCard[1] = clubs[selectNum];
-							sortTrumpCard(selectNum, sizeOfClubs);
-							sizeOfClubs--;
+				case 0: 	if(sizeOfClubs>0) { 
+							check = true;
+							returnCard[0] = 'c';
+							returnCard[1] = clubs[getRandomType(sizeOfClubs)];
+							sortTrumpCard(returnCard[1]-48, type);
+							} 
 							break;
-				case 1: 	selectNum = getRandomCard(sizeOfDiamonds);
-							returnCard[1] = diamonds[selectNum];
-							sortTrumpCard(selectNum, sizeOfClubs);
-							sizeOfDiamonds--;
+				case 1: 	if(sizeOfDiamonds>0) {
+							check = true;
+							returnCard[0] = 'd';
+							returnCard[1] = diamonds[getRandomType(sizeOfDiamonds)];
+							sortTrumpCard(returnCard[1]-48, type); 
+							}
 							break;
-				case 2: 	selectNum = getRandomCard(sizeOfHeart);
-							returnCard[1] = heart[selectNum];
-							sortTrumpCard(selectNum, sizeOfClubs);
-							sizeOfHeart--;
+				case 2: 	if(sizeOfHeart>0) {
+							check = true;
+							returnCard[0] = 'h';
+							returnCard[1] = heart[getRandomType(sizeOfHeart)];
+							sortTrumpCard(returnCard[1]-48, type);
+							}
 							break;
-				case 3:		selectNum = getRandomCard(sizeOfSpade);
-							returnCard[1] = spade[selectNum];
-							sortTrumpCard(selectNum, sizeOfClubs);
-							sizeOfSpade--;
+				case 3:		if(sizeOfSpade>0) {
+							check = true;
+							returnCard[0] = 's';
+							returnCard[1] = spade[getRandomType(sizeOfSpade)];
+							sortTrumpCard(returnCard[1]-48, type);
+							}
 							break;
-				default:	System.out.println("알 수 없는 오류");
-						 	System.exit(0);
+				default: 	System.out.println(returnCard[0] + ":" +returnCard[1]);	
+							System.out.println("카드 리턴 오류");
 			}
+			if(check==true) 
+				break;
 		}
-		returnCard[0] = trumpCard[0][intType];
 		return returnCard;
 	}
 
-	public int[] getRandomCard(int num) {
-		int[] card = new int[2];
-		int n = (int) (Math.random() * num) + 1;
-		int x = (int) (Math.random() * 4) + 1;
-		card[1] = n; 
-		switch(x) {
-			case 1: card[0] = 'c'; 
-			case 2:	card[0] = 'd';
-			case 3: card[0] = 'h';
-			case 4: card[0] = 's';
-			default: System.out.println("알 수 없는 오류");
-					 System.exit(0);
-		}
-		return card;
+	public int getRandomType(int num) {
+		return (int) (Math.random() * num);
 	}
 
-	public int getRandomCard(int x, int y) {
 
-		return (int) (Math.random() * x);
-	}
-	public void sortTrumpCard(int num, int size) { //카드를 뽑으면 빈자리를 채워넣는 메소드
+//	public int getRandomCard(int x, int y) {
+//
+//		return (int) (Math.random() * x);
+//	}
+	public void sortTrumpCard(int num, int type) { //카드를 뽑으면 빈자리를 채워넣는 메소드
 		int i = num;
-		if(num != size) {
-			for(i = num ; i <= sizeOfClubs; i++) {
-				select[i] = select[i+1];
-				//System.out.println(trumpCard[i-1][type]);
-			}
-		} else if(num == size) {
-			select[i] = '\u0000';
+		switch(type) {
+			case 0: 
+				if(num != sizeOfClubs) {
+					for(i = num ; i <= sizeOfClubs; i++) {
+						clubs[i] = clubs[i+1];
+					}
+				} else if(num == sizeOfClubs) {
+					clubs[i] = '\u0000';
+				}
+				sizeOfClubs--;
+				break;
+			case 1: 
+				if(num != sizeOfDiamonds) {
+					for(i = num ; i <= sizeOfDiamonds; i++) {
+						diamonds[i] = diamonds[i+1];
+					}
+				} else if(num == sizeOfDiamonds) {
+					diamonds[i] = '\u0000';
+				}
+				sizeOfDiamonds--;
+				break;
+			case 2: 
+				if(num != sizeOfHeart) {
+					for(i = num ; i <= sizeOfHeart; i++) {
+						heart[i] = heart[i+1];
+					}
+				} else if(num == sizeOfHeart) {
+					heart[i] = '\u0000';
+				}
+				sizeOfHeart--;
+				break;
+			case 3: 
+				if(num != sizeOfSpade) {
+					for(i = num ; i <= sizeOfSpade; i++) {
+						spade[i] = spade[i+1];
+					}
+				} else if(num == sizeOfSpade) {
+					spade[i] = '\u0000';
+				}
+				sizeOfSpade--;
+				break;
+			default: System.out.println("정렬 오류");
 		}
-	}
-	public int getSizeOfClubs() {
-		return sizeOfClubs;
-	}
-	public void setSizeOfClubs(int sizeOfClubs) {
-		this.sizeOfClubs = sizeOfClubs;
-	}
-	public int getSizeOfDiamonds() {
-		return sizeOfDiamonds;
-	}
-	public void setSizeOfDiamonds(int sizeOfDiamonds) {
-		this.sizeOfDiamonds = sizeOfDiamonds;
-	}
-	public int getSizeOfHeart() {
-		return sizeOfHeart;
-	}
-	public void setSizeOfHeart(int sizeOfHeart) {
-		this.sizeOfHeart = sizeOfHeart;
-	}
-	public int getSizeOfSpade() {
-		return sizeOfSpade;
-	}
-	public void setSizeOfSpade(int sizeOfSpade) {
-		this.sizeOfSpade = sizeOfSpade;
-	}
-	public boolean isCheck() {
-		return check;
-	}
-	public void setCheck(boolean check) {
-		this.check = check;
-	}
-	public char[] getClubs() {
-		return clubs;
-	}
-	public void setClubs(char[] clubs) {
-		this.clubs = clubs;
-	}
-	public char[] getDiamonds() {
-		return diamonds;
-	}
-	public void setDiamonds(char[] diamonds) {
-		this.diamonds = diamonds;
-	}
-	public char[] getHeart() {
-		return heart;
-	}
-	public void setHeart(char[] heart) {
-		this.heart = heart;
-	}
-	public char[] getSpade() {
-		return spade;
-	}
-	public void setSpade(char[] spade) {
-		this.spade = spade;
 	}
 	
 }
