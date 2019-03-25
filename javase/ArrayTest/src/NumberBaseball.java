@@ -18,7 +18,7 @@ import java.io.InputStreamReader;
 //	6-2 strike가 3이 아니라면 
 //	1. xxx는 x스트라이크 x볼 입니다  >>  3번으로
 public class NumberBaseball {
-	private int my[] = new int[3];
+	private int my[] = new int[3]; //선언부에서 값을 할당한는 것 보다는 생성자에서
 	private int com[] = new int[3];
 	BufferedReader in;
 	
@@ -55,7 +55,6 @@ public class NumberBaseball {
 		while(true) {
 			System.out.print("숫자 입력 : ");
 			int myNum = getNumber();
-			count++;
 			my[0] = myNum / 100;
 			my[1] = (myNum / 10) % 10; 
 			my[2] = myNum % 10; 
@@ -77,6 +76,7 @@ public class NumberBaseball {
 					}
 				}
 			}
+			count++;
 			//경과
 			if(strike != 3) {
 				System.out.println(myNum + "는 " + strike + " 스트라이크 " + ball + " 볼 입니다.");
