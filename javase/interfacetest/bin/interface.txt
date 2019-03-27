@@ -1,34 +1,34 @@
-Interface : ¾à¼Ó, ²®µ¥±â, ¸í¼¼¼­
+Interface : ì•½ì†, ê»ë°ê¸°, ëª…ì„¸ì„œ
 
-1. Ãß»ó¸Ş¼Òµå¸¸ °¡Áø Å¬·¡½ºÀÇ ÀÏÁ¾.(»ó¼ö´Â °¡´É)
-	º¯¼ö, ±¸Çö¸Ş¼Òµå X
-Çü½Ä)
-Á¢±ÙÁ¦¾îÀÚ (Å¬·¡½ºÀÇ Á¢±ÙÁ¦¾îÀÚ´Â µğÆúÆ®¿Í ÆÛºí¸¯¸¸) interface InterfaceName { //»ı¼ºÀÚ x
-	»ó¼ö;
-	Á¢±ÙÁ¦¾îÀÚ returnType methodName([args]);
-
-	}
-2. interface´Â Å¬·¡½º¿¡ ±¸ÇöÈÄ »ç¿ë.
-	implements keyword»ç¿ë
-	´ÙÁß implements °¡´É
-
-Çü½Ä)
-	Á¢±ÙÁ¦¾îÀÚ class Class [extends ClassName] [implements IN1, IN2 ...] {
+1. ì¶”ìƒë©”ì†Œë“œë§Œ ê°€ì§„ í´ë˜ìŠ¤ì˜ ì¼ì¢….(ìƒìˆ˜ëŠ” ê°€ëŠ¥)
+	ë³€ìˆ˜, êµ¬í˜„ë©”ì†Œë“œ X
+í˜•ì‹)
+ì ‘ê·¼ì œì–´ì (í´ë˜ìŠ¤ì˜ ì ‘ê·¼ì œì–´ìëŠ” ë””í´íŠ¸ì™€ í¼ë¸”ë¦­ë§Œ) interface InterfaceName { //ìƒì„±ì x
+	ìƒìˆ˜;
+	ì ‘ê·¼ì œì–´ì returnType methodName([args]);
 
 	}
+2. interfaceëŠ” í´ë˜ìŠ¤ì— êµ¬í˜„í›„ ì‚¬ìš©.
+	implements keywordì‚¬ìš©
+	ë‹¤ì¤‘ implements ê°€ëŠ¥
 
-3. »óÀ§ Class		Interface	Class		Interface
+í˜•ì‹)
+	ì ‘ê·¼ì œì–´ì class Class [extends ClassName] [implements IN1, IN2 ...] {
 
-	extends		implements	x		extends  //»ó½ÄÀûÀ¸·Î »ı°¢ÇÏÀÚ
+	}
 
-   ÇÏÀ§ Class		Class		Interface	interface
+3. ìƒìœ„ Class		Interface	Class		Interface
 
-4. interface´Â °´Ã¼ »ı¼º ºÒ°¡´É.
-   Å¬·¡½º¿¡ implements ÇÑ ÈÄ Å¬·¡½º¸¦ ÂüÁ¶ÇÏ¿© °´Ã¼ »ı¼º.
-   implements ÇÑ Å¬·¡½º´Â ¹İµå½Ã InterfaceÀÇ Ãß»ó ¸Ş¼Òµå¸¦ ¸ğµÎ override ÇØ¾ß ÇÑ´Ù
-* »ó¼ö : º¯°æ ºÒ°¡´É °ª.
-Çü½Ä)
-public static final DT CONST_NAME = °ª;
-¿¹) 
+	extends		implements	x		extends  //ìƒì‹ì ìœ¼ë¡œ ìƒê°í•˜ì
+
+   í•˜ìœ„ Class		Class		Interface	interface
+
+4. interfaceëŠ” ê°ì²´ ìƒì„± ë¶ˆê°€ëŠ¥.
+   í´ë˜ìŠ¤ì— implements í•œ í›„ í´ë˜ìŠ¤ë¥¼ ì°¸ì¡°í•˜ì—¬ ê°ì²´ ìƒì„±.
+   implements í•œ í´ë˜ìŠ¤ëŠ” ë°˜ë“œì‹œ Interfaceì˜ ì¶”ìƒ ë©”ì†Œë“œë¥¼ ëª¨ë‘ override í•´ì•¼ í•œë‹¤
+* ìƒìˆ˜ : ë³€ê²½ ë¶ˆê°€ëŠ¥ ê°’.
+í˜•ì‹)
+public static final DT CONST_NAME = ê°’;
+ì˜ˆ) 
 public final static int YEAR = 2019;
 public static final String CHARSET = "UTF-8";

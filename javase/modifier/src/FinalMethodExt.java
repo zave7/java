@@ -1,6 +1,6 @@
 public class FinalMethodExt extends FinalMethod {
     @Override
-    public void a() { //final method ´Â override ºÒ°¡
+    public void a() { //final method ëŠ” override ë¶ˆê°€
         x = 30;
     }
 }

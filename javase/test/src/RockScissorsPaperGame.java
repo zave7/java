@@ -11,50 +11,50 @@ public class RockScissorsPaperGame {
         com = (int)(Math.random() * 10) % 3;
     }
     public void menu() throws Exception {
-        System.out.print("\n°¡À§(0), ¹ÙÀ§(1), º¸(2) ¼±ÅÃÇÏ¼¼¿ä. : " );
+        System.out.print("\nê°€ìœ„(0), ë°”ìœ„(1), ë³´(2) ì„ íƒí•˜ì„¸ìš”. : " );
         select = Integer.parseInt(in.readLine());
         comRandom();
         if(select<0 || select>2) {
-            System.out.println("\n0~2 Áß ÇÏ³ª¸¸ ÀÔ·Â °¡´ÉÇÕ´Ï´Ù.\n");
+            System.out.println("\n0~2 ì¤‘ í•˜ë‚˜ë§Œ ì…ë ¥ ê°€ëŠ¥í•©ë‹ˆë‹¤.\n");
             menu();
         }
     }
     public void game() throws Exception {
-        System.out.println("==== ÄÄÇ»ÅÍ¿Í °¡À§¹ÙÀ§º¸ ÇÑÆÇ!!! ====");
+        System.out.println("==== ì»´í“¨í„°ì™€ ê°€ìœ„ë°”ìœ„ë³´ í•œíŒ!!! ====");
         String result;
         while(true) {
             System.out.print("------------------------------------------------");
             menu();
             if((select+2)%3 == com)
-                result = "ÀÌ°å´Ù";
+                result = "ì´ê²¼ë‹¤";
             else if((select+1)%3 == com)
-                result = "Á³´Ù";
+                result = "ì¡Œë‹¤";
             else
-                result = "ºñ°å´Ù";
-            System.out.println("\n³ª : " + setStr(select) + "\tÄÄÇ»ÅÍ : " + 
-                                    setStr(com) + "\t°á°ú : " + result);
+                result = "ë¹„ê²¼ë‹¤";
+            System.out.println("\në‚˜ : " + setStr(select) + "\tì»´í“¨í„° : " + 
+                                    setStr(com) + "\tê²°ê³¼ : " + result);
             exit();
         }
     }
     public void exit() throws Exception {
         int checkExit;
-        System.out.print("\n°ÔÀÓ °è¼Ó(1), Á¾·á(0)À» ÀÔ·ÂÇÏ¼¼¿ä : ");
+        System.out.print("\nê²Œì„ ê³„ì†(1), ì¢…ë£Œ(0)ì„ ì…ë ¥í•˜ì„¸ìš” : ");
         checkExit = Integer.parseInt(in.readLine());
         if(checkExit < 0 || checkExit > 1) {
-            System.out.println("\n[0] ¶Ç´Â [1]¸¸ ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+            System.out.println("\n[0] ë˜ëŠ” [1]ë§Œ ì…ë ¥í•´ì£¼ì„¸ìš”.");
             exit();
         }
         if(checkExit == 0) {
-            System.out.println("ÇÁ·Î±×·¥À» Á¾·áÇÕ´Ï´Ù!!!");
+            System.out.println("í”„ë¡œê·¸ë¨ì„ ì¢…ë£Œí•©ë‹ˆë‹¤!!!");
             System.exit(0);
         }
     }
     public String setStr(int num) {
         switch(num) {
-            case 0: return "°¡À§";
-            case 1: return "¹ÙÀ§";
-            case 2: return "º¸";
-            default: return "¿À·ùÀÔ´Ï´Ù";
+            case 0: return "ê°€ìœ„";
+            case 1: return "ë°”ìœ„";
+            case 2: return "ë³´";
+            default: return "ì˜¤ë¥˜ì…ë‹ˆë‹¤";
         }
     }
 

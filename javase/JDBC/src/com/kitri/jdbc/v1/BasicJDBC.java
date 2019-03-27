@@ -6,7 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class BasicJDBC {
+class BasicJDBC {
 	public static void main(String[] args) {
         String DB_URL = "jdbc:oracle:thin:@127.0.0.1:1521:XE";
         String DB_USER = "scott";

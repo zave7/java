@@ -2,23 +2,23 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-//0. com, my 3ÀÚ¸® ¹è¿­
-//1. com ¼¼ÀÚ¸® ³­¼ö ¹ß»ı. >> comRandom()
-//2. 1.ÀÇ ¼ıÀÚ´Â Áßº¹¼ıÀÚ x 
-//			0À¸·Î ½ÃÀÛ x
-//3. ³»°¡ ÀÔ·ÂÇÑ 3ÀÚ¸® ¼ıÀÚ¸¦ My¹è¿­¿¡ ³Ö±â
-//4. com°ú My ¼ıÀÚ¿Í ÀÚ¸®ºñ±³
-//5. ¼ıÀÚ°¡ °°´Ù¸é 
-//	5-1 ÀÚ¸®¼ö °°´Ù¸é strike Áõ°¡
-//	5-2 ÀÚ¸®¼ö ´Ù¸£´Ù¸é ball Áõ°¡
-//6. 5ÀÇ °á°ú
-//	6-1 strike°¡ 3 : 
-//	xxx´Â x¹øÂ° ¸¸¿¡ Á¤´äÀÔ´Ï´Ù. 
-//	°è¼Ó(1), Á¾·á(0) : 
-//	6-2 strike°¡ 3ÀÌ ¾Æ´Ï¶ó¸é 
-//	1. xxx´Â x½ºÆ®¶óÀÌÅ© xº¼ ÀÔ´Ï´Ù  >>  3¹øÀ¸·Î
+//0. com, my 3ìë¦¬ ë°°ì—´
+//1. com ì„¸ìë¦¬ ë‚œìˆ˜ ë°œìƒ. >> comRandom()
+//2. 1.ì˜ ìˆ«ìëŠ” ì¤‘ë³µìˆ«ì x 
+//			0ìœ¼ë¡œ ì‹œì‘ x
+//3. ë‚´ê°€ ì…ë ¥í•œ 3ìë¦¬ ìˆ«ìë¥¼ Myë°°ì—´ì— ë„£ê¸°
+//4. comê³¼ My ìˆ«ìì™€ ìë¦¬ë¹„êµ
+//5. ìˆ«ìê°€ ê°™ë‹¤ë©´ 
+//	5-1 ìë¦¬ìˆ˜ ê°™ë‹¤ë©´ strike ì¦ê°€
+//	5-2 ìë¦¬ìˆ˜ ë‹¤ë¥´ë‹¤ë©´ ball ì¦ê°€
+//6. 5ì˜ ê²°ê³¼
+//	6-1 strikeê°€ 3 : 
+//	xxxëŠ” xë²ˆì§¸ ë§Œì— ì •ë‹µì…ë‹ˆë‹¤. 
+//	ê³„ì†(1), ì¢…ë£Œ(0) : 
+//	6-2 strikeê°€ 3ì´ ì•„ë‹ˆë¼ë©´ 
+//	1. xxxëŠ” xìŠ¤íŠ¸ë¼ì´í¬ xë³¼ ì…ë‹ˆë‹¤  >>  3ë²ˆìœ¼ë¡œ
 public class NumberBaseball {
-	private int my[] = new int[3]; //¼±¾ğºÎ¿¡¼­ °ªÀ» ÇÒ´çÇÑ´Â °Í º¸´Ù´Â »ı¼ºÀÚ¿¡¼­
+	private int my[] = new int[3]; //ì„ ì–¸ë¶€ì—ì„œ ê°’ì„ í• ë‹¹í•œëŠ” ê²ƒ ë³´ë‹¤ëŠ” ìƒì„±ìì—ì„œ
 	private int com[] = new int[3];
 	BufferedReader in;
 	
@@ -53,13 +53,13 @@ public class NumberBaseball {
 		int ball = 0;
 		int count = 0;
 		while(true) {
-			System.out.print("¼ıÀÚ ÀÔ·Â : ");
+			System.out.print("ìˆ«ì ì…ë ¥ : ");
 			int myNum = getNumber();
 			my[0] = myNum / 100;
 			my[1] = (myNum / 10) % 10; 
 			my[2] = myNum % 10; 
 			
-			//¼ıÀÚ¿Í ÀÚ¸´¼ö ºñ±³
+			//ìˆ«ìì™€ ìë¦¿ìˆ˜ ë¹„êµ
 			int comLen = com.length;
 								   
 			int myLen = my.length; 
@@ -77,16 +77,16 @@ public class NumberBaseball {
 				}
 			}
 			count++;
-			//°æ°ú
+			//ê²½ê³¼
 			if(strike != 3) {
-				System.out.println(myNum + "´Â " + strike + " ½ºÆ®¶óÀÌÅ© " + ball + " º¼ ÀÔ´Ï´Ù.");
+				System.out.println(myNum + "ëŠ” " + strike + " ìŠ¤íŠ¸ë¼ì´í¬ " + ball + " ë³¼ ì…ë‹ˆë‹¤.");
 				strike=0;
 				ball=0;
 			} else {
-				System.out.println(myNum + " ´Â" + count + "¸¸¿¡ Á¤´äÀÔ´Ï´Ù.");
-				System.out.print("°è¼Ó (1), Á¾·á (0) : ");
+				System.out.println(myNum + " ëŠ”" + count + "ë§Œì— ì •ë‹µì…ë‹ˆë‹¤.");
+				System.out.print("ê³„ì† (1), ì¢…ë£Œ (0) : ");
 				if(getNumber()==0) {
-					System.out.println("°ÔÀÓÀ» Á¾·áÇÕ´Ï´Ù.");
+					System.out.println("ê²Œì„ì„ ì¢…ë£Œí•©ë‹ˆë‹¤.");
 					break;
 				}
 				count=0;

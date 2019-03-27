@@ -1,17 +1,17 @@
 public class DohyungTest {
     public static void main(String[] args) {
         Rect r1 = new Rect(6, 7);
-        System.out.println("°¡·Î°¡ " + r1.width + " ¼¼·Î°¡ " + r1.height + "ÀÎ »ç°¢ÇüÀÇ ³ĞÀÌ´Â " +
-            r1.getArea() + ", µÑ·¹´Â " + r1.getRound());
+        System.out.println("ê°€ë¡œê°€ " + r1.width + " ì„¸ë¡œê°€ " + r1.height + "ì¸ ì‚¬ê°í˜•ì˜ ë„“ì´ëŠ” " +
+            r1.getArea() + ", ë‘˜ë ˆëŠ” " + r1.getRound());
 
         Circle c1 = new Circle(5);
-        System.out.println("¹İÁö¸§ÀÌ " + c1.radius + "ÀÎ ¿øÀÇ ³ĞÀÌ´Â " + c1.getArea());
+        System.out.println("ë°˜ì§€ë¦„ì´ " + c1.radius + "ì¸ ì›ì˜ ë„“ì´ëŠ” " + c1.getArea());
         Dohyung d1 = new Rect(2, 3);
-        System.out.println("µµÇüÀÇ ³ĞÀÌ´Â " +
-            d1.getArea() + ", µÑ·¹´Â " + d1.getRound());
+        System.out.println("ë„í˜•ì˜ ë„“ì´ëŠ” " +
+            d1.getArea() + ", ë‘˜ë ˆëŠ” " + d1.getRound());
         Rect r2 = (Rect)d1;
-        System.out.println("°¡·Î°¡ " + r2.width + " ¼¼·Î°¡ " + r2.height + "ÀÎ »ç°¢ÇüÀÇ ³ĞÀÌ´Â " +
-            r2.getArea() + ", µÑ·¹´Â " + r2.getRound());
-        Circle c2 = (Circle)d1; //ÄÄÆÄÀÏ ½Ã¿¡´Â ¹®¹ı¸¸ °Ë»çÇÑ´Ù //·±Å¸ÀÓ½Ã¿¡ ¿¡·¯°¡ ¹ß»ıÇÑ´Ù
+        System.out.println("ê°€ë¡œê°€ " + r2.width + " ì„¸ë¡œê°€ " + r2.height + "ì¸ ì‚¬ê°í˜•ì˜ ë„“ì´ëŠ” " +
+            r2.getArea() + ", ë‘˜ë ˆëŠ” " + r2.getRound());
+        Circle c2 = (Circle)d1; //ì»´íŒŒì¼ ì‹œì—ëŠ” ë¬¸ë²•ë§Œ ê²€ì‚¬í•œë‹¤ //ëŸ°íƒ€ì„ì‹œì— ì—ëŸ¬ê°€ ë°œìƒí•œë‹¤
     }
 }

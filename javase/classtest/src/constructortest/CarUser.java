@@ -2,14 +2,14 @@ package constructortest;
 
 public class CarUser {
     public static void main(String[] args) {
-        Car car2 = new Car("Èò»ö");
+        Car car2 = new Car("í°ìƒ‰");
 
-        System.out.println("car2 ÀÇ ¼Óµµ¸¦ 3È¸ Áõ°¡!!");
+        System.out.println("car2 ì˜ ì†ë„ë¥¼ 3íšŒ ì¦ê°€!!");
         for(int i=0; i<3; i++) {
             car2.speedUp();
         }
         System.out.println(car2.speed);
-        System.out.println("car2 ÀÇ ¼Óµµ¸¦ 85 Áõ°¡!!");
+        System.out.println("car2 ì˜ ì†ë„ë¥¼ 85 ì¦ê°€!!");
         int speed = car2.speedUp(85);
         System.out.println(speed);
         

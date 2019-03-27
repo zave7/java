@@ -1,20 +1,20 @@
 
 public class ArrayTest2 {
 	public static void main(String[] args) {
-		Car car[] = new Car[6]; //ÁÖÀÚÃ¢À» ¸¸µå´Â °ÅÁö ÀÚµ¿Â÷¸¦ ¸¸µå´Â°ÍÀÌ ¾Æ´Ï´Ù
-		car[0] = new Car("¼Ò³ªÅ¸", "°ËÁ¤", "Çö´ë");
-		car[1] = new Car("ºÎ°¡Æ¼", "°ËÁ¤", "ºÎºÎ");
-		car[2] = new Car("k5", "°ËÁ¤", "kia");
-		car[3] = new Car("sm55", "°ËÁ¤", "»ï¼º");
-		car[4] = new Car("´Ï¾î·Î", "ºñµÑ±â", "±â¾Æ");
-		car[5] = new Car("½ÑÅ¸Æä", "°ËÁ¤", "Çö´ë");
+		Car car[] = new Car[6]; //ì£¼ìì°½ì„ ë§Œë“œëŠ” ê±°ì§€ ìë™ì°¨ë¥¼ ë§Œë“œëŠ”ê²ƒì´ ì•„ë‹ˆë‹¤
+		car[0] = new Car("ì†Œë‚˜íƒ€", "ê²€ì •", "í˜„ëŒ€");
+		car[1] = new Car("ë¶€ê°€í‹°", "ê²€ì •", "ë¶€ë¶€");
+		car[2] = new Car("k5", "ê²€ì •", "kia");
+		car[3] = new Car("sm55", "ê²€ì •", "ì‚¼ì„±");
+		car[4] = new Car("ë‹ˆì–´ë¡œ", "ë¹„ë‘˜ê¸°", "ê¸°ì•„");
+		car[5] = new Car("ì‹¼íƒ€í˜", "ê²€ì •", "í˜„ëŒ€");
 		System.out.println(car[0].getCarName());
 		System.out.println("-----------------------");
 //		for(Car c : car) {
 //			System.out.println(c);
 //		}
-		String name = "´Ï¾î·Î";
-		name = "sm5"; //¾ø½À´Ï´Ù
+		String name = "ë‹ˆì–´ë¡œ";
+		name = "sm5"; //ì—†ìŠµë‹ˆë‹¤
 		Car findCar = null;
 		int area = 0;
 		for(int i = 0; i<car.length; i++) {
@@ -26,11 +26,11 @@ public class ArrayTest2 {
 
 		}
 		if (findCar == null) 
-			System.out.println(name + "¾ø½À´Ï´Ù");
+			System.out.println(name + "ì—†ìŠµë‹ˆë‹¤");
 		else {
-			System.out.println(findCar.getColor() + "»ö " + findCar.getCarName() + "(" + 
-					findCar.getMaker() + ") ´Â " + area + "¹øÂ°¿¡ ÀÖ½À´Ï´Ù.");
+			System.out.println(findCar.getColor() + "ìƒ‰ " + findCar.getCarName() + "(" + 
+					findCar.getMaker() + ") ëŠ” " + area + "ë²ˆì§¸ì— ìˆìŠµë‹ˆë‹¤.");
 		}
-		// ºñµÑ±â»ö ´Ï¾î·Î ( ±â¾Æ)´Â 5¹øÂ°¿¡ ÀÖ½À´Ï´Ù
+		// ë¹„ë‘˜ê¸°ìƒ‰ ë‹ˆì–´ë¡œ ( ê¸°ì•„)ëŠ” 5ë²ˆì§¸ì— ìˆìŠµë‹ˆë‹¤
 	}
 }

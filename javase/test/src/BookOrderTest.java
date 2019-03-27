@@ -1,10 +1,10 @@
 public class BookOrderTest {
     public static void main(String[] args) {
-        // º­¤Á¤¤¼ö
+        // ë²¼ã…‘ã„´ìˆ˜
         String book1 = "JAVA";
         String book2 = "JQuery";
-        String book3 = "¿À¶óÅ¬";
-        String book4 = "½ºÇÁ¸µ";
+        String book3 = "ì˜¤ë¼í´";
+        String book4 = "ìŠ¤í”„ë§";
         int book1Price = 24000;
         int book2Price = 21000;
         int book3Price = 19000;
@@ -13,13 +13,13 @@ public class BookOrderTest {
         double discountCard = 0.15;
         int discountPrice = (int)(sumPrice - (sumPrice * discountCard));
 
-        System.out.println("===== µµ¼­ ±¸ÀÔ ¸ñ·Ï =====");
+        System.out.println("===== ë„ì„œ êµ¬ì… ëª©ë¡ =====");
         System.out.println(book1 + " : " + book1Price);
         System.out.println(book2 + " : " + book2Price);
         System.out.println(book3 + " : " + book3Price);
         System.out.println(book4 + " : " + book4Price);
         System.out.println("--------------------------");
-        System.out.println("ÁÖ¹® ÃÑ±İ¾× : " + sumPrice + "¿ø");
-        System.out.println("ÇÒÀÎÈÄ °áÁ¦ ±İ¾× : " + discountPrice + "¿ø");
+        System.out.println("ì£¼ë¬¸ ì´ê¸ˆì•¡ : " + sumPrice + "ì›");
+        System.out.println("í• ì¸í›„ ê²°ì œ ê¸ˆì•¡ : " + discountPrice + "ì›");
     }
 }

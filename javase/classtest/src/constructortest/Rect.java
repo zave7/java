@@ -1,8 +1,8 @@
 package constructortest;
 /*
-1. °¡·Î width, ¼¼·Î height
-2. ³ĞÀÌ : calcArea()
-   µÑ·¹ : calcRound()
+1. ê°€ë¡œ width, ì„¸ë¡œ height
+2. ë„“ì´ : calcArea()
+   ë‘˜ë ˆ : calcRound()
 */
 public class Rect {
     int width;

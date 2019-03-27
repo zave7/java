@@ -1,12 +1,12 @@
 public class Car {
 
-    String carName; // °´Ã¼ »ý¼º½Ã ÃÊ±âÈ­ ¾ÈÇØµµ null·Î ÀÚµ¿À¸·Î ÃÊ±âÈ­ ÇÔ
+    String carName; // ê°ì²´ ìƒì„±ì‹œ ì´ˆê¸°í™” ì•ˆí•´ë„ nullë¡œ ìžë™ìœ¼ë¡œ ì´ˆê¸°í™” í•¨
     String color;
     String maker;
-    int speed; // °´Ã¼ »ý¼º½Ã ÃÊ±âÈ­ ¾ÈÇØµµ 0À¸·Î ÀÚµ¿À¸·Î ÃÊ±âÈ­ ÇÔ
+    int speed; // ê°ì²´ ìƒì„±ì‹œ ì´ˆê¸°í™” ì•ˆí•´ë„ 0ìœ¼ë¡œ ìžë™ìœ¼ë¡œ ì´ˆê¸°í™” í•¨
 
-    // »ý¼ºÀÚ¸¦ µû·Î ¸¸µéÁö ¾ÊÀ¸¸é µðÆúÆ® ÄÁ½ºÆ®·°ÅÍ°¡ ¸¸µé¾îÁü
-    // µðÆúÆ® »ý¼ºÀÚ¿Í Ä¿½ºÅÒ »ý¼ºÀÚ¸¦ µÑ´Ù ¸¸µé ¼ö µµ ÀÖ´Ù
+    // ìƒì„±ìžë¥¼ ë”°ë¡œ ë§Œë“¤ì§€ ì•Šìœ¼ë©´ ë””í´íŠ¸ ì»¨ìŠ¤íŠ¸ëŸ­í„°ê°€ ë§Œë“¤ì–´ì§
+    // ë””í´íŠ¸ ìƒì„±ìžì™€ ì»¤ìŠ¤í…€ ìƒì„±ìžë¥¼ ë‘˜ë‹¤ ë§Œë“¤ ìˆ˜ ë„ ìžˆë‹¤
 
     public void speedUp() {
         int pp;

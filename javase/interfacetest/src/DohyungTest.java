@@ -1,13 +1,13 @@
 public class DohyungTest {
     public static void main(String[] args) {
         Rect r1 = new Rect(6, 7);
-        System.out.println("°¡·Î°¡ " + r1.width + " ¼¼·Î°¡ " + r1.height + "ÀÎ »ç°¢ÇüÀÇ ³ĞÀÌ´Â " +
-            r1.getArea() + ", µÑ·¹´Â " + r1.getRound());
+        System.out.println("ê°€ë¡œê°€ " + r1.width + " ì„¸ë¡œê°€ " + r1.height + "ì¸ ì‚¬ê°í˜•ì˜ ë„“ì´ëŠ” " +
+            r1.getArea() + ", ë‘˜ë ˆëŠ” " + r1.getRound());
 
         Circle c1 = new Circle(5);
-        System.out.println("¹İÁö¸§ÀÌ " + c1.radius + "ÀÎ ¿øÀÇ ³ĞÀÌ´Â " +
+        System.out.println("ë°˜ì§€ë¦„ì´ " + c1.radius + "ì¸ ì›ì˜ ë„“ì´ëŠ” " +
             c1.getArea());
-        //System.out.println(DohyungRound.x+=1); default ·Î final ÀÌ ÁöÁ¤µÇ±â ¶§¹®¿¡ ¿¡·¯°¡ ³­´Ù
-        //Circle c2 = (Circle)d1; //ÄÄÆÄÀÏ ½Ã¿¡´Â ¹®¹ı¸¸ °Ë»çÇÑ´Ù //·±Å¸ÀÓ½Ã¿¡ ¿¡·¯°¡ ¹ß»ıÇÑ´Ù
+        //System.out.println(DohyungRound.x+=1); default ë¡œ final ì´ ì§€ì •ë˜ê¸° ë•Œë¬¸ì— ì—ëŸ¬ê°€ ë‚œë‹¤
+        //Circle c2 = (Circle)d1; //ì»´íŒŒì¼ ì‹œì—ëŠ” ë¬¸ë²•ë§Œ ê²€ì‚¬í•œë‹¤ //ëŸ°íƒ€ì„ì‹œì— ì—ëŸ¬ê°€ ë°œìƒí•œë‹¤
     }
 }

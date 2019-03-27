@@ -13,41 +13,43 @@ public class TrumpCard extends Card {
 	}
 	public char[] getTrumpCard() {
 		char[] returnCard = {'\u0000','\u0000'};
-		int type; //Ä«µå Å¸ÀÔ 1~4
+		int type; //ì¹´ë“œ íƒ€ì… 1~4
 		boolean check = false;
 		while(true) {
 			type = getRandomType(4);
+			int temp = 0;
 			switch(type) {
 				case 0: 	if(sizeOfClubs>0) { 
 							check = true;
 							returnCard[0] = 'c';
-							returnCard[1] = clubs[getRandomType(sizeOfClubs)];
-							sortTrumpCard(returnCard[1]-48, type);
+							temp = getRandomType(sizeOfClubs);
+							returnCard[1] = clubs[temp];
+							sortTrumpCard(returnCard[1], type);
 							} 
 							break;
 				case 1: 	if(sizeOfDiamonds>0) {
 							check = true;
 							returnCard[0] = 'd';
-							returnCard[1] = diamonds[getRandomType(sizeOfDiamonds)];
-							sortTrumpCard(returnCard[1]-48, type); 
+							returnCard[1] = diamonds[temp];
+							sortTrumpCard(returnCard[1], type); 
 							}
 							break;
 				case 2: 	if(sizeOfHeart>0) {
 							check = true;
 							returnCard[0] = 'h';
-							returnCard[1] = heart[getRandomType(sizeOfHeart)];
-							sortTrumpCard(returnCard[1]-48, type);
+							returnCard[1] = heart[temp];
+							sortTrumpCard(returnCard[1], type);
 							}
 							break;
 				case 3:		if(sizeOfSpade>0) {
 							check = true;
 							returnCard[0] = 's';
-							returnCard[1] = spade[getRandomType(sizeOfSpade)];
-							sortTrumpCard(returnCard[1]-48, type);
+							returnCard[1] = spade[temp];
+							sortTrumpCard(returnCard[1], type);
 							}
 							break;
 				default: 	System.out.println(returnCard[0] + ":" +returnCard[1]);	
-							System.out.println("Ä«µå ¸®ÅÏ ¿À·ù");
+							System.out.println("ì¹´ë“œ ë¦¬í„´ ì˜¤ë¥˜");
 			}
 			if(check==true) 
 				break;
@@ -64,7 +66,7 @@ public class TrumpCard extends Card {
 //
 //		return (int) (Math.random() * x);
 //	}
-	public void sortTrumpCard(int num, int type) { //Ä«µå¸¦ »ÌÀ¸¸é ºóÀÚ¸®¸¦ Ã¤¿ö³Ö´Â ¸Ş¼Òµå
+	public void sortTrumpCard(int num, int type) { //ì¹´ë“œë¥¼ ë½‘ìœ¼ë©´ ë¹ˆìë¦¬ë¥¼ ì±„ì›Œë„£ëŠ” ë©”ì†Œë“œ
 		int i = num;
 		switch(type) {
 			case 0: 
@@ -107,7 +109,7 @@ public class TrumpCard extends Card {
 				}
 				sizeOfSpade--;
 				break;
-			default: System.out.println("Á¤·Ä ¿À·ù");
+			default: System.out.println("ì •ë ¬ ì˜¤ë¥˜");
 		}
 	}
 	

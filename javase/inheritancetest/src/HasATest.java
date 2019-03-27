@@ -6,7 +6,7 @@ public class HasATest {
     
     public HasATest() {
         f.setLayout(new FlowLayout());
-        //b.setLabel("´­·¯ºÁ");
+        //b.setLabel("ëˆŒëŸ¬ë´");
         f.add(b);
         f.setSize(400, 300);
         //f.setTitle("Has A Test !");

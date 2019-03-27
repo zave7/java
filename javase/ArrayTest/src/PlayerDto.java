@@ -1,24 +1,24 @@
 //Dto : Data Transfer Object
 //vo : value object
-//Bean : ²®µ¥±â
-//0 Áö¸íÅ¸ÀÚ
-//1 Åõ¼ö
-//2 Æ÷¼ö
-//3 1·ç¼ö
-//4 2·ç¼ö
-//5 3·ç¼ö
-//6 À¯°İ¼ö
-//7 ÁÂÀÍ¼ö
-//8 Áß°ß¼ö
-//9 ¿ìÀÍ¼ö
-//Å¸ÀÚ : Å¸À²
-//Åõ¼ö : ¹æ¾îÀ²
+//Bean : ê»ë°ê¸°
+//0 ì§€ëª…íƒ€ì
+//1 íˆ¬ìˆ˜
+//2 í¬ìˆ˜
+//3 1ë£¨ìˆ˜
+//4 2ë£¨ìˆ˜
+//5 3ë£¨ìˆ˜
+//6 ìœ ê²©ìˆ˜
+//7 ì¢Œìµìˆ˜
+//8 ì¤‘ê²¬ìˆ˜
+//9 ìš°ìµìˆ˜
+//íƒ€ì : íƒ€ìœ¨
+//íˆ¬ìˆ˜ : ë°©ì–´ìœ¨
 public class PlayerDto {
 	private int number;
 	private String name;
 	private int position;
 	private double grade;
-	private String[] positionStr = {"Áö¸íÅ¸ÀÚ", "Åõ¼ö", "Æ÷¼ö", "1·ç¼ö", "2·ç¼ö", "3·ç¼ö", "À¯°İ¼ö", "ÁÂÀÍ¼ö", "Áß°ß¼ö", "¿ìÀÍ¼ö"};
+	private String[] positionStr = {"ì§€ëª…íƒ€ì", "íˆ¬ìˆ˜", "í¬ìˆ˜", "1ë£¨ìˆ˜", "2ë£¨ìˆ˜", "3ë£¨ìˆ˜", "ìœ ê²©ìˆ˜", "ì¢Œìµìˆ˜", "ì¤‘ê²¬ìˆ˜", "ìš°ìµìˆ˜"};
 	public PlayerDto(int number, String name, int position, double grade) {
 		super();
 		this.number = number;
@@ -53,7 +53,7 @@ public class PlayerDto {
 	}
 	@Override
 	public String toString() {
-		return "PlayerDto [µî¹øÈ£=" + number + ",\t\t¼±¼ö¸í=" + name + "\t\t" + "Æ÷Áö¼Ç=" + positionStr[position] + "\t" + (position == 1 ? "¹æ¾îÀ²" : "Å¸À²") + grade + "]";
+		return "PlayerDto [ë“±ë²ˆí˜¸=" + number + ",\t\tì„ ìˆ˜ëª…=" + name + "\t\t" + "í¬ì§€ì…˜=" + positionStr[position] + "\t" + (position == 1 ? "ë°©ì–´ìœ¨" : "íƒ€ìœ¨") + grade + "]";
 	}
 	
 }

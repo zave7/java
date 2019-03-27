@@ -4,22 +4,22 @@ public class VarTest
 	{
 		int age;
 		age = 25;
-		System.out.println("´ç½ÅÀÇ ³ªÀÌ´Â " + age + "ÀÔ´Ï´Ù");
+		System.out.println("ë‹¹ì‹ ì˜ ë‚˜ì´ëŠ” " + age + "ì…ë‹ˆë‹¤");
 
 		// String carName;
-		// carName = "½î³ªÅ¸";
-		String carName = "½î³ªÅ¸";
-		System.out.println("´ç½ÅÀÇ Â÷ ÀÌ¸§Àº " + carName + "ÀÔ´Ï´Ù");
+		// carName = "ì˜ë‚˜íƒ€";
+		String carName = "ì˜ë‚˜íƒ€";
+		System.out.println("ë‹¹ì‹ ì˜ ì°¨ ì´ë¦„ì€ " + carName + "ì…ë‹ˆë‹¤");
 		
 		/*
 		char gender;
-		gender = '³²'; 
+		gender = 'ë‚¨'; 
 		*/
-		char gender = '³²';
-		System.out.println("´ç½ÅÀÇ ¼ºº°Àº " + gender + "ÀÔ´Ï´Ù");
+		char gender = 'ë‚¨';
+		System.out.println("ë‹¹ì‹ ì˜ ì„±ë³„ì€ " + gender + "ì…ë‹ˆë‹¤");
 		
-		gender = '¿©';
-		System.out.println("´ç½ÅÀÇ ¼ºº°Àº " + gender + "ÀÔ´Ï´Ù");
+		gender = 'ì—¬';
+		System.out.println("ë‹¹ì‹ ì˜ ì„±ë³„ì€ " + gender + "ì…ë‹ˆë‹¤");
 
 
 	}

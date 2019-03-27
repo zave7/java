@@ -11,9 +11,9 @@ public abstract class Game {
 		this.category = category;
 	}
 
-    public abstract void startGame(); //°ÔÀÓ ½ÇÇà
+    public abstract void startGame(); //ê²Œìž„ ì‹¤í–‰
 
     
-    public abstract void exitGame();//°ÔÀÓ Á¾·á
+    public abstract void exitGame();//ê²Œìž„ ì¢…ë£Œ
 
 }

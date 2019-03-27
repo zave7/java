@@ -4,27 +4,27 @@ public class IfElseTest1 {
 		int y = 90;
 		/*
 		if (x > y) {
-			System.out.println(x + " ´Â " + y + "º¸´Ù Å©´Ù");
+			System.out.println(x + " ëŠ” " + y + "ë³´ë‹¤ í¬ë‹¤");
 		}
 		else {
-			System.out.println(x + " ´Â " + y + "º¸´Ù ÀÛ´Ù");
+			System.out.println(x + " ëŠ” " + y + "ë³´ë‹¤ ìž‘ë‹¤");
 		}
 		*/
 		String result;
 		if (x == y) {
-			result = "°°´Ù";
+			result = "ê°™ë‹¤";
 		}
 		else {
 			if ( x > y)
 			{
-					result = "Å©´Ù";
+					result = "í¬ë‹¤";
 			}
 			else {
-					result = "ÀÛ´Ù";
+					result = "ìž‘ë‹¤";
 			}
 		}
 
 		System.out.println("x " + x + ", y " + y + " -> " + result);
-		System.out.println("ÇÁ·Î±×·¥Á¾·á");
+		System.out.println("í”„ë¡œê·¸ëž¨ì¢…ë£Œ");
 	}
 }

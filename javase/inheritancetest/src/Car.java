@@ -9,18 +9,18 @@ public class Car {
 
     public Car() {
 
-        this("½î³ªÅ¸", "Èò»ö", "Çö´ë"); //¸Ç Ã³À½ ½ÇÇà
+        this("ì˜ë‚˜íƒ€", "í°ìƒ‰", "í˜„ëŒ€"); //ë§¨ ì²˜ìŒ ì‹¤í–‰
     }
     public Car(String color) {
    
-        this("½î³ªÅ¸", color, "Çö´ë"); //¸Ç Ã³À½ ½ÇÇà
+        this("ì˜ë‚˜íƒ€", color, "í˜„ëŒ€"); //ë§¨ ì²˜ìŒ ì‹¤í–‰
     }
     public Car(String carName, String color) {
 
-        this(carName, color, "Çö´ë"); //¸Ç Ã³À½ ½ÇÇà
+        this(carName, color, "í˜„ëŒ€"); //ë§¨ ì²˜ìŒ ì‹¤í–‰
     }
     public Car(String carName, String color, String maker) {
-        //super() ¿ä±â¿¡ »ı·«
+        //super() ìš”ê¸°ì— ìƒëµ
         this.carName = carName;
         this.color = color;
         this.maker = maker;
@@ -46,12 +46,12 @@ public class Car {
             stop();
     }
     public String toString() {
-        return maker + "¿¡¼­ ¸¸µç " + color + " " + carName;
+        return maker + "ì—ì„œ ë§Œë“  " + color + " " + carName;
     }
     @Override   
     public boolean equals(Object obj) {
         Car car = (Car)obj;
-        //if (carName == car.carName)  "" °æ¿ì¿¡´Â  true  new String() ÀÏ°æ¿ì´Â false
+        //if (carName == car.carName)  "" ê²½ìš°ì—ëŠ”  true  new String() ì¼ê²½ìš°ëŠ” false
         if (carName.equals(car.carName))
             return true;
         return false;

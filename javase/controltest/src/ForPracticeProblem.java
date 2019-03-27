@@ -1,7 +1,7 @@
 public class ForPracticeProblem {
     public static void main(String[] args) {
-        // 3. for ¹®À» ÀÌ¿ëÇØ¼­ 1ºÎÅÍ 100±îÁöÀÇ Á¤¼ö Áß¿¡¼­ 3ÀÇ ¹è¼öÀÇ ÃÑÇÕÀ» ±¸ÇÏ´Â ÄÚµå¸¦ ÀÛ¼º
-        System.out.print("3¹ø.\n");
+        // 3. for ë¬¸ì„ ì´ìš©í•´ì„œ 1ë¶€í„° 100ê¹Œì§€ì˜ ì •ìˆ˜ ì¤‘ì—ì„œ 3ì˜ ë°°ìˆ˜ì˜ ì´í•©ì„ êµ¬í•˜ëŠ” ì½”ë“œë¥¼ ì‘ì„±
+        System.out.print("3ë²ˆ.\n");
         int sum=0;
         for(int i=1; i<=100; i++) {
             if (i%3 == 0) {
@@ -9,8 +9,8 @@ public class ForPracticeProblem {
             }                       
         }
         System.out.println(sum);
-        // 5. ÁßÃ¸ for¹®À» ÀÌ¿ëÇÏ¿© ¹æÁ¤½Ä 4x + 5y = 60 ÀÇ ¸ğµç ÇØ¸¦ ±¸ÇØ¼­ (x, y) ÇüÅÂ·Î Ãâ·Â
-        System.out.print("\n5¹ø.\n");
+        // 5. ì¤‘ì²© forë¬¸ì„ ì´ìš©í•˜ì—¬ ë°©ì •ì‹ 4x + 5y = 60 ì˜ ëª¨ë“  í•´ë¥¼ êµ¬í•´ì„œ (x, y) í˜•íƒœë¡œ ì¶œë ¥
+        System.out.print("\n5ë²ˆ.\n");
         for(int i=1; i<=10; i++) {
             for(int j=1; j<=10; j++) {
                 if(((4 * i) + (5 * j)) == 60) {
@@ -18,8 +18,8 @@ public class ForPracticeProblem {
                 }
             }
         }
-        // 6. for ¹®À» ÀÌ¿ëÇØ¼­ ½ÇÇà °á°ú¿Í °°Àº »ï°¢ÇüÀ» Ãâ·ÂÇÏ´Â ÄÚµå¸¦ ÀÛ¼º
-        System.out.print("\n6¹ø.\n");
+        // 6. for ë¬¸ì„ ì´ìš©í•´ì„œ ì‹¤í–‰ ê²°ê³¼ì™€ ê°™ì€ ì‚¼ê°í˜•ì„ ì¶œë ¥í•˜ëŠ” ì½”ë“œë¥¼ ì‘ì„±
+        System.out.print("\n6ë²ˆ.\n");
         for(int i=1; i<=5; i++) {
             for(int j=1; j<=i; j++) {
                 System.out.print("*");

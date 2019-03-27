@@ -1,6 +1,6 @@
 public class FinalVariable {
     final int x = 10;
-    public void a() { //final variable´Â °ª º¯°æ ºÒ°¡´É (»ó¼ö)
+    public void a() { //final variableëŠ” ê°’ ë³€ê²½ ë¶ˆê°€ëŠ¥ (ìƒìˆ˜)
         x = 30;
     }
 }

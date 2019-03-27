@@ -6,7 +6,7 @@ public class InterfaceTest extends Frame implements WindowListener, ActionListen
     public InterfaceTest() {
         super("Interface Test !");
         setLayout(new FlowLayout());
-        //setLabel("´­·¯ºÁ");
+        //setLabel("ëˆŒëŸ¬ë´");
         b1.setBackground(new Color(123, 255, 125));
         add(b1);
         setSize(400, 300);

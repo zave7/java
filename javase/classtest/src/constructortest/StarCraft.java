@@ -5,41 +5,41 @@ public class StarCraft {
         Marine com;
         my = new Marine();
         com = new Marine();
-        System.out.println("³»Ã¼·Â : " + my.getHp() + " ÀûÃ¼·Â : " + com.getHp());
-        //³»Ã¼·Â : 100 ÀûÃ¼·Â : 100
+        System.out.println("ë‚´ì²´ë ¥ : " + my.getHp() + " ì ì²´ë ¥ : " + com.getHp());
+        //ë‚´ì²´ë ¥ : 100 ì ì²´ë ¥ : 100
 
         int count = 2;
-        System.out.println("³»°¡ ÀûÀ» " + count + "È¸ °ø°İ!!!!");
+        System.out.println("ë‚´ê°€ ì ì„ " + count + "íšŒ ê³µê²©!!!!");
         my.attack(com, count);
-        System.out.println("³»Ã¼·Â : " + my.getHp() + " ÀûÃ¼·Â : " + com.getHp());
-        // ³»Ã¼·Â : 100 ÀûÃ¼·Â : 80
+        System.out.println("ë‚´ì²´ë ¥ : " + my.getHp() + " ì ì²´ë ¥ : " + com.getHp());
+        // ë‚´ì²´ë ¥ : 100 ì ì²´ë ¥ : 80
 
         count = 4;
-        System.out.println("ÀûÀÌ ³ª¸¦ " + count + "È¸ °ø°İ!!!!");
+        System.out.println("ì ì´ ë‚˜ë¥¼ " + count + "íšŒ ê³µê²©!!!!");
         com.attack(my, count);
-        System.out.println("³»Ã¼·Â : " + my.getHp() + " ÀûÃ¼·Â : " + com.getHp());
-        // ³»Ã¼·Â : 60 ÀûÃ¼·Â : 80
+        System.out.println("ë‚´ì²´ë ¥ : " + my.getHp() + " ì ì²´ë ¥ : " + com.getHp());
+        // ë‚´ì²´ë ¥ : 60 ì ì²´ë ¥ : 80
         
-        System.out.println("¸ğµå º¯°æ!!!!");
+        System.out.println("ëª¨ë“œ ë³€ê²½!!!!");
         my.changeMode();
-        System.out.println("³»Ã¼·Â : " + my.getHp() + " ÀûÃ¼·Â : " + com.getHp());
-        // ³»Ã¼·Â : 35 ÀûÃ¼·Â : 80
+        System.out.println("ë‚´ì²´ë ¥ : " + my.getHp() + " ì ì²´ë ¥ : " + com.getHp());
+        // ë‚´ì²´ë ¥ : 35 ì ì²´ë ¥ : 80
 
         count = 3;
-        System.out.println("³»°¡ ÀûÀ» " + count + "È¸ °ø°İ!!!!");
+        System.out.println("ë‚´ê°€ ì ì„ " + count + "íšŒ ê³µê²©!!!!");
         my.attack(com, count);
-        System.out.println("³»Ã¼·Â : " + my.getHp() + " ÀûÃ¼·Â : " + com.getHp());
-        // ³»Ã¼·Â : 35 ÀûÃ¼·Â : 35
-        System.out.println("¸ğµå º¯°æ!!!!");
+        System.out.println("ë‚´ì²´ë ¥ : " + my.getHp() + " ì ì²´ë ¥ : " + com.getHp());
+        // ë‚´ì²´ë ¥ : 35 ì ì²´ë ¥ : 35
+        System.out.println("ëª¨ë“œ ë³€ê²½!!!!");
         my.changeMode();
-        // °æ°í : ¸ğµå º¯°æ ºÒ°¡~!!!!
-        System.out.println("³»Ã¼·Â : " + my.getHp() + " ÀûÃ¼·Â : " + com.getHp());
-        // ³»Ã¼·Â : 35 ÀûÃ¼·Â : 35
+        // ê²½ê³  : ëª¨ë“œ ë³€ê²½ ë¶ˆê°€~!!!!
+        System.out.println("ë‚´ì²´ë ¥ : " + my.getHp() + " ì ì²´ë ¥ : " + com.getHp());
+        // ë‚´ì²´ë ¥ : 35 ì ì²´ë ¥ : 35
 
         count = 3;
-        System.out.println("³»°¡ ÀûÀ» " + count + "È¸ °ø°İ!!!!");
+        System.out.println("ë‚´ê°€ ì ì„ " + count + "íšŒ ê³µê²©!!!!");
         my.attack(com, count);
-        System.out.println("³»Ã¼·Â : " + my.getHp() + " ÀûÃ¼·Â : " + com.getHp());
-        // ³»Ã¼·Â : 35 ÀûÃ¼·Â : die
+        System.out.println("ë‚´ì²´ë ¥ : " + my.getHp() + " ì ì²´ë ¥ : " + com.getHp());
+        // ë‚´ì²´ë ¥ : 35 ì ì²´ë ¥ : die
     }
 }

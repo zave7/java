@@ -4,14 +4,14 @@ public class IfTest1 {
 		int y = 70;
 		/*
 		if(x > y) {
-			System.out.println("x°¡ Å©´Ù");
+			System.out.println("xê°€ í¬ë‹¤");
 		}
 		*/
 
 		int jumin = 3;
-		String gender = "³²ÀÚ";
+		String gender = "ë‚¨ì";
 		if(jumin == 2 || jumin == 4) {
-			gender = "¿©ÀÚ";
+			gender = "ì—¬ì";
 		}
 		System.out.println(gender);
 	}

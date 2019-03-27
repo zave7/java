@@ -1,6 +1,6 @@
 package com.kitri.jdbc.v1;
 
-public class User {	// DB와 연동할때 객체 정보를 담아둘 클래스 정의
+class User {	// DB와 연동할때 객체 정보를 담아둘 클래스 정의
 	private String id;
 	private String name;
 	private String password;

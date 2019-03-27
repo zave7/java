@@ -6,22 +6,22 @@ public class AbstractTest3 extends Frame{
     public AbstractTest3() {
         super("Has A Test !");
         setLayout(new FlowLayout());
-        // setLabel("´­·¯ºÁ");
+        // setLabel("ëˆŒëŸ¬ë´");
         b1.setBackground(new Color(123, 255, 125));
         add(b1);
         setSize(400, 300);
         setLocation(300,200);
         setVisible(true);
         WindowListener wl = new WindowAdapter(){
-        // WindowAdapter wl = new WindowAdapter() ÀÌ·¸°Ô ÇØµµ »ó°ü¾øÀ½
+        // WindowAdapter wl = new WindowAdapter() ì´ë ‡ê²Œ í•´ë„ ìƒê´€ì—†ìŒ
                                 public void windowClosing(WindowEvent e) {
                                     System.exit(0);
                                 }
                                 public void windowIconified(WindowEvent e) {
-                                    System.out.println("¾ÆÀÌÄÜÈ­!!");
+                                    System.out.println("ì•„ì´ì½˜í™”!!");
                                 }
                             };
-        addWindowListener(wl);// Ãß»óÅ¬·¡½ºÀÎµ¥ Ãß»ó¸Ş¼Òµå°¡ ¾ø´Â Å¬·¡½º´Â ÇÏ³ª ÀÌ»óÀÇ ¸Ş¼Òµå¸¸ ¿À¹ö¶óÀÌµå ÇÏ¸é µÈ´Ù
+        addWindowListener(wl);// ì¶”ìƒí´ë˜ìŠ¤ì¸ë° ì¶”ìƒë©”ì†Œë“œê°€ ì—†ëŠ” í´ë˜ìŠ¤ëŠ” í•˜ë‚˜ ì´ìƒì˜ ë©”ì†Œë“œë§Œ ì˜¤ë²„ë¼ì´ë“œ í•˜ë©´ ëœë‹¤
     }
     public static void main(String[] args) {
         AbstractTest3 hat = new AbstractTest3();

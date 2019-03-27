@@ -1,17 +1,17 @@
 /*
-1.  ¿ä±İ
-    ±âº»¿ä±İ(basicPrice)
-        ÀÏ¹İ 3000 
-        ½É¾ß 5000
+1.  ìš”ê¸ˆ
+    ê¸°ë³¸ìš”ê¸ˆ(basicPrice)
+        ì¼ë°˜ 3000 
+        ì‹¬ì•¼ 5000
 
-    ¿ä±İÇÕ(totalPrice)
+    ìš”ê¸ˆí•©(totalPrice)
         
-    ¿ä±İ(price)
-        ÀÏ¹İ 100/km
-        ½É¾ß 150/km
+    ìš”ê¸ˆ(price)
+        ì¼ë°˜ 100/km
+        ì‹¬ì•¼ 150/km
 
-2.  ¿ä±İ°è»ê(calcPrice())
-3.  ½É¾ßÇÒÁõ : 0½Ã ~ 6½Ã 
+2.  ìš”ê¸ˆê³„ì‚°(calcPrice())
+3.  ì‹¬ì•¼í• ì¦ : 0ì‹œ ~ 6ì‹œ 
 */
 import java.util.*;
 public class Taxi extends Car{
@@ -22,10 +22,10 @@ public class Taxi extends Car{
     Calendar calendar;
     
     public Taxi() {
-        //super(); »ı·« ¾êµµ Ã¹¹øÂ° ½ÇÇà¿¡¼­¸¸ ÀÛµ¿ÇÑ´Ù
+        //super(); ìƒëµ ì–˜ë„ ì²«ë²ˆì§¸ ì‹¤í–‰ì—ì„œë§Œ ì‘ë™í•œë‹¤
     }    
     public Taxi(String carName, String color, String maker) {
-        //super() ¿ä±â¿¡ »ı·«
+        //super() ìš”ê¸°ì— ìƒëµ
         super(carName, color, maker);
     }
     void initPrice() {
@@ -49,16 +49,16 @@ public class Taxi extends Car{
         price += km * incPerKm;
         return price;
     }
-    // annotation ÁÖ¼®Àº @µÚÀÇ ³»¿ë¿¡ µû¶ó¼­ ÀÇ¹Ì°¡ ºÎ¿©µÈ´Ù
-    @Override //OverrideÀÇ °­Á¦¼º ºÎ¿©
-    public int speedUp(int speed) { //¸Ş¼Òµå ¿À¹ö¶óÀÌµå¿¡¼­ Á¢±ÙÁ¦¾îÀÚ´Â ³ĞÀº ÀÇ¹Ì·Î º¯°æ °¡´ÉÇÏ´Ù
-        speed = super.speedUp(speed); // »óÀ§ Å¬·¡½º°¡ °¡Áö°í ÀÖ´Â ¿À¹ö¶óÀÌµå ÇÑ ¸Ş¼Òµå¸¦ È£ÃâÇØ¶ó (±»ÀÌ Áßº¹ÇÏÁö ¾Ê¾Æµµ µÈ´Ù)
+    // annotation ì£¼ì„ì€ @ë’¤ì˜ ë‚´ìš©ì— ë”°ë¼ì„œ ì˜ë¯¸ê°€ ë¶€ì—¬ëœë‹¤
+    @Override //Overrideì˜ ê°•ì œì„± ë¶€ì—¬
+    public int speedUp(int speed) { //ë©”ì†Œë“œ ì˜¤ë²„ë¼ì´ë“œì—ì„œ ì ‘ê·¼ì œì–´ìëŠ” ë„“ì€ ì˜ë¯¸ë¡œ ë³€ê²½ ê°€ëŠ¥í•˜ë‹¤
+        speed = super.speedUp(speed); // ìƒìœ„ í´ë˜ìŠ¤ê°€ ê°€ì§€ê³  ìˆëŠ” ì˜¤ë²„ë¼ì´ë“œ í•œ ë©”ì†Œë“œë¥¼ í˜¸ì¶œí•´ë¼ (êµ³ì´ ì¤‘ë³µí•˜ì§€ ì•Šì•„ë„ ëœë‹¤)
         if(speed > 150)
             this.speed = 150;
         return this.speed;
     }
     @Override
     public String toString() {
-        return super.toString() + " ÅÃ½Ã";
+        return super.toString() + " íƒì‹œ";
     }
 }

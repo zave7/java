@@ -4,12 +4,12 @@ public class IfElseIfTest1 {
 		int y = 90;
 		String result;
 		if ( x == y ) {
-			result = "°°´Ù";
+			result = "ê°™ë‹¤";
 		}	else if (x > y) {
-			result = "x°¡ Å©´Ù";
+			result = "xê°€ í¬ë‹¤";
 		}	else {
-			result = "x°¡ ÀÛ´Ù";
+			result = "xê°€ ì‘ë‹¤";
 		}
-		System.out.println("x y ºñ±³ °á°ú : " + result);
+		System.out.println("x y ë¹„êµ ê²°ê³¼ : " + result);
 	}
 }

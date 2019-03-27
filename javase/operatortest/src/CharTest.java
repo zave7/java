@@ -2,6 +2,6 @@ public class CharTest
 {
 	public static void main(String[] args) 
 	{
-		System.out.println("³» ÀÌ¸§Àº \"±Ç\t¿µÂù\"ÀÔ´Ï´Ù.\\\n³ª´Â \'ÀÚ¹Ù°­»ç\'ÀÔ´Ï´Ù.\\");
+		System.out.println("ë‚´ ì´ë¦„ì€ \"ê¶Œ\tì˜ì°¬\"ì…ë‹ˆë‹¤.\\\në‚˜ëŠ” \'ìë°”ê°•ì‚¬\'ì…ë‹ˆë‹¤.\\");
 	}
 }

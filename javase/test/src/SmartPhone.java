@@ -31,7 +31,7 @@ public class SmartPhone {
     }
     void printDiscountPrice() {
         if(discountRate != 0) {
-            System.out.println("«“¿Œ∞°∞› : " + (price - (price * discountRate / 100)));
+            System.out.println("Ìï†Ïù∏Í∞ÄÍ≤© : " + (price - (price * discountRate / 100)));
         }
     }
 }

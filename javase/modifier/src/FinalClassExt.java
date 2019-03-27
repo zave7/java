@@ -1,3 +1,3 @@
 public class FinalClassExt extends FinalClass {
-    //final Class ´Â »ó¼Ó ºÒ°¡
+    //final Class ëŠ” ìƒì† ë¶ˆê°€
 }

@@ -3,21 +3,21 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-//0. com, my 3ÀÚ¸® ¹è¿­.
-//1. com ¼¼ÀÚ¸® ³­¼ö ¹ß»ı. >> comRandom()
-//2. 1ÀÇ ¼ıÀÚ´Â Áßº¹ ¼ıÀÚ X
-//            0À¸·Î ½ÃÀÛ X
-//3. ³»°¡ ÀÔ·ÂÇÑ 3ÀÚ¸®¼ıÀÚ¸¦ my ¹è¿­¿¡ ³Ö±â
-//4. com°ú myÀÇ ¼ıÀÚ¿Í ÀÚ¸®ºñ±³
-//5. ¼ıÀÚ°¡ °°´Ù¸é
-//  5-1. ÀÚ¸®¼ö °°´Ù¸é strike Áõ°¡
-//  5-2. ÀÚ¸®¼ö ´Ù¸£´Ù¸é ball Áõ°¡.
-//6. 5ÀÇ °á°ú
-//  6-1. strike°¡ 3 : 
-//	xxx´Â x¹øÂ°¸¸¿¡ Á¤´äÀÔ´Ï´Ù. 
-//	°è¼Ó(1), Á¾·á(0) : 
-//  6-2. strike°¡ 3ÀÌ ¾Æ´Ï¶ó¸é
-//   1. xxx´Â x½ºÆ®¶óÀÌÅ© xº¼ÀÔ´Ï´Ù. >> 3¹øÀ¸·Î
+//0. com, my 3ìë¦¬ ë°°ì—´.
+//1. com ì„¸ìë¦¬ ë‚œìˆ˜ ë°œìƒ. >> comRandom()
+//2. 1ì˜ ìˆ«ìëŠ” ì¤‘ë³µ ìˆ«ì X
+//            0ìœ¼ë¡œ ì‹œì‘ X
+//3. ë‚´ê°€ ì…ë ¥í•œ 3ìë¦¬ìˆ«ìë¥¼ my ë°°ì—´ì— ë„£ê¸°
+//4. comê³¼ myì˜ ìˆ«ìì™€ ìë¦¬ë¹„êµ
+//5. ìˆ«ìê°€ ê°™ë‹¤ë©´
+//  5-1. ìë¦¬ìˆ˜ ê°™ë‹¤ë©´ strike ì¦ê°€
+//  5-2. ìë¦¬ìˆ˜ ë‹¤ë¥´ë‹¤ë©´ ball ì¦ê°€.
+//6. 5ì˜ ê²°ê³¼
+//  6-1. strikeê°€ 3 : 
+//	xxxëŠ” xë²ˆì§¸ë§Œì— ì •ë‹µì…ë‹ˆë‹¤. 
+//	ê³„ì†(1), ì¢…ë£Œ(0) : 
+//  6-2. strikeê°€ 3ì´ ì•„ë‹ˆë¼ë©´
+//   1. xxxëŠ” xìŠ¤íŠ¸ë¼ì´í¬ xë³¼ì…ë‹ˆë‹¤. >> 3ë²ˆìœ¼ë¡œ
 
 
 public class NumberBaseball2 {
@@ -43,7 +43,7 @@ public class NumberBaseball2 {
 		do {
 			com[2] = (int) (Math.random() * 10);
 		}while (com[0] == com[2] || com[1] == com[2]);	
-		System.out.println("ÄÄÅÍ : " + com[0] + com[1] + com[2]);
+		System.out.println("ì»´í„° : " + com[0] + com[1] + com[2]);
 	}
 	
 	private void game() {
@@ -53,18 +53,18 @@ public class NumberBaseball2 {
 		while(true) {
 			strike = 0;
 			ball = 0;
-			System.out.print("¼ıÀÚÀÔ·Â : ");
+			System.out.print("ìˆ«ìì…ë ¥ : ");
 			int myNum = getNumber();//149
 			my[0] = myNum / 100;//1
 			my[1] = myNum / 10 % 10;//4
 			my[2] = myNum % 10;//9
 			
-//			¼ıÀÚ¿Í ÀÚ¸®¼ö ºñ±³
+//			ìˆ«ìì™€ ìë¦¬ìˆ˜ ë¹„êµ
 //			328		149
 			for (int m = 0; m < gameLength; m++) {
 				for (int c = 0; c < gameLength; c++) {
-					if(my[m] == com[c]) { //°°Àº ¼ıÀÚ¶ó¸é..
-						if(m == c)//ÀÚ¸®¼ö °°´Ù¸é...
+					if(my[m] == com[c]) { //ê°™ì€ ìˆ«ìë¼ë©´..
+						if(m == c)//ìë¦¬ìˆ˜ ê°™ë‹¤ë©´...
 							strike++;
 						else
 							ball++;
@@ -74,10 +74,10 @@ public class NumberBaseball2 {
 			count++;
 			
 			
-//			°á°ú
+//			ê²°ê³¼
 			if(strike == 3) {
-				System.out.println(myNum + "À» " + count + "¹ø¸¸¿¡ Á¤´äÀÔ´Ï´Ù.");
-				System.out.print("°è¼Ó(1), Á¾·á(0) : ");
+				System.out.println(myNum + "ì„ " + count + "ë²ˆë§Œì— ì •ë‹µì…ë‹ˆë‹¤.");
+				System.out.print("ê³„ì†(1), ì¢…ë£Œ(0) : ");
 				int num = getNumber();
 				if(num == 1) {
 					comRandom();
@@ -85,11 +85,11 @@ public class NumberBaseball2 {
 //					ball = 0;
 					count = 0;
 				} else {
-					System.out.println("ÇÁ·Î±×·¥À» Á¾·áÇÕ´Ï´Ù.!!!");
+					System.out.println("í”„ë¡œê·¸ë¨ì„ ì¢…ë£Œí•©ë‹ˆë‹¤.!!!");
 					System.exit(0);
 				}
 			} else {
-				System.out.println(count + ". " + myNum + "Àº " + strike + "½ºÆ®¶óÀÌÅ© " + ball + "º¼ÀÔ´Ï´Ù.");
+				System.out.println(count + ". " + myNum + "ì€ " + strike + "ìŠ¤íŠ¸ë¼ì´í¬ " + ball + "ë³¼ì…ë‹ˆë‹¤.");
 			}
 		}
 	}

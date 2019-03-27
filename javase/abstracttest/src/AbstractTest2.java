@@ -1,7 +1,7 @@
 public class AbstractTest2 {
     public static void main(String[] args) throws Exception{
         
-        //3. ¿ÜºÎÅ¬·¡½º ÂüÁ¶
+        //3. ì™¸ë¶€í´ë˜ìŠ¤ ì°¸ì¡°
         Runtime r = Runtime.getRuntime();
         Process p = r.exec("calc");
         System.out.println("");

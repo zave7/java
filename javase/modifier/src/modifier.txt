@@ -1,14 +1,14 @@
-¼öÁ¤ÀÚ (modifier)
+ìˆ˜ì •ì (modifier)
 1. abstract
-2. static : °øÀ¯ //´ÙÀ½ È£Ãâ¿¡ ¿µÇâÀ» ÁÖÁö ¾ÊÀ» ¶§ »ç¿ëÇÑ´Ù
+2. static : ê³µìœ  //ë‹¤ìŒ í˜¸ì¶œì— ì˜í–¥ì„ ì£¼ì§€ ì•Šì„ ë•Œ ì‚¬ìš©í•œë‹¤
 3. final
-	a. class    : ÀÌ Å¬·¡½º´Â »ó¼Ó ºÒ°¡
-	b. method   : override ºÒ°¡
-	c. variable : »ó¼ö
+	a. class    : ì´ í´ë˜ìŠ¤ëŠ” ìƒì† ë¶ˆê°€
+	b. method   : override ë¶ˆê°€
+	c. variable : ìƒìˆ˜
 
 		abstarct	static			final
 
-class		O		X(inner classÁ¦¿Ü)	O
+class		O		X(inner classì œì™¸)	O
 method		O		O			O
 variable	X		O			O
 

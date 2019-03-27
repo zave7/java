@@ -1,11 +1,11 @@
 public class WhileTest1 {
     public static void main(String[] args) {
-        System.out.println("1-10 ±îÁö Ãâ·Â");
+        System.out.println("1-10 ê¹Œì§€ ì¶œë ¥");
         int i = 0;
         while(i < 10) {
             System.out.println(++i);
         }
-        System.out.println("1-10 ±îÁöÀÇ ³­¼ö¸¦ ¹ß»ı");
+        System.out.println("1-10 ê¹Œì§€ì˜ ë‚œìˆ˜ë¥¼ ë°œìƒ");
         boolean flag = true;
         int n=0;
         while(flag) {
@@ -14,7 +14,7 @@ public class WhileTest1 {
             if(number != 0) {
                 System.out.println("number == " + number);
             } else {
-                System.out.println("0ÀÌ ¹ß»ı(" + n + "¹øÂ°)µÇ¾î ÇÁ·Î±×·¥À» Á¾·áÇÕ´Ï´Ù");
+                System.out.println("0ì´ ë°œìƒ(" + n + "ë²ˆì§¸)ë˜ì–´ í”„ë¡œê·¸ë¨ì„ ì¢…ë£Œí•©ë‹ˆë‹¤");
                 flag = false;
             }
         }

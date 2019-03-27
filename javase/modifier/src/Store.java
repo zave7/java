@@ -1,33 +1,33 @@
 public class Store {
     public static void main(String[] args) {
 
-        PointCard p1 = new PointCard("¹Ú¹Ì·¡");
-        PointCard p2 = new PointCard("È²¼±Çı");
-        System.out.println(p1.name + "´Ô ¹°°Ç ±¸¸Å");
+        PointCard p1 = new PointCard("ë°•ë¯¸ë˜");
+        PointCard p2 = new PointCard("í™©ì„ í˜œ");
+        System.out.println(p1.name + "ë‹˜ ë¬¼ê±´ êµ¬ë§¤");
         int point = p1.visit();
-        System.out.println(p1.name + "´ÔÀÇ Æ÷ÀÎÆ®´Â " + point + "ÀÔ´Ï´Ù.");
-        System.out.println(p2.name + "´Ô ¹°°Ç ±¸¸Å");
+        System.out.println(p1.name + "ë‹˜ì˜ í¬ì¸íŠ¸ëŠ” " + point + "ì…ë‹ˆë‹¤.");
+        System.out.println(p2.name + "ë‹˜ ë¬¼ê±´ êµ¬ë§¤");
         point = p2.visit();
-        System.out.println(p2.name + "´ÔÀÇ Æ÷ÀÎÆ®´Â " + point + "ÀÔ´Ï´Ù.");
-        System.out.println(p2.name + "´Ô ¹°°Ç ±¸¸Å");
+        System.out.println(p2.name + "ë‹˜ì˜ í¬ì¸íŠ¸ëŠ” " + point + "ì…ë‹ˆë‹¤.");
+        System.out.println(p2.name + "ë‹˜ ë¬¼ê±´ êµ¬ë§¤");
         point = p2.visit();
-        System.out.println(p2.name + "´ÔÀÇ Æ÷ÀÎÆ®´Â " + point + "ÀÔ´Ï´Ù.");
+        System.out.println(p2.name + "ë‹˜ì˜ í¬ì¸íŠ¸ëŠ” " + point + "ì…ë‹ˆë‹¤.");
         System.out.println("----------------------------------------------");
 
 
 
 
-        Guest g1 = new Guest("¹Ú¹Ì·¡");
-        Guest g2 = new Guest("È²¼±Çı");
-        System.out.println(g1.name + "´Ô ¹æ¹®");
+        Guest g1 = new Guest("ë°•ë¯¸ë˜");
+        Guest g2 = new Guest("í™©ì„ í˜œ");
+        System.out.println(g1.name + "ë‹˜ ë°©ë¬¸");
         int count = g1.visit();
-        System.out.println(g1.name + "´ÔÀº " + g1.cnt + "¹øÂ° ¹æ¹®ÀÚÀÔ´Ï´Ù.");
-        System.out.println(g2.name + "´Ô ¹æ¹®");
+        System.out.println(g1.name + "ë‹˜ì€ " + g1.cnt + "ë²ˆì§¸ ë°©ë¬¸ìì…ë‹ˆë‹¤.");
+        System.out.println(g2.name + "ë‹˜ ë°©ë¬¸");
         count = g2.visit();
-        System.out.println(g2.name + "´ÔÀº " + g2.cnt + "¹øÂ° ¹æ¹®ÀÚÀÔ´Ï´Ù.");
-        System.out.println(g2.name + "´Ô ¹æ¹®");
+        System.out.println(g2.name + "ë‹˜ì€ " + g2.cnt + "ë²ˆì§¸ ë°©ë¬¸ìì…ë‹ˆë‹¤.");
+        System.out.println(g2.name + "ë‹˜ ë°©ë¬¸");
         count = g2.visit();
-        System.out.println(g2.name + "´ÔÀº " + g2.cnt + "¹øÂ° ¹æ¹®ÀÚÀÔ´Ï´Ù.");
+        System.out.println(g2.name + "ë‹˜ì€ " + g2.cnt + "ë²ˆì§¸ ë°©ë¬¸ìì…ë‹ˆë‹¤.");
 
     }
 }

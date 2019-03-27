@@ -4,14 +4,14 @@ import com.kitri.car.Car;
 
 public class CarUser {
 	public static void main(String[] args) {
-		Car car = new Car("½î³ªÅ¸", "°ËÁ¤»ö", "Çö´ë");
+		Car car = new Car("ì˜ë‚˜íƒ€", "ê²€ì •ìƒ‰", "í˜„ëŒ€");
 
-		System.out.println("ÀÌ¸§ : " + car.getName());
-		System.out.println("ÀÌ¸§ : " + car.getColor());
-		System.out.println("ÀÌ¸§ : " + car.getMaker());
-		car.setColor("»¡°­");
-		System.out.println("ÀÌ¸§ : " + car.getColor());
+		System.out.println("ì´ë¦„ : " + car.getName());
+		System.out.println("ì´ë¦„ : " + car.getColor());
+		System.out.println("ì´ë¦„ : " + car.getMaker());
+		car.setColor("ë¹¨ê°•");
+		System.out.println("ì´ë¦„ : " + car.getColor());
 		System.out.println(car);
 	}
 }
-//ÀÌÅ¬¸³½º ´ÜÃàÅ° Alt ¾Æ·¡ ¶Ç´Â À§¹æÇâÅ°
+//ì´í´ë¦½ìŠ¤ ë‹¨ì¶•í‚¤ Alt ì•„ë˜ ë˜ëŠ” ìœ„ë°©í–¥í‚¤

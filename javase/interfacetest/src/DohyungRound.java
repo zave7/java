@@ -1,4 +1,4 @@
 public interface DohyungRound {
-    int x = 10; // ÄÄÆÄÀÏ ½Ã¿¡´Â ¹®Á¦°¡ ¾øÁö¸¸ °ªÀ» º¯°æÇÏ·Á ÇÒ¶§ ¿¡·¯°¡ ³­´Ù public static final »ı·«
-    double getRound(); //public static »ı·«
+    int x = 10; // ì»´íŒŒì¼ ì‹œì—ëŠ” ë¬¸ì œê°€ ì—†ì§€ë§Œ ê°’ì„ ë³€ê²½í•˜ë ¤ í• ë•Œ ì—ëŸ¬ê°€ ë‚œë‹¤ public static final ìƒëµ
+    double getRound(); //public static ìƒëµ
 }

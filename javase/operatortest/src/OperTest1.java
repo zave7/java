@@ -15,16 +15,16 @@ public class OperTest1
 
 		char c = 'a';
 		System.out.println("c == " + c);
-		System.out.println((int)c); // °­Á¦ Çüº¯È¯
+		System.out.println((int)c); // ê°•ì œ í˜•ë³€í™˜
 
 		int y = c;
-		System.out.println("y == " + y); //ÀÚµ¿ Çüº¯È¯
+		System.out.println("y == " + y); //ìë™ í˜•ë³€í™˜
 
 		c = (char)y;
 		System.out.println("c == " + c);
 
 		boolean b = true;
-		//int z = b; //error Çü º¯È¯Àº type º¯È¯ÀÌ °¡´ÉÇÑ °Í¸¸ µÈ´Ù.
+		//int z = b; //error í˜• ë³€í™˜ì€ type ë³€í™˜ì´ ê°€ëŠ¥í•œ ê²ƒë§Œ ëœë‹¤.
 
 		int p = 30;
 		double d = p;

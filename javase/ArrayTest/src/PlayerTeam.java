@@ -1,31 +1,31 @@
-//0 Áö¸íÅ¸ÀÚ
-//1 Åõ¼ö
-//2 Æ÷¼ö
-//3 1·ç¼ö
-//4 2·ç¼ö
-//5 3·ç¼ö
-//6 À¯°İ¼ö
-//7 ÁÂÀÍ¼ö
-//8 Áß°ß¼ö
-//9 ¿ìÀÍ¼ö
-//Å¸ÀÚ : Å¸À²
-//Åõ¼ö : ¹æ¾îÀ²
+//0 ì§€ëª…íƒ€ì
+//1 íˆ¬ìˆ˜
+//2 í¬ìˆ˜
+//3 1ë£¨ìˆ˜
+//4 2ë£¨ìˆ˜
+//5 3ë£¨ìˆ˜
+//6 ìœ ê²©ìˆ˜
+//7 ì¢Œìµìˆ˜
+//8 ì¤‘ê²¬ìˆ˜
+//9 ìš°ìµìˆ˜
+//íƒ€ì : íƒ€ìœ¨
+//íˆ¬ìˆ˜ : ë°©ì–´ìœ¨
 public class PlayerTeam {
 	public static void main(String[] args) {
 		
 		PlayerDto player[] = new PlayerDto[5];
-		PlayerDto t1 = new PlayerDto(24,"¿ÀÀç¿ø", 4, 0.321);
-		PlayerDto t2 = new PlayerDto(13, "Çã°æ¹Î", 5, 0.351);
-		PlayerDto t3 = new PlayerDto(34, "¸°µåºí·³", 1, 0.001);
-		PlayerDto t4 = new PlayerDto(9, "Æä¸£³­µ¥½º", 3, 0.421);
-		PlayerDto t5 = new PlayerDto(38, "±è´ëÇÑ", 7, 0.384);
+		PlayerDto t1 = new PlayerDto(24,"ì˜¤ì¬ì›", 4, 0.321);
+		PlayerDto t2 = new PlayerDto(13, "í—ˆê²½ë¯¼", 5, 0.351);
+		PlayerDto t3 = new PlayerDto(34, "ë¦°ë“œë¸”ëŸ¼", 1, 0.001);
+		PlayerDto t4 = new PlayerDto(9, "í˜ë¥´ë‚œë°ìŠ¤", 3, 0.421);
+		PlayerDto t5 = new PlayerDto(38, "ê¹€ëŒ€í•œ", 7, 0.384);
 		player[0] = t1;
 		player[1] = t2;
 		player[2] = t3;
 		player[3] = t4;
 		player[4] = t5;
 		
-		int len = player.length; //for¹®¿¡¼­ ÇÑ¹ø¿¡ ºñ±³ÇÏÁö ¸¶¶ó º¯¼ö¿¡ ÀúÀåÇØ¼­ ºñ±³
+		int len = player.length; //forë¬¸ì—ì„œ í•œë²ˆì— ë¹„êµí•˜ì§€ ë§ˆë¼ ë³€ìˆ˜ì— ì €ì¥í•´ì„œ ë¹„êµ
 		for (int i = 0; i < len; i++) {
 			System.out.println(player[i]);
 		}

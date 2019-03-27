@@ -5,7 +5,7 @@ public class OperTest5 {
 		System.out.println("1. x = " + x);
 		x = 10;
 		System.out.println("2. x = " + x);
-		x += 5; // x = x + 5; ¿¬»êÀ» ÇÑ¹ø¸¸ ÇÑ´Ù
+		x += 5; // x = x + 5; ì—°ì‚°ì„ í•œë²ˆë§Œ í•œë‹¤
 		System.out.println("3. x = " + x);
 		x -= 5;
 		System.out.println("4. x = " + x);

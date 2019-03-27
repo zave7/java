@@ -1,14 +1,14 @@
 public class OperTest4 {
 	public static void main(String[] args) {
 		int jumin = 1;
-		String gender = jumin % 2 == 0 ? "¿©ÀÚ" : "³²ÀÚ"; // »ïÇ× ¿¬»êÀÚ
+		String gender = jumin % 2 == 0 ? "ì—¬ì" : "ë‚¨ì"; // ì‚¼í•­ ì—°ì‚°ì
 		System.out.println(gender);
 
-		//Á¡¼ö°¡ 80 ÀÌ»óÀÌ¸é ÇÕ°İ, 80 ¹Ì¸¸ÀÌ¸é ºÒÇÕ°İ
-		//´ç½ÅÀÇ Á¡¼ö´Â xxÀÌ¹Ç·Î xxÀÔ´Ï´Ù.
+		//ì ìˆ˜ê°€ 80 ì´ìƒì´ë©´ í•©ê²©, 80 ë¯¸ë§Œì´ë©´ ë¶ˆí•©ê²©
+		//ë‹¹ì‹ ì˜ ì ìˆ˜ëŠ” xxì´ë¯€ë¡œ xxì…ë‹ˆë‹¤.
 
 		int score = 79;
-		String passCheck = score >= 80 ? "ÇÕ°İ" : "ºÒÇÕ°İ";
-		System.out.println("´ç½ÅÀÇ Á¡¼ö´Â " + score + "Á¡ÀÌ¹Ç·Î " + passCheck + "ÀÔ´Ï´Ù.");
+		String passCheck = score >= 80 ? "í•©ê²©" : "ë¶ˆí•©ê²©";
+		System.out.println("ë‹¹ì‹ ì˜ ì ìˆ˜ëŠ” " + score + "ì ì´ë¯€ë¡œ " + passCheck + "ì…ë‹ˆë‹¤.");
 	}
 }

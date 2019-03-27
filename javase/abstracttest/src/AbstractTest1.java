@@ -2,10 +2,10 @@ import java.util.*;
 
 public class AbstractTest1 {
 	public static void main(String[] args) {
-		// api¹®¼­¸¦ º¼¶§ Ç×»ó Å¬·¡½º Á¾·ù¿Í »ı¼ºÀÚ, ´ÙÀÌ·ºÆ® ¼­ºêÅ¬·¡½º¸¦ È®ÀÎ
-		// 1. ÇÏÀ§ Å¬·¡½º ÂüÁ¶
+		// apië¬¸ì„œë¥¼ ë³¼ë•Œ í•­ìƒ í´ë˜ìŠ¤ ì¢…ë¥˜ì™€ ìƒì„±ì, ë‹¤ì´ë ‰íŠ¸ ì„œë¸Œí´ë˜ìŠ¤ë¥¼ í™•ì¸
+		// 1. í•˜ìœ„ í´ë˜ìŠ¤ ì°¸ì¡°
 		// Calendar car = new GregorianCalendar();
-		// 2. ÀÚ½ÅÀÇ °´Ã¼¸¦ return ÇÏ´Â static method.
+		// 2. ìì‹ ì˜ ê°ì²´ë¥¼ return í•˜ëŠ” static method.
 		Calendar cal = Calendar.getInstance();
 		int y = cal.get(Calendar.YEAR);
 		int m = cal.get(Calendar.MONTH) + 1;
@@ -14,6 +14,6 @@ public class AbstractTest1 {
 		int mi = cal.get(Calendar.MINUTE);
 		int s = cal.get(Calendar.SECOND);
 
-		System.out.println(y + "³â " + m + "¿ù " + d + "ÀÏ " + h + "½Ã " + mi + "ºĞ " + s + "ÃÊ");
+		System.out.println(y + "ë…„ " + m + "ì›” " + d + "ì¼ " + h + "ì‹œ " + mi + "ë¶„ " + s + "ì´ˆ");
 	}
 }

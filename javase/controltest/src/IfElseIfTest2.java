@@ -1,17 +1,17 @@
 /*
-score(Á¡¼ö) °¡
-	90ÀÌ»óÀÌ¸é ÇÐÁ¡Àº A
-	80ÀÌ»óÀÌ¸é ÇÐÁ¡Àº B
-	70ÀÌ»óÀÌ¸é ÇÐÁ¡Àº C
-	60ÀÌ»óÀÌ¸é ÇÐÁ¡Àº D
-	60¹Ì¸¸ÀÌ¸é ÇÐÁ¡Àº F
-X5Á¡ ÀÌ»óÀÌ¸é X+
-°á°ú : Á¡¼ö°¡ xxÁ¡ ÀÌ¹Ç·Î xÇÐÁ¡ÀÔ´Ï´Ù.
+score(ì ìˆ˜) ê°€
+	90ì´ìƒì´ë©´ í•™ì ì€ A
+	80ì´ìƒì´ë©´ í•™ì ì€ B
+	70ì´ìƒì´ë©´ í•™ì ì€ C
+	60ì´ìƒì´ë©´ í•™ì ì€ D
+	60ë¯¸ë§Œì´ë©´ í•™ì ì€ F
+X5ì  ì´ìƒì´ë©´ X+
+ê²°ê³¼ : ì ìˆ˜ê°€ xxì  ì´ë¯€ë¡œ xí•™ì ìž…ë‹ˆë‹¤.
 
-º¯¼ö	int score
+ë³€ìˆ˜	int score
 		char grade
 
-»ç¿ëÇÒ ¹®¹ý if
+ì‚¬ìš©í•  ë¬¸ë²• if
 */
 
 public class IfElseIfTest2 {
@@ -33,6 +33,6 @@ public class IfElseIfTest2 {
 			grade += "+";
 			//grade = "A" + "+";
 		}
-		System.out.println("°á°ú : Á¡¼ö°¡ " + score + "Á¡ ÀÌ¹Ç·Î " + grade + "ÇÐÁ¡ÀÔ´Ï´Ù.");
+		System.out.println("ê²°ê³¼ : ì ìˆ˜ê°€ " + score + "ì  ì´ë¯€ë¡œ " + grade + "í•™ì ìž…ë‹ˆë‹¤.");
 	}
 }

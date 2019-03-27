@@ -1,17 +1,17 @@
 /*
-score(Á¡¼ö) °¡
-	90ÀÌ»óÀÌ¸é ÇĞÁ¡Àº A
-	80ÀÌ»óÀÌ¸é ÇĞÁ¡Àº B
-	70ÀÌ»óÀÌ¸é ÇĞÁ¡Àº C
-	60ÀÌ»óÀÌ¸é ÇĞÁ¡Àº D
-	60¹Ì¸¸ÀÌ¸é ÇĞÁ¡Àº F
-X5Á¡ ÀÌ»óÀÌ¸é X+
-°á°ú : Á¡¼ö°¡ xxÁ¡ ÀÌ¹Ç·Î xÇĞÁ¡ÀÔ´Ï´Ù.
+score(ì ìˆ˜) ê°€
+	90ì´ìƒì´ë©´ í•™ì ì€ A
+	80ì´ìƒì´ë©´ í•™ì ì€ B
+	70ì´ìƒì´ë©´ í•™ì ì€ C
+	60ì´ìƒì´ë©´ í•™ì ì€ D
+	60ë¯¸ë§Œì´ë©´ í•™ì ì€ F
+X5ì  ì´ìƒì´ë©´ X+
+ê²°ê³¼ : ì ìˆ˜ê°€ xxì  ì´ë¯€ë¡œ xí•™ì ì…ë‹ˆë‹¤.
 
-º¯¼ö	int score
+ë³€ìˆ˜	int score
 		char grade
 
-»ç¿ëÇÒ ¹®¹ı if
+ì‚¬ìš©í•  ë¬¸ë²• if
 */
 public class SwitchTest2 {
 	public static void main(String[] args) {
@@ -28,6 +28,6 @@ public class SwitchTest2 {
 			if(score > 60 && (score % 10 >= 5 || score == 100)) {
 				grade += "+";
 			}
-			System.out.println("ÇĞÁ¡ : " + grade);
+			System.out.println("í•™ì  : " + grade);
 	}
 }

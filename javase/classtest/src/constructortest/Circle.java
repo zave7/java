@@ -1,8 +1,8 @@
 package constructortest;
 /*
-1. ¹İÁö¸§ radius
-2. ³ĞÀÌ : calcArea()
-   µÑ·¹ : calcRound()
+1. ë°˜ì§€ë¦„ radius
+2. ë„“ì´ : calcArea()
+   ë‘˜ë ˆ : calcRound()
 */
 public class Circle {
     int radius;
@@ -19,7 +19,7 @@ public class Circle {
         return Math.PI * (radius ^ 2);
     }
     double calcRound() {
-        //static int test = 5; ¸Ş¼Òµå ¾È¿¡´Â ½ºÅÂÆ½ ¼±¾ğ ºÒ°¡
+        //static int test = 5; ë©”ì†Œë“œ ì•ˆì—ëŠ” ìŠ¤íƒœí‹± ì„ ì–¸ ë¶ˆê°€
         return Math.PI * radius;
     }
 }

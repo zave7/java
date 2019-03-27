@@ -7,7 +7,7 @@ public class Test {
         in = new BufferedReader(new InputStreamReader(System.in));
     }
     public void game() throws Exception {
-        System.out.print("0 1 2 ÀÔ·Â : ");
+        System.out.print("0 1 2 ìž…ë ¥ : ");
         int my = Integer.parseInt(in.readLine());
         System.out.println("my === " + my);
     }

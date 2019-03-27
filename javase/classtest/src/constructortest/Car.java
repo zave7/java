@@ -7,34 +7,34 @@ public class Car extends Object{
     int speed;
     char test;
 
-    //this() ´Â »ı¼ºÀÚÀÇ ¸Ç Ã¹¹øÂ° ½ÇÇà¹®¿¡¼­¸¸ ½ÇÇà°¡´ÉÇÏ´Ù. Áï ¸Ç Ã³À½ ´Ü ÇÑ¹ø
-    // »ı¼ºÀÚÀÇ ±â´É : °´Ã¼¸¦ ¸Ş¸ğ¸®¿¡ ¿Ã¸°´Ù
-    // ÃÊ±âÈ­ ÀÛ¾÷À» ÇÑ´Ù
+    //this() ëŠ” ìƒì„±ìì˜ ë§¨ ì²«ë²ˆì§¸ ì‹¤í–‰ë¬¸ì—ì„œë§Œ ì‹¤í–‰ê°€ëŠ¥í•˜ë‹¤. ì¦‰ ë§¨ ì²˜ìŒ ë‹¨ í•œë²ˆ
+    // ìƒì„±ìì˜ ê¸°ëŠ¥ : ê°ì²´ë¥¼ ë©”ëª¨ë¦¬ì— ì˜¬ë¦°ë‹¤
+    // ì´ˆê¸°í™” ì‘ì—…ì„ í•œë‹¤
 
     public Car() {
-        /*carName = "½î³ªÅ¸";
-        color = "°ËÁ¤";
-        maker = "Çö´ë";
+        /*carName = "ì˜ë‚˜íƒ€";
+        color = "ê²€ì •";
+        maker = "í˜„ëŒ€";
         //test = 'a';
         */
-        this("123", "color", "Çö´ë");
+        this("123", "color", "í˜„ëŒ€");
     }
     public Car(String color) {
         /*
-        carName = "½î³ªÅ¸"; //this jvm ÀÌ ¾Ë¾Æ¼­ ºÙ¿©ÁØ´Ù
+        carName = "ì˜ë‚˜íƒ€"; //this jvm ì´ ì•Œì•„ì„œ ë¶™ì—¬ì¤€ë‹¤
         this.color = color;
-        maker = "Çö´ë";
+        maker = "í˜„ëŒ€";
         //test = 'a';
         */      
-        this("123", color, "Çö´ë");
+        this("123", color, "í˜„ëŒ€");
     }
     public Car(String carName, String color) {
         /*
         this.carName = carName;
         this.color = color;
-        maker = "Çö´ë";
+        maker = "í˜„ëŒ€";
         */
-        this(carName, color, "Çö´ë");
+        this(carName, color, "í˜„ëŒ€");
     }
     public Car(String carName, String color, String maker) {
         this.carName = carName;
@@ -72,6 +72,6 @@ public class Car extends Object{
     }
 
     public String toString() {
-        return "Â÷ ÀÌ¸§ : " + carName + "  »ö»ó : " + color + "  Á¦Á¶»ç : " + maker;
+        return "ì°¨ ì´ë¦„ : " + carName + "  ìƒ‰ìƒ : " + color + "  ì œì¡°ì‚¬ : " + maker;
     }
 }

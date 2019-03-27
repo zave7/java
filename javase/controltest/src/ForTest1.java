@@ -5,11 +5,11 @@ public class ForTest1 {
 			System.out.print(i + "\t");
 		}
         */
-        //1~10 È¦¼ö¸¸
+        //1~10 í™€ìˆ˜ë§Œ
         for(int i=1; i<=10; i+=2) {
             System.out.println(i + "  ");
         }
-        //1~100 10°³ ´ÜÀ§·Î ÁÙ¹Ù²Þ
+        //1~100 10ê°œ ë‹¨ìœ„ë¡œ ì¤„ë°”ê¿ˆ
         for(int i=1; i<=100; i++) {
             System.out.print(i+"  ");
             if(i%10==0) {

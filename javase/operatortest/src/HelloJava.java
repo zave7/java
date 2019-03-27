@@ -3,9 +3,9 @@ public class HelloJava {
 	public static void main(String args[]) {
 
 		System.out.println("Hello Java!!");
-		System.out.print("¾È³ç");
-		System.out.println(" ÀÚ¹Ù !!");
-		System.out.println("--ÇÁ·Î±×·¥ Á¾·á--");
+		System.out.print("ì•ˆë…•");
+		System.out.println(" ìë°” !!");
+		System.out.println("--í”„ë¡œê·¸ë¨ ì¢…ë£Œ--");
 
 	}
 

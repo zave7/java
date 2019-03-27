@@ -1,21 +1,21 @@
 public class SmartPhoneTest {
     public static void main(String[] args) {
-        SmartPhone samsung1 = new SmartPhone("»ï¼º", "°¶·°½Ã³ëÆ®2", 850000);
-        SmartPhone iPhone = new SmartPhone("¾ÖÇÃ", "¾ÆÀÌÆù5", 740000, 30);
-        SmartPhone samsung2 = new SmartPhone("»ï¼º", "°¶·°½ÃS3", 750000, 35);
+        SmartPhone samsung1 = new SmartPhone("ì‚¼ì„±", "ê°¤ëŸ­ì‹œë…¸íŠ¸2", 850000);
+        SmartPhone iPhone = new SmartPhone("ì• í”Œ", "ì•„ì´í°5", 740000, 30);
+        SmartPhone samsung2 = new SmartPhone("ì‚¼ì„±", "ê°¤ëŸ­ì‹œS3", 750000, 35);
     
-        System.out.println("=== Á¦Ç°¸ñ·Ï ===");
+        System.out.println("=== ì œí’ˆëª©ë¡ ===");
         System.out.println("------------------");
         System.out.println(samsung1.getName() + " [" + samsung1.getMaker() +"]");
-        System.out.println("°¡°İ : " + samsung1.getPrice());
+        System.out.println("ê°€ê²© : " + samsung1.getPrice());
         samsung1.printDiscountPrice();
         System.out.println("------------------");
         System.out.println(iPhone.getName() + " [" + iPhone.getMaker() +"]");
-        System.out.println("°¡°İ : " + iPhone.getPrice());
+        System.out.println("ê°€ê²© : " + iPhone.getPrice());
         iPhone.printDiscountPrice();
         System.out.println("------------------");
         System.out.println(samsung2.getName() + " [" + samsung2.getMaker() +"]");
-        System.out.println("°¡°İ : " + samsung2.getPrice());
+        System.out.println("ê°€ê²© : " + samsung2.getPrice());
         samsung2.printDiscountPrice();
     }
 }

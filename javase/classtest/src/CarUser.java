@@ -4,41 +4,41 @@ public class CarUser {
         Car car1 = new Car();
 
         
-        System.out.println("1. Â÷ ÀÌ¸§ : " + car1.carName + "\t\t\t\t»ö»ó : " + car1.color + "\t\t\t\tÁ¦Á¶»ç : " + car1.maker);
-        car1.carName = "½î³ªÅ¸";
+        System.out.println("1. ì°¨ ì´ë¦„ : " + car1.carName + "\t\t\t\tìƒ‰ìƒ : " + car1.color + "\t\t\t\tì œì¡°ì‚¬ : " + car1.maker);
+        car1.carName = "ì˜ë‚˜íƒ€";
         car1.color = "blue";
-        car1.maker = "Çö´ë";
-        System.out.println("2. Â÷ ÀÌ¸§ : " + car1.carName + "\t\t\t\t»ö»ó : " + car1.color + "\t\t\t\tÁ¦Á¶»ç : " + car1.maker);
+        car1.maker = "í˜„ëŒ€";
+        System.out.println("2. ì°¨ ì´ë¦„ : " + car1.carName + "\t\t\t\tìƒ‰ìƒ : " + car1.color + "\t\t\t\tì œì¡°ì‚¬ : " + car1.maker);
         
         Car car2 = new Car();
-        System.out.println("z. Â÷ ÀÌ¸§ : " + car2.carName + "\t\t\t\t»ö»ó : " + car2.color + "\t\t\t\tÁ¦Á¶»ç : " + car2.maker);
-        car2.carName = "123Å¸";
+        System.out.println("z. ì°¨ ì´ë¦„ : " + car2.carName + "\t\t\t\tìƒ‰ìƒ : " + car2.color + "\t\t\t\tì œì¡°ì‚¬ : " + car2.maker);
+        car2.carName = "123íƒ€";
         car2.color = "b123lue";
-        car2.maker = "±â¾Æ";
-        System.out.println("z. Â÷ ÀÌ¸§ : " + car2.carName + "\t\t\t\t»ö»ó : " + car2.color + "\t\t\t\tÁ¦Á¶»ç : " + car2.maker);
+        car2.maker = "ê¸°ì•„";
+        System.out.println("z. ì°¨ ì´ë¦„ : " + car2.carName + "\t\t\t\tìƒ‰ìƒ : " + car2.color + "\t\t\t\tì œì¡°ì‚¬ : " + car2.maker);
 
         System.out.println(car1);
         System.out.println(car2);
 
-        System.out.println("ÃÖÃÊ " + car1.carName + "ÀÇ ¼Óµµ : " + car1.speed);
-        System.out.println("car1ÀÇ ¼Óµµ¸¦ 2È¸ Áõ°¡");
+        System.out.println("ìµœì´ˆ " + car1.carName + "ì˜ ì†ë„ : " + car1.speed);
+        System.out.println("car1ì˜ ì†ë„ë¥¼ 2íšŒ ì¦ê°€");
         car1.speedUp();
         car1.speedUp();
-        System.out.println("¼Óµµ 2È¸ Áõ°¡ ÈÄ " + car1.carName + "ÀÇ ¼Óµµ : " + car1.speed);
-        System.out.println("car1ÀÇ ¼Óµµ¸¦ 8È¸ Áõ°¡");
+        System.out.println("ì†ë„ 2íšŒ ì¦ê°€ í›„ " + car1.carName + "ì˜ ì†ë„ : " + car1.speed);
+        System.out.println("car1ì˜ ì†ë„ë¥¼ 8íšŒ ì¦ê°€");
         for(int i=0; i<8; i++) {
             car1.speedUp();
         }
-        System.out.println("¼Óµµ 8È¸ Áõ°¡ ÈÄ " + car1.carName + "ÀÇ ¼Óµµ : " + car1.speed);
-        System.out.println("car1ÀÇ ¼Óµµ¸¦ 4È¸ °¨¼Ò");
+        System.out.println("ì†ë„ 8íšŒ ì¦ê°€ í›„ " + car1.carName + "ì˜ ì†ë„ : " + car1.speed);
+        System.out.println("car1ì˜ ì†ë„ë¥¼ 4íšŒ ê°ì†Œ");
         for(int i=0; i<4; i++) {
             car1.speedDown();
         }
-        System.out.println("¼Óµµ 4È¸ °¨¼Ò ÈÄ " + car1.carName + "ÀÇ ¼Óµµ : " + car1.speed);
-        System.out.println("car1ÀÇ ¼Óµµ¸¦ 10È¸ °¨¼Ò");
+        System.out.println("ì†ë„ 4íšŒ ê°ì†Œ í›„ " + car1.carName + "ì˜ ì†ë„ : " + car1.speed);
+        System.out.println("car1ì˜ ì†ë„ë¥¼ 10íšŒ ê°ì†Œ");
         for(int i=0; i<10; i++) {
             car1.speedDown();
         }
-        System.out.println("¼Óµµ 10È¸ °¨¼Ò ÈÄ " + car1.carName + "ÀÇ ¼Óµµ : " + car1.speed);
+        System.out.println("ì†ë„ 10íšŒ ê°ì†Œ í›„ " + car1.carName + "ì˜ ì†ë„ : " + car1.speed);
     }
 }

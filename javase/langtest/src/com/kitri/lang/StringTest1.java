@@ -4,37 +4,37 @@ public class StringTest1 {
 	public static void main(String args[]) {
 		String s1 = "java";
 		String s2 = "java";
-		String s3 = new String("java"); //  °´Ã¼´Â Èü ¿µ¿ª¿¡ »ı¼ºµÇÁö¸¸ ¸®ÅÍ·² ¿µ¿ª¿¡ ÀÖ´Â ÁÖ¼Ò¸¦ ÂüÁ¶ÇÑ´Ù
+		String s3 = new String("java"); //  ê°ì²´ëŠ” í™ ì˜ì—­ì— ìƒì„±ë˜ì§€ë§Œ ë¦¬í„°ëŸ´ ì˜ì—­ì— ìˆëŠ” ì£¼ì†Œë¥¼ ì°¸ì¡°í•œë‹¤
 		String s4 = new String("java");
 		if(s1 == s2)
-			System.out.println("s1 ÁÖ¼Ò°ªÀÌ °°´Ù s2");//o
+			System.out.println("s1 ì£¼ì†Œê°’ì´ ê°™ë‹¤ s2");//o
 		if(s1 == s3)
-			System.out.println("s1 ÁÖ¼Ò°ªÀÌ °°´Ù s3");//x
+			System.out.println("s1 ì£¼ì†Œê°’ì´ ê°™ë‹¤ s3");//x
 		if(s1 == s4)
-			System.out.println("s1 ÁÖ¼Ò°ªÀÌ °°´Ù s4");//x
+			System.out.println("s1 ì£¼ì†Œê°’ì´ ê°™ë‹¤ s4");//x
 		if(s2 == s3)
-			System.out.println("s2 ÁÖ¼Ò°ªÀÌ °°´Ù s3");//x
+			System.out.println("s2 ì£¼ì†Œê°’ì´ ê°™ë‹¤ s3");//x
 		if(s2 == s4)
-			System.out.println("s2 ÁÖ¼Ò°ªÀÌ °°´Ù s4");//x
+			System.out.println("s2 ì£¼ì†Œê°’ì´ ê°™ë‹¤ s4");//x
 		if(s3 == s4)
-			System.out.println("s3 ÁÖ¼Ò°ªÀÌ °°´Ù s4");//x ÁÖ¼Ò°ªÀ» ºñ±³ÇÑ´Ù
+			System.out.println("s3 ì£¼ì†Œê°’ì´ ê°™ë‹¤ s4");//x ì£¼ì†Œê°’ì„ ë¹„êµí•œë‹¤
 		System.out.println("----------------------------");
 		
-		if(s1.equals(s2)) //ÀÌ°Å´Â °ª ÀÚÃ¼¸¦ ºñ±³ÇÑ´Ù
-			System.out.println("s1 ¹®ÀÚ¿­°ªÀÌ °°´Ù s2");//o
+		if(s1.equals(s2)) //ì´ê±°ëŠ” ê°’ ìì²´ë¥¼ ë¹„êµí•œë‹¤
+			System.out.println("s1 ë¬¸ìì—´ê°’ì´ ê°™ë‹¤ s2");//o
 		if(s1.equals(s3))
-			System.out.println("s1 ¹®ÀÚ¿­°ªÀÌ °°´Ù s3");//o
+			System.out.println("s1 ë¬¸ìì—´ê°’ì´ ê°™ë‹¤ s3");//o
 		if(s1.equals(s4))
-			System.out.println("s1 ¹®ÀÚ¿­°ªÀÌ °°´Ù s4");//o
+			System.out.println("s1 ë¬¸ìì—´ê°’ì´ ê°™ë‹¤ s4");//o
 		if(s2.equals(s4))
-			System.out.println("s2 ¹®ÀÚ¿­°ªÀÌ °°´Ù s3");//o
+			System.out.println("s2 ë¬¸ìì—´ê°’ì´ ê°™ë‹¤ s3");//o
 		if(s2.equals(s4))
-			System.out.println("s2 ¹®ÀÚ¿­°ªÀÌ °°´Ù s4");//o
+			System.out.println("s2 ë¬¸ìì—´ê°’ì´ ê°™ë‹¤ s4");//o
 		if(s3.equals(s4))
-			System.out.println("s3 ¹®ÀÚ¿­°ªÀÌ °°´Ù s4");//o ÁÖ¼Ò°ªÀ» ºñ±³ÇÑ´Ù
+			System.out.println("s3 ë¬¸ìì—´ê°’ì´ ê°™ë‹¤ s4");//o ì£¼ì†Œê°’ì„ ë¹„êµí•œë‹¤
 	}
 } 
-//Èü¿¡´Â ¹®ÀÚ¿­À» ÀúÀåÇÏ´Â º°µµÀÇ °ø°£ÀÌ ÀÖ´Ù
-//¹®ÀÚ¿­À» »ı¼ºÇÒ¶§ ±âÁ¸¿¡ ÀÖ´Â °ª°ú °°Àº °ªÀÌ ÀÖ´ÂÁö ºñ±³ÇÏ°í ¾øÀ¸¸é »ı¼º ÀÖÀ¸¸é ÂüÁ¶
-//ÀúÀåÇÏ´Â ¿µ¿ª ÀÚÃ¼°¡ ´Ù¸£±â ¶§¹®¿¡ ÁÖ¼Ò °ª ºñ±³ ºÒ°¡ 
-//½ºÆ®¸µÀº ºÒº¯ÀÌ´Ù »õ·Î¸¸µé¾îÁ³À¸¸é ¸¸µé¾îÁ³Áö º¯ÇÏÁö ¾Ê´Â´Ù
+//í™ì—ëŠ” ë¬¸ìì—´ì„ ì €ì¥í•˜ëŠ” ë³„ë„ì˜ ê³µê°„ì´ ìˆë‹¤
+//ë¬¸ìì—´ì„ ìƒì„±í• ë•Œ ê¸°ì¡´ì— ìˆëŠ” ê°’ê³¼ ê°™ì€ ê°’ì´ ìˆëŠ”ì§€ ë¹„êµí•˜ê³  ì—†ìœ¼ë©´ ìƒì„± ìˆìœ¼ë©´ ì°¸ì¡°
+//ì €ì¥í•˜ëŠ” ì˜ì—­ ìì²´ê°€ ë‹¤ë¥´ê¸° ë•Œë¬¸ì— ì£¼ì†Œ ê°’ ë¹„êµ ë¶ˆê°€ 
+//ìŠ¤íŠ¸ë§ì€ ë¶ˆë³€ì´ë‹¤ ìƒˆë¡œë§Œë“¤ì–´ì¡Œìœ¼ë©´ ë§Œë“¤ì–´ì¡Œì§€ ë³€í•˜ì§€ ì•ŠëŠ”ë‹¤

@@ -3,52 +3,52 @@ public class TaxiGuest {
         Taxi t1 = new Taxi();
         System.out.println(t1.toString());
 
-        Taxi t2 = new Taxi("k5", "°¨È«»ö", "±â¾Æ");
+        Taxi t2 = new Taxi("k5", "ê°í™ìƒ‰", "ê¸°ì•„");
         System.out.println(t2.toString());
 
         int km;
-        /*System.out.println(t2.toString() + "À»(¸¦) Å¸°í ±¸µğ¿¡¼­ °­³²±îÁö " + km + "km ÀÌµ¿");
+        /*System.out.println(t2.toString() + "ì„(ë¥¼) íƒ€ê³  êµ¬ë””ì—ì„œ ê°•ë‚¨ê¹Œì§€ " + km + "km ì´ë™");
         int price = t2.calcPrice(km);
-        System.out.println("¿ä±İÀº : " + t2.price + "¿ø");
-        System.out.println("´©Àû ¼öÀÍ : " + t2.totalPrice + "¿ø");
+        System.out.println("ìš”ê¸ˆì€ : " + t2.price + "ì›");
+        System.out.println("ëˆ„ì  ìˆ˜ìµ : " + t2.totalPrice + "ì›");
 
         km = 20;
-        System.out.println(t2.toString() + "À»(¸¦) Å¸°í °­³²¿¡¼­ ±¸µğ±îÁö " + km + "km ÀÌµ¿");
+        System.out.println(t2.toString() + "ì„(ë¥¼) íƒ€ê³  ê°•ë‚¨ì—ì„œ êµ¬ë””ê¹Œì§€ " + km + "km ì´ë™");
         price = t2.calcPrice(km);
-        System.out.println("¿ä±İÀº : " + t2.price + "¿ø");
-        System.out.println("´©Àû ¼öÀÍ : " + t2.totalPrice + "¿ø");*/
+        System.out.println("ìš”ê¸ˆì€ : " + t2.price + "ì›");
+        System.out.println("ëˆ„ì  ìˆ˜ìµ : " + t2.totalPrice + "ì›");*/
         km = 10;
         t2.initPrice();
-        System.out.println(t2.toString() + "À»(¸¦) Å¸°í °­³²¿¡¼­ ±¸µğ±îÁö " + km + "km ÀÌµ¿");
+        System.out.println(t2.toString() + "ì„(ë¥¼) íƒ€ê³  ê°•ë‚¨ì—ì„œ êµ¬ë””ê¹Œì§€ " + km + "km ì´ë™");
         t2.sumPrice(km);
-        System.out.println("¿ä±İÀº : " + t2.price + "¿ø");
+        System.out.println("ìš”ê¸ˆì€ : " + t2.price + "ì›");
         t2.initPrice();
         t2.sumPrice(20);
-        System.out.println("¿ä±İÀº : " + t2.price + "¿ø");
-        System.out.println("´©Àû ¼öÀÍ : " + t2.totalPrice + "¿ø");
+        System.out.println("ìš”ê¸ˆì€ : " + t2.price + "ì›");
+        System.out.println("ëˆ„ì  ìˆ˜ìµ : " + t2.totalPrice + "ì›");
 
         int upDown = 50;
-        System.out.println("t2ÀÇ ¼Óµµ¸¦ " + upDown + " ¸¸Å­ °¡¼Ó!!");
+        System.out.println("t2ì˜ ì†ë„ë¥¼ " + upDown + " ë§Œí¼ ê°€ì†!!");
         int speed = t2.speedUp(upDown);
-        System.out.println("t2ÀÇ ¼Óµµ¸¦ " + speed + " " + t2.speed);
+        System.out.println("t2ì˜ ì†ë„ë¥¼ " + speed + " " + t2.speed);
 
         upDown = 250;
-        System.out.println("t2ÀÇ ¼Óµµ¸¦ " + upDown + " ¸¸Å­ °¡¼Ó!!");
+        System.out.println("t2ì˜ ì†ë„ë¥¼ " + upDown + " ë§Œí¼ ê°€ì†!!");
         speed = t2.speedUp(upDown);
-        System.out.println("t2ÀÇ ¼Óµµ¸¦ " + speed + " " + t2.speed);
-        // ¿ÀºêÁ§Æ®¸¸ ¾²¸é ÀÚµ¿À¸·Î toString À» È£ÃâÇÑ´Ù
+        System.out.println("t2ì˜ ì†ë„ë¥¼ " + speed + " " + t2.speed);
+        // ì˜¤ë¸Œì íŠ¸ë§Œ ì“°ë©´ ìë™ìœ¼ë¡œ toString ì„ í˜¸ì¶œí•œë‹¤
 
-        Taxi t3 = new Taxi("k5", "°¨È«»ö", "±â¾Æ");
+        Taxi t3 = new Taxi("k5", "ê°í™ìƒ‰", "ê¸°ì•„");
         System.out.println(t2 + "  " + t3);
         System.out.println(t2.hashCode() + "  " + t3.hashCode());
-        if(t2 == t3) // == ºñ±³¿¬»êÀÚ´Â ±âº» DTÀÏ °æ¿ì¿¡ °ªÀ» ºñ±³¸¸ ÂüÁ¶Çü DT ÁÖ¼Ò°ªÀ» ºñ±³
-            System.out.println("ÁÖ¼Ò °ªÀÌ °°Àº Â÷ÀÌ´Ù");
+        if(t2 == t3) // == ë¹„êµì—°ì‚°ìëŠ” ê¸°ë³¸ DTì¼ ê²½ìš°ì— ê°’ì„ ë¹„êµë§Œ ì°¸ì¡°í˜• DT ì£¼ì†Œê°’ì„ ë¹„êµ
+            System.out.println("ì£¼ì†Œ ê°’ì´ ê°™ì€ ì°¨ì´ë‹¤");
         else
-            System.out.println("ÁÖ¼Ò °ªÀÌ ´Ù¸¥ Â÷ÀÌ´Ù");
-        if(t2.equals(t3)) // == ºñ±³¿¬»êÀÚ´Â ±âº» DTÀÏ °æ¿ì¿¡ °ªÀ» ºñ±³¸¸ ÂüÁ¶Çü DT ÁÖ¼Ò°ªÀ» ºñ±³
-            System.out.println("Â÷ÀÌ¸§ÀÌ °°Àº Â÷ÀÌ´Ù");
+            System.out.println("ì£¼ì†Œ ê°’ì´ ë‹¤ë¥¸ ì°¨ì´ë‹¤");
+        if(t2.equals(t3)) // == ë¹„êµì—°ì‚°ìëŠ” ê¸°ë³¸ DTì¼ ê²½ìš°ì— ê°’ì„ ë¹„êµë§Œ ì°¸ì¡°í˜• DT ì£¼ì†Œê°’ì„ ë¹„êµ
+            System.out.println("ì°¨ì´ë¦„ì´ ê°™ì€ ì°¨ì´ë‹¤");
         else
-            System.out.println("Â÷ÀÌ¸§ÀÌ ´Ù¸¥ Â÷ÀÌ´Ù");
+            System.out.println("ì°¨ì´ë¦„ì´ ë‹¤ë¥¸ ì°¨ì´ë‹¤");
     }
         Car car = new Taxi();
         //System.out.println(car);

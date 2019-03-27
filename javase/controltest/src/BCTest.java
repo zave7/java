@@ -5,7 +5,7 @@ public class BCTest {
             count++;
             int number = (int) (Math.random() * 10);
             if(number == 0) {
-                System.out.println("number°¡ 0ÀÌ ³ª¿Ô½À´Ï´Ù. \n ÇÁ·Î±×·¥ Á¾·áÇÕ´Ï´Ù");
+                System.out.println("numberê°€ 0ì´ ë‚˜ì™”ìŠµë‹ˆë‹¤. \n í”„ë¡œê·¸ë¨ ì¢…ë£Œí•©ë‹ˆë‹¤");
                 break;
             }
             System.out.println("number = " + number);
@@ -16,7 +16,7 @@ public class BCTest {
             count++;
             int number = (int) (Math.random() * 10);
             if(number == 0) {
-                System.out.println("number°¡ 0ÀÌ ³ª¿Ô½À´Ï´Ù \n ´ÙÀ½À¸·Î ÁøÇàÇÕ´Ï´Ù");
+                System.out.println("numberê°€ 0ì´ ë‚˜ì™”ìŠµë‹ˆë‹¤ \n ë‹¤ìŒìœ¼ë¡œ ì§„í–‰í•©ë‹ˆë‹¤");
                 //continue;
         }
         System.out.println(count + ". number = " + number);

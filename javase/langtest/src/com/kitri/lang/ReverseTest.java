@@ -3,9 +3,9 @@ package com.kitri.lang;
 public class ReverseTest {
 	public static void main(String[] args) {
 		String str = "!!! avajjj olleh";
-//		Hello Java !!! ÃÖ¼Ò 3°³ ¸¸µé±â
+//		Hello Java !!! ìµœì†Œ 3ê°œ ë§Œë“¤ê¸°
 //		--------------------------------------------------------------------------------
-//		int len = str.length() - 1;					//»õ·Î¿î char ¹è¿­¿¡  str.charAt() ÀÌ¿ë
+//		int len = str.length() - 1;					//ìƒˆë¡œìš´ char ë°°ì—´ì—  str.charAt() ì´ìš©
 //		char cpStr[] = new char[str.length()];
 //		for (int i = 0; i < str.length(); i++) {
 //			cpStr[i] = str.charAt(len);
@@ -13,9 +13,9 @@ public class ReverseTest {
 //		}
 //		str = String.valueOf(cpStr);
 //		System.out.println(str);
-//		System.out.println("e´Â " + (str.indexOf('e')+1) + "¹øÂ°¿¡ ÀÖ½À´Ï´Ù");
+//		System.out.println("eëŠ” " + (str.indexOf('e')+1) + "ë²ˆì§¸ì— ìˆìŠµë‹ˆë‹¤");
 //		--------------------------------------------------------------------------------
-//		String cpStr = "";								//»õ·Î¿î String¿¡ str.charAt() ÀÌ¿ë
+//		String cpStr = "";								//ìƒˆë¡œìš´ Stringì— str.charAt() ì´ìš©
 //		int len = str.length() - 1;					
 //		for (int i = len; i >= 0; i--) {
 //			cpStr += str.charAt(i);
@@ -23,35 +23,35 @@ public class ReverseTest {
 //		str = cpStr;
 //		System.out.println(str);
 //		
-//		System.out.println("e´Â " + (str.indexOf('e')+1) + "¹øÂ°¿¡ ÀÖ½À´Ï´Ù");
+//		System.out.println("eëŠ” " + (str.indexOf('e')+1) + "ë²ˆì§¸ì— ìˆìŠµë‹ˆë‹¤");
 //		--------------------------------------------------------------------------------
-		char temp;
-		char cpStr[] = str.toCharArray();			//»õ·Î¿î char ¹è¿­¿¡ str.toCharArray() ÀÌ¿ë
-		int len = cpStr.length - 1;
-		for (int i = 0; i <= len; i++) {	
-			temp = cpStr[i];
-			cpStr[i] = cpStr[len-i];
-			cpStr[len-i] = temp;
-			if(len-i*2 <= 2) //len-i-i <= 2
-				break;
-		}
-		str = String.valueOf(cpStr);
-		System.out.println(str);
-		System.out.println("e´Â " + (str.indexOf('e')+1) + "¹øÂ°¿¡ ÀÖ½À´Ï´Ù");
-//		--------------------------------------------------------------------------------
-//		byte temp;
-//		byte cpStr[] = str.getBytes();			//»õ·Î¿î byte ¹è¿­¿¡ str.getBytes() ÀÌ¿ë
-//		int len = cpStr.length - 1;				//ÇÑ±ÛÀÏ °æ¿ì ±úÁø´Ù
-//		for (int i = 0; i <= len; i++) {		
+//		char temp;
+//		char cpStr[] = str.toCharArray();			//ìƒˆë¡œìš´ char ë°°ì—´ì— str.toCharArray() ì´ìš©
+//		int len = cpStr.length - 1;
+//		for (int i = 0; i <= len; i++) {	
 //			temp = cpStr[i];
 //			cpStr[i] = cpStr[len-i];
 //			cpStr[len-i] = temp;
 //			if(len-i*2 <= 2) //len-i-i <= 2
 //				break;
 //		}
-//		str = new String(cpStr);
+//		str = String.valueOf(cpStr);
 //		System.out.println(str);
-//		System.out.println("e´Â " + (str.indexOf('e')+1) + "¹øÂ°¿¡ ÀÖ½À´Ï´Ù");
-//		e´Â 2¹øÂ° ÀÖ½À´Ï´Ù
+//		System.out.println("eëŠ” " + (str.indexOf('e')+1) + "ë²ˆì§¸ì— ìˆìŠµë‹ˆë‹¤");
+//		--------------------------------------------------------------------------------
+		byte temp;
+		byte cpStr[] = str.getBytes();			//ìƒˆë¡œìš´ byte ë°°ì—´ì— str.getBytes() ì´ìš©
+		int len = cpStr.length - 1;				//í•œê¸€ì¼ ê²½ìš° ê¹¨ì§„ë‹¤
+		for (int i = 0; i <= len; i++) {		
+			temp = cpStr[i];
+			cpStr[i] = cpStr[len-i];
+			cpStr[len-i] = temp;
+			if(len-i*2 <= 2) //len-i-i <= 2
+				break;
+		}
+		str = new String(cpStr);
+		System.out.println(str);
+		System.out.println("eëŠ” " + (str.indexOf('e')+1) + "ë²ˆì§¸ì— ìˆìŠµë‹ˆë‹¤");
+//		eëŠ” 2ë²ˆì§¸ ìˆìŠµë‹ˆë‹¤
 	}
 }

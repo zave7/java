@@ -1,87 +1,87 @@
-ÀÚ·áÇü
-º¯¼ö
-¿¬»êÀÚ
-Á¦¾î¹®(Á¶°Ç, ¹Ýº¹)
+ìžë£Œí˜•
+ë³€ìˆ˜
+ì—°ì‚°ìž
+ì œì–´ë¬¸(ì¡°ê±´, ë°˜ë³µ)
 
-** °´Ã¼(Object)
-class : class´Â °´Ã¼¸¦ »ý¼ºÇÏ±â À§ÇÑ Æ²
-Obejct(°´Ã¼)
-		   Object(class) : ÀÚµ¿Â÷(Car)
+** ê°ì²´(Object)
+class : classëŠ” ê°ì²´ë¥¼ ìƒì„±í•˜ê¸° ìœ„í•œ í‹€
+Obejct(ê°ì²´)
+		   Object(class) : ìžë™ì°¨(Car)
 
-	¼Ó¼º(field)			±â´É(method)
+	ì†ì„±(field)			ê¸°ëŠ¥(method)
 	--------------------------------------------
-	Â÷ÀÌ¸§ carName		°¡¼Ó speedUp
-	»ö»ó    color		°¨¼Ó speedDown
-	Á¦Á¶»ç maker		Á¤Áö stop
-	¼Óµµ    speed
+	ì°¨ì´ë¦„ carName		ê°€ì† speedUp
+	ìƒ‰ìƒ    color		ê°ì† speedDown
+	ì œì¡°ì‚¬ maker		ì •ì§€ stop
+	ì†ë„    speed
 	
-method : ±â´É, Çàµ¿, ÇÔ¼ö
-Çü½Ä)
-Á¢±ÙÁ¦¾îÀÚ ReturnType methodName([args]¡¤¡¤¡¤) {
-	½ÇÇà¹®;
-	½ÇÇà¹®;
-	½ÇÇà¹®;
-	return °ª;
+method : ê¸°ëŠ¥, í–‰ë™, í•¨ìˆ˜
+í˜•ì‹)
+ì ‘ê·¼ì œì–´ìž ReturnType methodName([args]Â·Â·Â·) {
+	ì‹¤í–‰ë¬¸;
+	ì‹¤í–‰ë¬¸;
+	ì‹¤í–‰ë¬¸;
+	return ê°’;
 };
 
-- retrun type : ½ÇÇà °á°úÀÇ data type
-		    return ÇÒ °ªÀÌ ¾øÀ» °æ¿ì void 
-- class //Å¬·¡½ºÀÇ Á¢±ÙÁ¦¾îÀÚ´Â public or default
-Á¢±ÙÁ¦¾îÀÚ class ClassName {
-	¼Ó¼º
+- retrun type : ì‹¤í–‰ ê²°ê³¼ì˜ data type
+		    return í•  ê°’ì´ ì—†ì„ ê²½ìš° void 
+- class //í´ëž˜ìŠ¤ì˜ ì ‘ê·¼ì œì–´ìžëŠ” public or default
+ì ‘ê·¼ì œì–´ìž class ClassName {
+	ì†ì„±
 ----------------------------------
-	¸Þ¼Òµå
+	ë©”ì†Œë“œ
 }
 
-** Class ÀÇ »ç¿ë (ÂüÁ¶Çü reference Data type)
-1. ¼±¾ð
-	Çü½Ä)
-	Á¢±ÙÁ¦¾îÀÚ ClassName °´Ã¼¸í;
-	¿¹)
+** Class ì˜ ì‚¬ìš© (ì°¸ì¡°í˜• reference Data type)
+1. ì„ ì–¸
+	í˜•ì‹)
+	ì ‘ê·¼ì œì–´ìž ClassName ê°ì²´ëª…;
+	ì˜ˆ)
 	public String CarName;
 	private Car car;
-2. »ý¼º : memory ¿¡ ÇÒ´ç
-	Çü½Ä)
-	°´Ã¼¸í = new ClassName([args]);
-	ClassName °´Ã¼¸í = new ClassName([args]);
+2. ìƒì„± : memory ì— í• ë‹¹
+	í˜•ì‹)
+	ê°ì²´ëª… = new ClassName([args]);
+	ClassName ê°ì²´ëª… = new ClassName([args]);
 
-	carName = new String("½î³ªÅ¸");
+	carName = new String("ì˜ë‚˜íƒ€");
 	car = new Car();
 
-	>>>>>1, 2 µ¿½Ã¿¡
-	Á¢±ÙÁ¦¾îÀÚ ClassName °´Ã¼¸í = new ClassName();
+	>>>>>1, 2 ë™ì‹œì—
+	ì ‘ê·¼ì œì–´ìž ClassName ê°ì²´ëª… = new ClassName();
 
-3. »ç¿ë
-	Çü½Ä)
-	°´Ã¼¸í.º¯¼ö //get
-	°´Ã¼¸í.º¯¼ö = °ª; //set
-	°´Ã¼¸í.method();
-	¿¹)
+3. ì‚¬ìš©
+	í˜•ì‹)
+	ê°ì²´ëª….ë³€ìˆ˜ //get
+	ê°ì²´ëª….ë³€ìˆ˜ = ê°’; //set
+	ê°ì²´ëª….method();
+	ì˜ˆ)
 	int len = carName.length();
 	car.speed = 100;
 	System.out.println(car.speed); //100
 	gbb.game();
 
-** »ý¼ºÀÚ(Constructor) // °´Ã¼¸¦ ¸Þ¸ð¸®¿¡ ¿Ã¸°´Ù
-¡Ø this() ·Î ÀÚ±âÀÚ½ÅÀÇ »ý¼ºÀÚ¸¦ È£Ãâ ÇÒ ¼ö ÀÖ´Ù
-1. °´Ã¼ »ý¼º½Ã ÃÖÃÊ·Î È£Ãâ. ´Ü, new ¿¬»êÀÚ¿Í ÇÔ²² È£Ãâ.
-2. °´Ã¼ »ý¼º½Ã °´Ã¼ÀÇ ÃÊ±âÈ­ ÀÛ¾÷.
-3. »ç¿ëÀÚ Á¤ÀÇ »ý¼ºÀÚ°¡ ¾øÀ» °æ¿ì default »ý¼ºÀÚ »ý·«µÇ¾î ÀÖ´Ù.
+** ìƒì„±ìž(Constructor) // ê°ì²´ë¥¼ ë©”ëª¨ë¦¬ì— ì˜¬ë¦°ë‹¤
+â€» this() ë¡œ ìžê¸°ìžì‹ ì˜ ìƒì„±ìžë¥¼ í˜¸ì¶œ í•  ìˆ˜ ìžˆë‹¤
+1. ê°ì²´ ìƒì„±ì‹œ ìµœì´ˆë¡œ í˜¸ì¶œ. ë‹¨, new ì—°ì‚°ìžì™€ í•¨ê»˜ í˜¸ì¶œ.
+2. ê°ì²´ ìƒì„±ì‹œ ê°ì²´ì˜ ì´ˆê¸°í™” ìž‘ì—….
+3. ì‚¬ìš©ìž ì •ì˜ ìƒì„±ìžê°€ ì—†ì„ ê²½ìš° default ìƒì„±ìž ìƒëžµë˜ì–´ ìžˆë‹¤.
 	D C :	public ClassName() {}
-	»ç¿ëÀÚ Á¤ÀÇ »ý¼ºÀÚ¸¦ ÇÏ³ª ÀÌ»ó ¸¸µé°æ¿ì default »ý¼ºÀÚ´Â »ç¶óÁø´Ù.
+	ì‚¬ìš©ìž ì •ì˜ ìƒì„±ìžë¥¼ í•˜ë‚˜ ì´ìƒ ë§Œë“¤ê²½ìš° default ìƒì„±ìžëŠ” ì‚¬ë¼ì§„ë‹¤.
 
-4. ClassÀÇ ÀÌ¸§¿Í °°Àº ¸Þ¼ÒµåÀÇ ÀÏÁ¾.
-	Retrun type ÀÌ ¾ø´Ù.
-	Çü½Ä)
-	Á¢±ÙÁ¦¾îÀÚ ClassName([args]) {
-		½ÇÇà¹®;
+4. Classì˜ ì´ë¦„ì™€ ê°™ì€ ë©”ì†Œë“œì˜ ì¼ì¢….
+	Retrun type ì´ ì—†ë‹¤.
+	í˜•ì‹)
+	ì ‘ê·¼ì œì–´ìž ClassName([args]) {
+		ì‹¤í–‰ë¬¸;
 	}
 
-5. method overloading(´ÙÁßÁ¤ÀÇ)
-	°°Àº ÀÌ¸§ÀÌ ¸Þ¼Òµå¸¦ ¿©·¯°³ Á¤ÀÇ ÇÏ´Â°Í
-	´Ü, ÀÎÀÚ°ªÀÇ °¹¼ö°¡ ´Ù¸£°Å³ª
-			Å¸ÀÔÀÌ ´Þ¶ó¾ß ÇÑ´Ù.
-	¿¹)
+5. method overloading(ë‹¤ì¤‘ì •ì˜)
+	ê°™ì€ ì´ë¦„ì´ ë©”ì†Œë“œë¥¼ ì—¬ëŸ¬ê°œ ì •ì˜ í•˜ëŠ”ê²ƒ
+	ë‹¨, ì¸ìžê°’ì˜ ê°¯ìˆ˜ê°€ ë‹¤ë¥´ê±°ë‚˜
+			íƒ€ìž…ì´ ë‹¬ë¼ì•¼ í•œë‹¤.
+	ì˜ˆ)
 	public void a() {}
 	public void a() {}			//X
 	public void a(int x) {}		//O
@@ -91,27 +91,27 @@ method : ±â´É, Çàµ¿, ÇÔ¼ö
 	public void a(int x, int y) {}	//O
 	public void a(String s, int y) {} //O
 
-6.	this : ÀÚ±â Å¬·¡½º ÂüÁ¶ º¯¼ö
-	super : »óÀ§ Å¬·¡½º ÂüÁ¶ º¯¼ö
+6.	this : ìžê¸° í´ëž˜ìŠ¤ ì°¸ì¡° ë³€ìˆ˜
+	super : ìƒìœ„ í´ëž˜ìŠ¤ ì°¸ì¡° ë³€ìˆ˜
 
-	this() : ÀÚ±â Å¬·¡½º »ý¼ºÀÚ È£Ãâ
-	super() : »óÀ§ Å¬·¡½º »ý¼ºÀÚ È£Ãâ
-
-
+	this() : ìžê¸° í´ëž˜ìŠ¤ ìƒì„±ìž í˜¸ì¶œ
+	super() : ìƒìœ„ í´ëž˜ìŠ¤ ìƒì„±ìž í˜¸ì¶œ
 
 
 
-char¼Ó¼º ÀÇ µðÆúÆ® Ä¡´Â'\u0000' , Java ¾ð¾î ½ºÆåÀÇ ¡¸4.12.5 º¯¼öÀÇ ÃÊ±âÄ¡¡¹ÀÇ ¼³¸í´ë·Î (null Ä³¸¯ÅÍ) ÀÔ´Ï´Ù.
 
-³» ½Ã½ºÅÛ¿¡¼­ ÁÙ System.out.println('\u0000');Àº ÀÛÀº »ç°¢ÇüÀ» ÀÎ¼âÇÏ´Âµ¥, ÀÌ´Â ÀÎ¼â °¡´ÉÇÑ ¹®ÀÚ°¡ ¾Æ´Ï¶ó´Â °ÍÀ» ÀÇ¹ÌÇÕ´Ï´Ù.
+
+charì†ì„± ì˜ ë””í´íŠ¸ ì¹˜ëŠ”'\u0000' , Java ì–¸ì–´ ìŠ¤íŽ™ì˜ ã€Œ4.12.5 ë³€ìˆ˜ì˜ ì´ˆê¸°ì¹˜ã€ì˜ ì„¤ëª…ëŒ€ë¡œ (null ìºë¦­í„°) ìž…ë‹ˆë‹¤.
+
+ë‚´ ì‹œìŠ¤í…œì—ì„œ ì¤„ System.out.println('\u0000');ì€ ìž‘ì€ ì‚¬ê°í˜•ì„ ì¸ì‡„í•˜ëŠ”ë°, ì´ëŠ” ì¸ì‡„ ê°€ëŠ¥í•œ ë¬¸ìžê°€ ì•„ë‹ˆë¼ëŠ” ê²ƒì„ ì˜ë¯¸í•©ë‹ˆë‹¤.
 
 static!!!
 
-ÃÊ±â°ªÀº Ç×»ó ºÎÁ¤ÀûÀ¸·Î ÇØ¶ó
+ì´ˆê¸°ê°’ì€ í•­ìƒ ë¶€ì •ì ìœ¼ë¡œ í•´ë¼
 
-ÀÚ½Å Å¬·¡½º¿¡¼­ ¸Þ¼Òµå³ª Àü¿ª º¯¼ö¸¦ »ç¿ëÇÒ °æ¿ì
-³»ºÎÀûÀ¸·Î thisÇÑ´Ù
+ìžì‹  í´ëž˜ìŠ¤ì—ì„œ ë©”ì†Œë“œë‚˜ ì „ì—­ ë³€ìˆ˜ë¥¼ ì‚¬ìš©í•  ê²½ìš°
+ë‚´ë¶€ì ìœ¼ë¡œ thisí•œë‹¤
 
-½ºÅÂÆ½À¸·Î ¼±¾ðµÈ º¯¼ö´Â Å¬·¡½º¸â¹ö
-ÀÏ¹ÝÀûÀ¸·Î ¼±¾ðµÈ º¯¼ö´Â ÀÎ½ºÅÏ½º¸â¹ö 
+ìŠ¤íƒœí‹±ìœ¼ë¡œ ì„ ì–¸ëœ ë³€ìˆ˜ëŠ” í´ëž˜ìŠ¤ë©¤ë²„
+ì¼ë°˜ì ìœ¼ë¡œ ì„ ì–¸ëœ ë³€ìˆ˜ëŠ” ì¸ìŠ¤í„´ìŠ¤ë©¤ë²„ 
 

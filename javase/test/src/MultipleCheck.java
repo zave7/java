@@ -5,7 +5,7 @@ public class MultipleCheck {
     public static void main(String[] args) {
 
         int n = 20;
-        System.out.println("¹Ýº¹ È½¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä : " + n);
+        System.out.println("ë°˜ë³µ íšŸìˆ˜ë¥¼ ìž…ë ¥í•˜ì„¸ìš” : " + n);
         for(int i = 1; i<=n; i++) {
             System.out.print(i + ". ");
             if2ModZero(i);
@@ -13,29 +13,29 @@ public class MultipleCheck {
             if5ModZero(i);
             System.out.print("\n");
         }
-        System.out.println("===== Ãâ·Â È½¼ö =====");
-        System.out.println("2ÀÇ ¹è¼ö : " + count2);
-        System.out.println("3ÀÇ ¹è¼ö : " + count3);
-        System.out.println("5ÀÇ ¹è¼ö : " + count5);
+        System.out.println("===== ì¶œë ¥ íšŸìˆ˜ =====");
+        System.out.println("2ì˜ ë°°ìˆ˜ : " + count2);
+        System.out.println("3ì˜ ë°°ìˆ˜ : " + count3);
+        System.out.println("5ì˜ ë°°ìˆ˜ : " + count5);
     }
         
     static void if2ModZero(int n) {
         if(n % 2 == 0) {
-            System.out.print("2ÀÇ ¹è¼ö ");
+            System.out.print("2ì˜ ë°°ìˆ˜ ");
             count2++;
         }
     }
         
     static void if3ModZero(int n) {
         if(n % 3 == 0) {
-            System.out.print("3ÀÇ ¹è¼ö ");
+            System.out.print("3ì˜ ë°°ìˆ˜ ");
             count3++;
         }
     }
 
     static void if5ModZero(int n) {
         if(n % 5 == 0) {
-            System.out.print("5ÀÇ ¹è¼ö");
+            System.out.print("5ì˜ ë°°ìˆ˜");
             count5++;
         }
     }

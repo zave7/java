@@ -1,6 +1,6 @@
 public class IdentifyQuestionOperator {
 	public static void main(String[] args) {
-		/* ¹®Á¦ 2
+		/* ë¬¸ì œ 2
 		int x = 10;
 		int y = 20;
 		int z = (++x) + (y--);

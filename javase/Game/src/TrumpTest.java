@@ -7,11 +7,11 @@ public class TrumpTest {
 		char[] result;
 		for(i = 0; i < 52; i++) {
 		result = t.getTrumpCard();
-		System.out.println(i + "¹øÂ° " + result[0] + " : " + result[1]);
+		System.out.println(i + "ë²ˆì§¸ " + result[0] + " : " + result[1]);
 		
 		
 		}
-		System.out.println("¸¶Áö¸· : " + i);
+		System.out.println("ë§ˆì§€ë§‰ : " + i);
 //		System.out.println((int) (Math.random() * 4));
 	}
 }

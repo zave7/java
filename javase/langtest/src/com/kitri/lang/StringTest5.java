@@ -3,32 +3,32 @@ package com.kitri.lang;
 public class StringTest5 {
 	public static void main(String[] args) {
 		String str = "hello java";
-		int x = str.indexOf('¤Á');
+		int x = str.indexOf('ã…‘');
 		System.out.println(x);
-		x = str.indexOf('l', 8); //¾øÀ¸¸é -1 ¸®ÅÏ ÇÏ´Âµí, 8ºÎÅÍ Ã£´Â´Ù
+		x = str.indexOf('l', 8); //ì—†ìœ¼ë©´ -1 ë¦¬í„´ í•˜ëŠ”ë“¯, 8ë¶€í„° ì°¾ëŠ”ë‹¤
 		System.out.println(x);
-		x = str.indexOf("java"); // java °¡ ¸î¹øÂ° ºÎÅÍ ½ÃÀÛÇÏ³Ä
+		x = str.indexOf("java"); // java ê°€ ëª‡ë²ˆì§¸ ë¶€í„° ì‹œì‘í•˜ëƒ
 		System.out.println(x);
-		x = str.lastIndexOf('a'); //¸¶Áö¸·¿¡ ³ª¿À´Â a°¡ ¸î¹øÂ°¿¡ ÀÖ³Ä
+		x = str.lastIndexOf('a'); //ë§ˆì§€ë§‰ì— ë‚˜ì˜¤ëŠ” aê°€ ëª‡ë²ˆì§¸ì— ìˆëƒ
 		System.out.println(x);
 		
 		String str2 = "";
-		System.out.println(str2 + "ÀÇ ±æÀÌ : " + str2.length());
-		if(str2.isEmpty()) //¹®ÀÚ¿­ÀÇ ±æÀÌ°¡ 0ÀÏ °æ¿ì true¸®ÅÏ
-			System.out.println("ºó¹®ÀÚ¿­ÀÌ´Ù");
+		System.out.println(str2 + "ì˜ ê¸¸ì´ : " + str2.length());
+		if(str2.isEmpty()) //ë¬¸ìì—´ì˜ ê¸¸ì´ê°€ 0ì¼ ê²½ìš° trueë¦¬í„´
+			System.out.println("ë¹ˆë¬¸ìì—´ì´ë‹¤");
 		else 
 			System.out.println("str2 == " + str2);
 		
-		String str3 = "  hello     . "; //¹®ÀÚ¿­ ¾ÕµÚÀÇ °ø¹éÀº Á¦°ÅÇÏ´Âµ¥ ¹®ÀÚ¿­ »çÀÌÀÇ °ø¹éÀº Á¦°Åx
-		System.out.println(str3 + "ÀÇ ±æÀÌ : " + str3.length()); //trim ¸¹ÀÌ ¾´´Ù
-		System.out.println(str3.trim() + "ÀÇ °ø¹é Á¦°Å ÈÄ ±æÀÌ : " + str3.trim().length());
+		String str3 = "  hello     . "; //ë¬¸ìì—´ ì•ë’¤ì˜ ê³µë°±ì€ ì œê±°í•˜ëŠ”ë° ë¬¸ìì—´ ì‚¬ì´ì˜ ê³µë°±ì€ ì œê±°x
+		System.out.println(str3 + "ì˜ ê¸¸ì´ : " + str3.length()); //trim ë§ì´ ì“´ë‹¤
+		System.out.println(str3.trim() + "ì˜ ê³µë°± ì œê±° í›„ ê¸¸ì´ : " + str3.trim().length());
 		
 		String str4 = "jaba";
-		System.out.println(str4 + "::::" +str4.replace('b', 'v')); //¹®ÀÚµµ ¹Ù²Ü ¼ö ÀÖ°í 
+		System.out.println(str4 + "::::" +str4.replace('b', 'v')); //ë¬¸ìë„ ë°”ê¿€ ìˆ˜ ìˆê³  
 		System.out.println(str4 + "::::" +str4.replace("jaba", "java")); 
-		//¹®ÀÚ¿­µµ ¹Ù²Ü ¼ö ÀÖ´Ù ( ¹öÀü Ã¼Å©µµ ÇØºÁ¾ß ÇÑ´Ù) 1.4 ¹Ì¸¸ÀÇ ¹öÀüÀº ¹®ÀÚ¿­ ¹Ù²Ù´Â ±â´ÉÀÌ ¾ø´Ù
+		//ë¬¸ìì—´ë„ ë°”ê¿€ ìˆ˜ ìˆë‹¤ ( ë²„ì „ ì²´í¬ë„ í•´ë´ì•¼ í•œë‹¤) 1.4 ë¯¸ë§Œì˜ ë²„ì „ì€ ë¬¸ìì—´ ë°”ê¾¸ëŠ” ê¸°ëŠ¥ì´ ì—†ë‹¤
 		System.out.println(str4 + "::::" +str4.replaceAll("jaba", "java")); 
-		//¹®ÀÚ¿­µµ ¹Ù²Ü ¼ö ÀÖ´Ù ( ¹öÀü Ã¼Å©µµ ÇØºÁ¾ß ÇÑ´Ù)
+		//ë¬¸ìì—´ë„ ë°”ê¿€ ìˆ˜ ìˆë‹¤ ( ë²„ì „ ì²´í¬ë„ í•´ë´ì•¼ í•œë‹¤)
 		
 		String str5 = "hello java !!";
 		String s[] = str5.split("a");
@@ -37,9 +37,9 @@ public class StringTest5 {
 			System.out.println(s[i]);
 		}
 		
-		System.out.println(str5.substring(6, 9)); //6ºÎÅÍ 9 Àü±îÁö
+		System.out.println(str5.substring(6, 9)); //6ë¶€í„° 9 ì „ê¹Œì§€
 		
-//		¼ıÀÚ >> ¹®ÀÚ¿­
+//		ìˆ«ì >> ë¬¸ìì—´
 		int num = 100;
 		String sn1 = num + "";
 		System.out.println(sn1 + 100);
@@ -48,7 +48,7 @@ public class StringTest5 {
 		String sn3 = Integer.toString(num);
 		System.out.println(sn3 + 100);
 		
-//		¹®ÀÚ¿­ >> ¼ıÀÚ
+//		ë¬¸ìì—´ >> ìˆ«ì
 		String ns = "100";
 		num = Integer.parseInt(ns);
 		System.out.println(num + 100);

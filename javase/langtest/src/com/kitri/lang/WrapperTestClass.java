@@ -1,8 +1,8 @@
 package com.kitri.lang;
 
 
-//	Wrapper Class : ±âº» µ¥ÀÌÅÍ Å¸ÀÔÀ» Å¬·¡½ºÈ­
-//	±âº» DT 	WrapperClass
+//	Wrapper Class : ê¸°ë³¸ ë°ì´í„° íƒ€ì…ì„ í´ë˜ìŠ¤í™”
+//	ê¸°ë³¸ DT 	WrapperClass
 //	boolean		Boolean
 //	char		Character
 //	byte		Byte
@@ -27,14 +27,14 @@ public class WrapperTestClass {
 //		Integer integer = new Integer(s);
 //		int x = integer.intValue();
 //		System.out.println(x + 4);
-		int x = Integer.parseInt(s); // ¹®ÀÚ¿­À» ±âº»µ¥ÀÌÅÍ ÇüÀ¸·Î ¹Ù²Ü¶§ ¸¹ÀÌ ½á¿ä
+		int x = Integer.parseInt(s); // ë¬¸ìì—´ì„ ê¸°ë³¸ë°ì´í„° í˜•ìœ¼ë¡œ ë°”ê¿€ë•Œ ë§ì´ ì¨ìš”
 		System.out.println(x);
 		
 		s = "123.45";
 		double d = Double.parseDouble(s);
 		System.out.println(d + 4 );
 		
-		//autoBoxing ·¡ÆÛÅ¬·¡½º¿¡¼­ °°Àº 1.5 ºÎÅÍ Áö¿ø 
+		//autoBoxing ë˜í¼í´ë˜ìŠ¤ì—ì„œ ê°™ì€ 1.5 ë¶€í„° ì§€ì› 
 		Integer i2 = new Integer(3);
 		Integer i3 = new Integer(3);
 		//unboxing

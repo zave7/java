@@ -1,7 +1,7 @@
 public class Guest {
 
-    static int cnt;//class º¯¼ö
-    String name;//instance º¯¼ö ÀÎ½ºÅÏ½º ¸â¹ö
+    static int cnt;//class ë³€ìˆ˜
+    String name;//instance ë³€ìˆ˜ ì¸ìŠ¤í„´ìŠ¤ ë©¤ë²„
 
     public Guest(String name) {
         this.name = name;

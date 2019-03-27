@@ -16,22 +16,22 @@ public class StringTest3 {
 		boolean checkNum = true;
 		for (int i = 0; i < len; i++) {
 			if (str.charAt(i) > 57 || str.charAt(i) < 48) {
-				System.out.println(str + " Àº ¼ýÀÚ°¡ ¾Æ´Õ´Ï´Ù");
+				System.out.println(str + " ì€ ìˆ«ìžê°€ ì•„ë‹™ë‹ˆë‹¤");
 				checkNum = false;
 				break;
 			}
 		}
 		if (checkNum)
-			System.out.println(str + " Àº ¼ýÀÚÀÔ´Ï´Ù");
+			System.out.println(str + " ì€ ìˆ«ìžìž…ë‹ˆë‹¤");
 		String str1 = "hello";
 		String str2 = "java";
 		System.out.println(str1.concat(str2));
 		
 		str = "hello java !!!";
 		if(str.startsWith("he")) 
-			System.out.println(str + " h·Î ½ÃÀÛÇÑ´Ù");
+			System.out.println(str + " hë¡œ ì‹œìž‘í•œë‹¤");
 		if(str.endsWith("!"))
-			System.out.println("!·Î ³¡³­´Ù");
+			System.out.println("!ë¡œ ëë‚œë‹¤");
 		
 		String s1 = "jAva";
 		String s2 = "JaVa";
@@ -39,13 +39,13 @@ public class StringTest3 {
 		System.out.println("s1.upperCace() == " + s1.toLowerCase());
 		
 		if(s1.equals(s2))
-			System.out.println("s1°ú s2´Â °°Àº ¹®ÀÚ¿­ÀÌ´Ù");
+			System.out.println("s1ê³¼ s2ëŠ” ê°™ì€ ë¬¸ìžì—´ì´ë‹¤");
 		else
-			System.out.println("´Ù¸¥¹®ÀÚ¿­ÀÌ´Ù");
+			System.out.println("ë‹¤ë¥¸ë¬¸ìžì—´ì´ë‹¤");
 		if(s1.equalsIgnoreCase(s2))
-			System.out.println(s1 + "°ú " + s2 + "´Â ´ë¼Ò¹®ÀÚ ±¸ºÐ¾øÀÌ °°Àº¹®ÀÚ¿­ÀÌ´Ù");
+			System.out.println(s1 + "ê³¼ " + s2 + "ëŠ” ëŒ€ì†Œë¬¸ìž êµ¬ë¶„ì—†ì´ ê°™ì€ë¬¸ìžì—´ì´ë‹¤");
 		else 
-			System.out.println(s1 + "°ú " + s2 + "´Â ´ë¼Ò¹®ÀÚ ±¸ºÐ¾øÀÌ ´Ù¸¥¹®ÀÚ¿­ÀÌ´Ù");
+			System.out.println(s1 + "ê³¼ " + s2 + "ëŠ” ëŒ€ì†Œë¬¸ìž êµ¬ë¶„ì—†ì´ ë‹¤ë¥¸ë¬¸ìžì—´ì´ë‹¤");
 		
 		
 	}

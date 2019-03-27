@@ -6,7 +6,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class UserDao {	//data access object JDBC를 이용하여 DB에서 데이터를 조회하고 조작하는 기능을 구현한 클래스
+class UserDao {	//data access object JDBC를 이용하여 DB에서 데이터를 조회하고 조작하는 기능을 구현한 클래스
 	public void add(User user) throws ClassNotFoundException, SQLException { // Mysql 예
 		Class.forName("com.mysql.jdbc.Driver");
 		Connection c = DriverManager.getConnection(
@@ -25,7 +25,7 @@ public class UserDao {	//data access object JDBC를 이용하여 DB에서 데이
 		
 	}
 	
-	public User get(String id) throws ClassNotFoundException, SQLException {
+	User get(String id) throws ClassNotFoundException, SQLException {
 		Class.forName("com.mysql.jdbc.Driver");
 		Connection c = DriverManager.getConnection(
 				"jdbc:mysql://Localhost/springbook", "spring", "bool");

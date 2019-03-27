@@ -6,29 +6,29 @@ public class StringTest2 {
 	public static void main(String[] args) throws UnsupportedEncodingException {
 //		String str = null;
 //		System.out.println("\n");
-		String str1 = new String();//ºñ¾îÀÖ´Â ¹®ÀÚ¿­À» ¸¸µç´Ù
+		String str1 = new String();//ë¹„ì–´ìˆëŠ” ë¬¸ìì—´ì„ ë§Œë“ ë‹¤
 		System.out.println("\nString()");
-		System.out.println("new String() ¹®ÀÚ¿­ ±æÀÌ = " + str1.length());
-		//¾öÃ»³ª°Ô Áß¿äÇÏ´Ù!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+		System.out.println("new String() ë¬¸ìì—´ ê¸¸ì´ = " + str1.length());
+		//ì—„ì²­ë‚˜ê²Œ ì¤‘ìš”í•˜ë‹¤!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 		System.out.println("\nString(byte[] bytes, String charsetName)");
 //		byte b[] = {97, 98, 99, 100};
-		byte b[] = {-66, -56, -77, -25, -57, -49, -68, -68, -65, -28, 46}; //¿Ï¼ºÇü ÇÑ±Û
+		byte b[] = {-66, -56, -77, -25, -57, -49, -68, -68, -65, -28, 46}; //ì™„ì„±í˜• í•œê¸€
 		String str2 = new String(b);
-//		String str2 = new String(b, "euc-kr") // µğÆúÆ® ¿É¼Ç
+//		String str2 = new String(b, "euc-kr") // ë””í´íŠ¸ ì˜µì…˜
 		System.out.println(str2);
 		
 		byte b2[] = {-20, -107, -120, -21, -123, -107, -19, -107, -104, -20, -124, -72, -20, -102, -108, 46};
-		String str3 = new String(b2, "utf-8"); //Àü¼¼°è ¸ğµç¹®ÀÚ Ã³¸® 3byte ±ÛÀÚ¸¦ ±×¸°´Ù
+		String str3 = new String(b2, "utf-8"); //ì „ì„¸ê³„ ëª¨ë“ ë¬¸ì ì²˜ë¦¬ 3byte ê¸€ìë¥¼ ê·¸ë¦°ë‹¤
 		System.out.println(str3);
 		
 		System.out.println("\nString(byte[] bytes, int offset, int length)");
 		byte b3[] = {97, 98, 99, 100, 101, 102, 103, 104};
-		String str4 = new String(b3, 2, 4); //¹è¿­ÀÇ ½ÃÀÛ°ú ³¡À» ÁöÁ¤ÇØ¼­ °¡Á®¿Â´Ù
+		String str4 = new String(b3, 2, 4); //ë°°ì—´ì˜ ì‹œì‘ê³¼ ëì„ ì§€ì •í•´ì„œ ê°€ì ¸ì˜¨ë‹¤
 		System.out.println(str4);
 		
 		System.out.println("\nString(char[] value)");
 //		char c[] = {'a', 'b', 'c', 'd', 'e', 'f'};
-		char c[] = {'¾È', '³ç', 'ÇÏ', '¼¼', '¿ä', '.'};
+		char c[] = {'ì•ˆ', 'ë…•', 'í•˜', 'ì„¸', 'ìš”', '.'};
 		String str5 = new String(c);
 		System.out.println(str5);
 		
