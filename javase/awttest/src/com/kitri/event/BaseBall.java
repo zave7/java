@@ -1,4 +1,4 @@
-package com.kitri.design;
+package com.kitri.event;
 
 import java.awt.*;
 

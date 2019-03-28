@@ -1,8 +1,9 @@
-package com.kitri.design;
+package com.kitri.event;
 
 import java.awt.*;
+import java.awt.event.*;
 
-public class ItemTest extends Frame{
+public class ItemTest extends Frame implements ItemListener, ActionListener{
 
 //	1. Frame을 상속
 //	2. 선언부에 필요한 객체 생성
@@ -35,7 +36,9 @@ public class ItemTest extends Frame{
 		pn.add(apple);
 		pn.add(banana);
 		pn.add(st);
-		ch.setSize(ds);
+		ch.add("아침");
+		ch.add("점심");
+		ch.add("저녁");
 		ps.add(ch, "Center");
 		ps.add(b, "East");
 		add(pn, "North");
@@ -44,9 +47,50 @@ public class ItemTest extends Frame{
 //		setLayout(new BorderLayout(0, 10));
 		setBounds(300, 200, 300, 500);
 		setVisible(true); // 배치부의 마지막에 비저블
+		
+		b.addActionListener(this);
+		menu1.addItemListener(this);
+		menu2.addItemListener(this);
+		menu3.addItemListener(this);
+		apple.addItemListener(this);
+		banana.addItemListener(this);
+		st.addItemListener(this);
+		ch.addItemListener(this);
 
 	}
 	public static void main(String[] args) {
 		new ItemTest(); // 이름 없이 객체 생성
+	}
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		System.exit(0);
+	}
+	@Override
+	public void itemStateChanged(ItemEvent e) {
+		Object event = e.getSource();
+		System.out.println("안녕");
+		if(event == ch) {
+			String str = ch.getSelectedItem();
+			System.out.println(str);
+			if(str.equals("아침"))
+				menu1.setState(true);
+			else if(str.equals("점심"))
+				menu2.setState(true);
+			else if(str.equals("저녁"))
+				menu3.setState(true);
+		}
+		
+		Checkbox sel = cbg.getSelectedCheckbox();
+		String selStr = sel.getLabel();
+		System.out.println(selStr);
+		ta.setText("-----" + selStr + "-----");
+		ta.append("\n1. 사과 : " + eat(apple.getState()));
+		ta.append("\n2. 바나나 : " + eat(banana.getState()));
+		ta.append("\n3. 딸기 : "+ eat(st.getState()));
+		
+		ch.select(selStr);
+	}
+	private String eat(boolean flag) {
+		return flag == true ? "먹었다" : "안먹었다";
 	}
 }

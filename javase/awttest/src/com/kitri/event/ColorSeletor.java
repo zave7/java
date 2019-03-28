@@ -1,8 +1,10 @@
-package com.kitri.design;
+package com.kitri.event;
 
 import java.awt.*;
+import java.awt.event.AdjustmentEvent;
+import java.awt.event.AdjustmentListener;
 
-public class ColorSeletor extends Frame{
+public class ColorSeletor extends Frame implements AdjustmentListener{
 	
 	
 	
@@ -49,11 +51,7 @@ public class ColorSeletor extends Frame{
 		r.setForeground(Color.WHITE);
 		g.setForeground(Color.WHITE);
 		b.setForeground(Color.WHITE);
-		int r = sr.getValue();
-		int g = sg.getValue();
-		int b = sb.getValue();
-		pen.setBackground(new Color(r, g, b));
-		colorL.setText("r = " + r + " g = " + g + " b = " + b);
+		check();
 		pes.add(colorL, "Center");
 		pes.add(button, "East");
 		
@@ -68,8 +66,25 @@ public class ColorSeletor extends Frame{
 		
 		setBounds(300, 300, 600, 300);
 		setVisible(true);
+		
+		sr.addAdjustmentListener(this);
+		sg.addAdjustmentListener(this);
+		sb.addAdjustmentListener(this);
 	}
 	public static void main(String[] args) {
 		new ColorSeletor();
 	}
+	@Override
+	public void adjustmentValueChanged(AdjustmentEvent e) {
+		check();
+	}
+	
+	private void check() {
+		int r = sr.getValue();
+		int g = sg.getValue();
+		int b = sb.getValue();
+		pen.setBackground(new Color(r, g, b));
+		colorL.setText("r = " + r + " g = " + g + " b = " + b);
+	}
+	
 }

@@ -5,13 +5,10 @@ import java.sql.*;
 public class MemberDao {
 private ConnectionMaker connectionMaker;
 	
-	public MemberDao() {
-		connectionMaker = new OracleConnectionMaker();
-	}
-	
 	public MemberDao(ConnectionMaker connectionMaker) {
 		this.connectionMaker = connectionMaker;
 	}
+	
 	public void add(User user) throws ClassNotFoundException, SQLException {
 		Connection c = connectionMaker.makeConnection();	
 		

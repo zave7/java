@@ -8,15 +8,15 @@ import java.sql.Statement;
 
 class BasicJDBC {
 	public static void main(String[] args) {
-        String DB_URL = "jdbc:oracle:thin:@127.0.0.1:1521:XE";
-        String DB_USER = "scott";
-        String DB_PASSWORD = "tiger";
+        String DB_URL = "jdbc:oracle:thin:@127.0.0.1:1521:orcl";
+        String DB_USER = "kitri";
+        String DB_PASSWORD = "kitri";
 
         Connection conn = null;
         Statement stmt = null;
         ResultSet rs = null;
 
-        String query = "SELECT * FROM emp";
+        String query = "SELECT * FROM usertest";
         try {
             // 드라이버를 로딩한다.
             Class.forName("oracle.jdbc.driver.OracleDriver");
@@ -35,19 +35,11 @@ class BasicJDBC {
             rs = stmt.executeQuery(query);
 
             while (rs.next()) { 
-                String empno = rs.getString(1);
-                String ename = rs.getString(2);
-                String job = rs.getString(3);
-                String mgr = rs.getString(4);
-                String hiredate = rs.getString(5);
-                String sal = rs.getString(6);
-                String comm = rs.getString(7);
-                String depno = rs.getString(8);
+                String id = rs.getString(1);
+                String name = rs.getString(2);
+                String password = rs.getString(3);
                 // 결과를 출력한다.
-                System.out.println( 
-                    empno + " : " + ename + " : " + job + " : " + mgr
-                    + " : " + hiredate + " : " + sal + " : " + comm + " : "
-                + depno); 
+                System.out.println("id = " + id + " name" + name + " password" + password); 
             }
         } catch ( Exception e ) {
             e.printStackTrace();

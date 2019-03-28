@@ -7,11 +7,7 @@ import java.sql.SQLException;
 
 public class UserDao {
 	private ConnectionMaker connectionMaker;
-	
-	public UserDao() {
-		connectionMaker = new OracleConnectionMaker();
-	}
-	
+
 	public UserDao(ConnectionMaker connectionMaker) {
 		this.connectionMaker = connectionMaker;
 	}
@@ -19,7 +15,7 @@ public class UserDao {
 		Connection c = connectionMaker.makeConnection();	
 		
 		PreparedStatement ps = c.prepareStatement(
-				"insert into users(id, name, password) values(?,?,?)");
+				"insert into usertest(id, name, password) values(?,?,?)");
 		ps.setString(1, user.getId());
 		ps.setString(2, user.getName());
 		ps.setString(3, user.getPassword());
@@ -35,7 +31,7 @@ public class UserDao {
 
 		
 		PreparedStatement ps = c.prepareStatement(
-				"insert into users(id, name, password) values(?,?,?)");
+				"insert into usertest(id, name, password) values(?,?,?)");
 		ps.setString(1, id);
 		
 		ResultSet rs = ps.executeQuery();
