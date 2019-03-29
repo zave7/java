@@ -22,5 +22,9 @@ class User {	// DB와 연동할때 객체 정보를 담아둘 클래스 정의
 	public void setPassword(String password) {
 		this.password = password;
 	}
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", name=" + name + ", password=" + password + "]";
+	}
 	
 }

@@ -20,6 +20,7 @@ import java.io.InputStreamReader;
 public class NumberBaseball {
 	private int my[] = new int[3]; //선언부에서 값을 할당한는 것 보다는 생성자에서
 	private int com[] = new int[3];
+	int gameLength;
 	BufferedReader in;
 	
 	public NumberBaseball() {

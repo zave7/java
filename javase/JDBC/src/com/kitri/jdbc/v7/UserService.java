@@ -7,21 +7,15 @@ public class UserService { // 이제 비즈니스 로직 단계에서 어떤 커
 	private User user = new User();
 	private UserDao dao = new DaoFactory().userDao();
 
-	public void add(User user) throws ClassNotFoundException, SQLException {
-		user.setId("test0216");
-		user.setName("name0216");
-		user.setPassword("pass0216");
-
+	public void addUser(User user) throws ClassNotFoundException, SQLException {
 		dao.add(user);
-
 		System.out.println(user.getId() + "등록 성공");
 	}
 
-	public void select(String id) throws ClassNotFoundException, SQLException {
+	public User getUser(String id) throws ClassNotFoundException, SQLException {
 		User user = dao.get(id);
 		System.out.println(user.getName());
 		System.out.println(user.getPassword());
-
-		System.out.println(user.getId() + "조회 성공");
+		return user;
 	}
 }
