@@ -37,8 +37,8 @@ public class BaseBall extends Frame {
 		pw.add(ta, "Center");
 		pw.add(pws, "South");
 		setLayout(new BorderLayout(10, 0));
-		add(pe, "East");
-		add(pw, "Center");
+		this.add(pe, "East");
+		this.add(pw, "Center");
 
 		setBounds(300, 300, 400, 400);
 		setVisible(true);
@@ -56,7 +56,8 @@ public class BaseBall extends Frame {
 		fontColorChooser.sg.addAdjustmentListener(baseballController);
 		fontColorChooser.sb.addAdjustmentListener(baseballController);
 		fontColorChooser.button.addActionListener(baseballController);
-
+		
+		this.addWindowListener(baseballController);
 	}
 
 	public static void main(String[] args) {

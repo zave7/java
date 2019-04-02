@@ -2,7 +2,7 @@ package com.kitri.event;
 
 import java.awt.event.*;
 
-public class BaseballController implements ActionListener, AdjustmentListener {
+public class BaseballController extends WindowAdapter implements ActionListener, AdjustmentListener{
 
 	BaseBall baseBall;
 	BaseballService baseballService;
@@ -33,7 +33,14 @@ public class BaseballController implements ActionListener, AdjustmentListener {
 	}
 
 	@Override
+	public void windowClosing(WindowEvent e) {
+		baseballService.exit();
+	}
+
+	@Override
 	public void adjustmentValueChanged(AdjustmentEvent e) {
 		baseballService.check();
 	}
+	
+	
 }

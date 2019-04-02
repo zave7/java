@@ -1,0 +1,21 @@
+I / O java.io 
+※ 자바 웹에서 쓰이면서 io가 많이 축소됐다
+
+byteStream ( Node Stream ) : 모든 데이터를 1byte로 처리
+~Stream으로 끝나는것은 전부 byteStream이다
+
+characterStream (내부적으로 byte Stream을 쓴다) ( Fiter Stream ) : 모든 데이터를 2byte로 처리
+I : ~ Reader
+O : ~ Writer
+
+
+
+입력 장치
+|
+input Stream 데이터의 흐름 입력과 자바를 연결하는 중간다리역할 (넘어가는 데이터에 따라 약간 달라진다) 
+|
+자바
+|
+output Stream
+|
+출력장치

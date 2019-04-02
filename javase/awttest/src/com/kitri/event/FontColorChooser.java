@@ -1,18 +1,17 @@
 package com.kitri.event;
 
 import java.awt.*;
-import java.awt.event.AdjustmentEvent;
-import java.awt.event.AdjustmentListener;
+import java.awt.event.*;
 
 public class FontColorChooser extends Frame {
 	
 	
 	
-	Panel pw = new Panel();
+	Panel pw = new Panel(); 
 	Panel pw1 = new Panel();
 	Panel pw2 = new Panel();
 	Panel pw3 = new Panel();
-	Panel pe = new Panel();
+	Panel pe = new Panel(); 
 	Panel pen = new Panel();
 	Panel pes = new Panel();
 	Label r = new Label("빨강", Label.CENTER);
@@ -65,5 +64,14 @@ public class FontColorChooser extends Frame {
 		
 		setBounds(710, 300, 600, 300);
 		
+		addWindowListener(new WindowAdapter() {
+
+			@Override
+			public void windowClosing(WindowEvent e) {
+				super.windowClosing(e);
+				setVisible(false);
+			}
+			
+		});
 	}
 }
