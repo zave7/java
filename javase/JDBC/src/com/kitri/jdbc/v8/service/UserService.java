@@ -1,0 +1,32 @@
+package com.kitri.jdbc.v8.service;
+
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.kitri.jdbc.v8.dao.DaoFactory;
+import com.kitri.jdbc.v8.dao.UserDao;
+import com.kitri.jdbc.v8.dto.UserDto;
+
+public class UserService { // 이제 비즈니스 로직 단계에서 어떤 커넥션을 쓸지 결정하지 않는다. 단순히 daofactory의 메소드를 호출하기만 하면 되기 때문이다
+							// 그리고 이제 UserService와 Test 클래스를 나누겠다
+	private UserDto user = new UserDto();
+	private UserDao dao = new DaoFactory().userDao();
+
+	public void addUser(UserDto user) throws ClassNotFoundException, SQLException {
+		dao.add(user);
+		System.out.println(user.getId() + "등록 성공");
+	}
+
+	public UserDto getUser(String name) throws ClassNotFoundException, SQLException {
+		UserDto user = dao.getUserByName(name);
+		System.out.println(user.getName());
+		System.out.println(user.getPassword());
+		return user;
+	}
+	public List<UserDto> getAllUser() throws ClassNotFoundException, SQLException {
+		List<UserDto> list = new ArrayList<UserDto>();
+		list = dao.getAll();
+		return list;
+	}
+}
