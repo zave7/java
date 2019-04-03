@@ -9,7 +9,7 @@ public class FileTest {
 		//파일의 내용을 읽기
 		try { // in out 을 열었으면 닫아야 한다 (연결 했으면 끊어라)
 			File infile = new File("f:\\iotest\\hello.txt"); // filepath 입력
-			in = new FileInputStream(infile);
+			in = new FileInputStream(infile);  // 엔터도 인식하기 때문에 
 			long length = infile.length();
 			byte b[] = new byte[(int)length];
 			int x = in.read(b);

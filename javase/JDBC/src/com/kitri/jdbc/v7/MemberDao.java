@@ -9,7 +9,7 @@ private ConnectionMaker connectionMaker;
 		this.connectionMaker = connectionMaker;
 	}
 	
-	public void add(User user) throws ClassNotFoundException, SQLException {
+	public void add(UserDto user) throws ClassNotFoundException, SQLException {
 		Connection c = connectionMaker.makeConnection();	
 		
 		PreparedStatement ps = c.prepareStatement(
@@ -24,7 +24,7 @@ private ConnectionMaker connectionMaker;
 		c.close();
 	}
 	
-	public User get(String id) throws ClassNotFoundException, SQLException {
+	public UserDto get(String id) throws ClassNotFoundException, SQLException {
 		Connection c = connectionMaker.makeConnection();
 
 		
@@ -34,7 +34,7 @@ private ConnectionMaker connectionMaker;
 		
 		ResultSet rs = ps.executeQuery();
 		rs.next();
-		User user = new User();
+		UserDto user = new UserDto();
 		user.setId(rs.getString("id"));
 		user.setName(rs.getString("name"));
 		user.setPassword(rs.getString("password"));

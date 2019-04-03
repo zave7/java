@@ -1,6 +1,6 @@
-package com.kitri.jdbc.v1;
+package com.kitri.jdbc.v7;
 
-class User {	// DB와 연동할때 객체 정보를 담아둘 클래스 정의
+class UserDto {	// DB와 연동할때 객체 정보를 담아둘 클래스 정의 // UserDto 이다.
 	private String id;
 	private String name;
 	private String password;
@@ -21,6 +21,10 @@ class User {	// DB와 연동할때 객체 정보를 담아둘 클래스 정의
 	}
 	public void setPassword(String password) {
 		this.password = password;
+	}
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", name=" + name + ", password=" + password + "]";
 	}
 	
 }

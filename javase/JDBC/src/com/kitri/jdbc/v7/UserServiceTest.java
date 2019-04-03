@@ -6,7 +6,7 @@ public class UserServiceTest {
 	public static void main(String[] args) throws ClassNotFoundException, SQLException {
 
 		UserService userService = new UserService();
-		User user = new User();
+		UserDto user = new UserDto();
 		// dao의 메소드를 활용하여 비즈니스 로직을 구현
 		user.setId("new123");
 		user.setName("testname");
@@ -14,7 +14,7 @@ public class UserServiceTest {
 
 		userService.addUser(user);
 		
-		User resultUser;
+		UserDto resultUser;
 		resultUser = userService.getUser("new123");
 		System.out.println(resultUser);
 	}

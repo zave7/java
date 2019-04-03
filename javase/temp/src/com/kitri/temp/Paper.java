@@ -1,19 +1,22 @@
 package com.kitri.temp;
 
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
-
-import java.awt.*;
-
-import javax.swing.JButton;
 import javax.swing.JTextArea;
-import javax.swing.JTextField;
+import javax.swing.JButton;
+import java.awt.CardLayout;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 import javax.swing.SwingConstants;
+import java.awt.Color;
 
 public class Paper extends JFrame {
-	Dimension dsLabel = new Dimension(30, 60); 
+
 	private JPanel contentPane;
 
 	/**
@@ -36,53 +39,67 @@ public class Paper extends JFrame {
 	 * Create the frame.
 	 */
 	public Paper() {
-		setTitle("쪽지 보내기");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 320, 374);
+		setBounds(100, 100, 335, 377);
 		contentPane = new JPanel();
-		contentPane.setBackground(Color.YELLOW);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		contentPane.setLayout(new BorderLayout(0, 0));
 		setContentPane(contentPane);
 		
-		JPanel panel_1 = new JPanel();
-		panel_1.setBackground(Color.YELLOW);
-		contentPane.add(panel_1, BorderLayout.SOUTH);
-		
-		JButton send = new JButton("보내기");
-		panel_1.add(send);
-		
-		JButton cancel = new JButton("취소");
-		panel_1.add(cancel);
-		
-		JTextArea textArea = new JTextArea();
-		contentPane.add(textArea, BorderLayout.CENTER);
-		
 		JPanel panel = new JPanel();
 		panel.setBackground(Color.YELLOW);
-		contentPane.add(panel, BorderLayout.NORTH);
+		contentPane.add(panel, BorderLayout.CENTER);
+		panel.setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("From : ");
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setPreferredSize(new Dimension(50, 20));
+		lblNewLabel.setBounds(12, 22, 69, 28);
 		panel.add(lblNewLabel);
 		
 		JLabel label = new JLabel("");
 		label.setOpaque(true);
 		label.setBackground(Color.ORANGE);
-		label.setPreferredSize(new Dimension(50, 20));
+		label.setHorizontalAlignment(SwingConstants.CENTER);
+		label.setBounds(77, 22, 69, 28);
 		panel.add(label);
 		
-		JLabel lblTo = new JLabel("To : ");
+		JLabel lblTo = new JLabel("   To : ");
 		lblTo.setHorizontalAlignment(SwingConstants.CENTER);
-		lblTo.setPreferredSize(new Dimension(50, 20));
+		lblTo.setBounds(146, 22, 69, 28);
 		panel.add(lblTo);
 		
-		JLabel label_1 = new JLabel("");
-		label_1.setBackground(Color.ORANGE);
-		label_1.setOpaque(true);
-		label_1.setPreferredSize(new Dimension(50, 20));
-		panel.add(label_1);
+		JLabel label_2 = new JLabel("");
+		label_2.setBackground(Color.ORANGE);
+		label_2.setOpaque(true);
+		label_2.setHorizontalAlignment(SwingConstants.CENTER);
+		label_2.setBounds(215, 22, 69, 28);
+		panel.add(label_2);
+		
+		JTextArea textArea = new JTextArea();
+		textArea.setBounds(26, 60, 259, 204);
+		panel.add(textArea);
+		
+		JPanel panel_1 = new JPanel();
+		panel_1.setBounds(77, 287, 75, 32);
+		panel.add(panel_1);
+		panel_1.setLayout(new CardLayout(0, 0));
+		
+		JButton button_1 = new JButton("답변");
+		panel_1.add(button_1, "name_1061305650288");
+		button_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		
+		JButton btnNewButton = new JButton("보내기");
+		panel_1.add(btnNewButton, "name_989811126353");
+		
+		JButton button = new JButton("취소");
+		button.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		button.setBounds(162, 287, 75, 32);
+		panel.add(button);
 	}
-
 }

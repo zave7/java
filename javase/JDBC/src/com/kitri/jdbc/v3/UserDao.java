@@ -11,7 +11,7 @@ public class UserDao {
 	public UserDao() {
 		simpleConnectionMaker = new SimpleConnectionMaker();
 	}
-	public void add(User user) throws ClassNotFoundException, SQLException {
+	public void add(UserDto user) throws ClassNotFoundException, SQLException {
 		Connection c = simpleConnectionMaker.makeNewConnection();	// 여러 기능에 맞게 여러 클래스로 분리
 		
 		PreparedStatement ps = c.prepareStatement(
@@ -25,7 +25,7 @@ public class UserDao {
 		ps.close();
 		c.close();
 	}
-	public User get(String id) throws ClassNotFoundException, SQLException {
+	public UserDto get(String id) throws ClassNotFoundException, SQLException {
 		Connection c = simpleConnectionMaker.makeNewConnection(); 
 
 		
@@ -35,7 +35,7 @@ public class UserDao {
 		
 		ResultSet rs = ps.executeQuery();
 		rs.next();
-		User user = new User();
+		UserDto user = new UserDto();
 		user.setId(rs.getString("id"));
 		user.setName(rs.getString("name"));
 		user.setPassword(rs.getString("password"));

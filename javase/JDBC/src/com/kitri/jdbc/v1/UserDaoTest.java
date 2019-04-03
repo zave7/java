@@ -10,7 +10,7 @@ class UserDaoTest {	// UserService와 같은 의미
 							// 재사용성이 크게 증가한다
 	static void main(String[] args) throws ClassNotFoundException, SQLException {
 		UserDao dao = new UserDao();
-		User user = new User();
+		UserDto user = new UserDto();
 		user.setId("testid");
 		user.setName("testname");
 		user.setPassword("testpass");
@@ -19,7 +19,7 @@ class UserDaoTest {	// UserService와 같은 의미
 		
 		System.out.println(user.getId() + "등록 성공");
 		
-		User user2 = dao.get(user.getId());
+		UserDto user2 = dao.get(user.getId());
 		System.out.println(user2.getName());
 		System.out.println(user2.getPassword());
 		
