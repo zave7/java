@@ -8,8 +8,8 @@ import com.kitri.jdbc.v8.dao.DaoFactory;
 import com.kitri.jdbc.v8.dao.UserDao;
 import com.kitri.jdbc.v8.dto.UserDto;
 
-public class UserService { // 이제 비즈니스 로직 단계에서 어떤 커넥션을 쓸지 결정하지 않는다. 단순히 daofactory의 메소드를 호출하기만 하면 되기 때문이다
-							// 그리고 이제 UserService와 Test 클래스를 나누겠다
+public class UserService { // 이제 비즈니스 로직인 service 단계에서 어떤 커넥션을 쓸지 결정하지 않는다. 
+							//단순히 daofactory의 메소드를 호출하기만 하면 되기 때문이다
 	private UserDto user = new UserDto();
 	private UserDao dao = new DaoFactory().userDao();
 

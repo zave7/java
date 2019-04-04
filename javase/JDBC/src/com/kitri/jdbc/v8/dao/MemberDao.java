@@ -4,6 +4,7 @@ import java.sql.*;
 
 import com.kitri.jdbc.v8.jdbcinterface.ConnectionMaker;
 import com.kitri.jdbc.v8.dto.UserDto;
+
 public class MemberDao {
 private ConnectionMaker connectionMaker;
 	
@@ -11,7 +12,7 @@ private ConnectionMaker connectionMaker;
 		this.connectionMaker = connectionMaker;
 	}
 	
-	public void add(UserDto user) throws ClassNotFoundException, SQLException {
+	public void add(UserDto user) throws ClassNotFoundException, SQLException { // try catch 던지지 말고 잡아야 한다 ps, c close가 닫히지 않기 때문
 		Connection c = connectionMaker.makeConnection();	
 		
 		PreparedStatement ps = c.prepareStatement(

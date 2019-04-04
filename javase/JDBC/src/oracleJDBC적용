@@ -5,3 +5,9 @@
 					-> (add external jars..) 
 					-> ojdbc 저장했던 경로 선택 후 추가 
 					-> 이제 오라클 db와 jdbc로 연동
+					
+create table usertest(	-- 테스트 테이블
+    id varchar2(5) PRIMARY key,
+    name varchar2(50) not null,
+    password varchar2(50) not null
+);

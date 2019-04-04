@@ -15,11 +15,11 @@ public class UserServiceTest {
 		list = userService.getAllUser();
 		
 		
-		for(UserDto user : list) {
-			System.out.println("유저 아이디 : " + user.getId() + "\t\t유저 비밀번호 : " + user.getPassword()
-								+ "\t\t유저 이름 : " + user.getName());
-		}
-		System.out.println("--------------------------위아래는 같은 코드입니다--------------------------");
+//		for(UserDto user : list) {
+//			System.out.println("유저 아이디 : " + user.getId() + "\t\t유저 비밀번호 : " + user.getPassword()
+//								+ "\t\t유저 이름 : " + user.getName());
+//		}
+//		System.out.println("--------------------------위아래는 같은 코드입니다--------------------------");
 		int len = list.size();
 		for (int i = 0; i < len; i++) {
 			System.out.println("유저 아이디 : " + list.get(i).getId() + "\t\t유저 비밀번호 : " + list.get(i).getPassword()

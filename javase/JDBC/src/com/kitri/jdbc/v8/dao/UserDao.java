@@ -11,7 +11,6 @@ import com.kitri.jdbc.v8.dto.UserDto;
 import com.kitri.jdbc.v8.jdbcinterface.ConnectionMaker;
 
 public class UserDao {
-	private ConnectionMaker connectionMaker;
 	// Dao의 종류 select - resultSet이 있어야 한다 select 된 정보를 담을 Dto List를 하나 만들고
 //															while문 안에서 객체 정보를 담는다
 //					insert, update, delete - executeUpdate()를 실행하면 작업된 row의 갯수를 리턴 해준다
@@ -31,6 +30,7 @@ public class UserDao {
 //	미리 만들어둘 수도 있다
 //	- 한번오브젝트(싱글톤)가 만들어지고 난 후에는 getInstance() 메소드를 통해 이미 만들어져 스태틱 필드에 저장해둔 오브젝트를
 //	넘겨준다
+	private ConnectionMaker connectionMaker;
 	public UserDao(ConnectionMaker connectionMaker) {
 		this.connectionMaker = connectionMaker;
 	}
@@ -51,8 +51,6 @@ public class UserDao {
 				user.setPassword(rs.getString("password"));
 				list.add(user);
 			}
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
@@ -93,8 +91,6 @@ public class UserDao {
 			ps.setString(2, user.getName());
 			ps.setString(3, user.getPassword());
 			ps.executeUpdate();
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
@@ -132,8 +128,6 @@ public class UserDao {
 			user.setId(rs.getString("id"));
 			user.setName(rs.getString("name"));
 			user.setPassword(rs.getString("password"));
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
@@ -177,8 +171,6 @@ public class UserDao {
 			user.setId(rs.getString("id"));
 			user.setName(rs.getString("name"));
 			user.setPassword(rs.getString("password"));
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
