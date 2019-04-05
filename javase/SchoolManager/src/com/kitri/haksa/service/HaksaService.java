@@ -5,7 +5,7 @@ import com.kitri.haksa.data.HaksaDto;
 public interface HaksaService {
 	public void menu();
 	public void registerMenu();
-	public void register(HaksaDto haksa);
+//	public void register(HaksaDto haksa);
 	public void findNameMenu();
 	public HaksaDto findName(String name);
 	public void deleteMenu();

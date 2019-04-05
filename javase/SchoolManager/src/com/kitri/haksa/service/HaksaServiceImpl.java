@@ -4,6 +4,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.kitri.haksa.dao.HaksaDao;
 import com.kitri.haksa.data.HaksaDto;
 
 public class HaksaServiceImpl implements HaksaService{
@@ -11,7 +12,7 @@ public class HaksaServiceImpl implements HaksaService{
 	private List<HaksaDto> list;
 	private String job[] = {"학번", "과목", "부서"};
 	private BufferedReader br;
-	
+	private HaksaDao haksaDao = new HaksaDao();
 	public HaksaServiceImpl() {
 		this.list = new ArrayList<HaksaDto>();
 		this.br = new BufferedReader(new InputStreamReader(System.in));
@@ -130,7 +131,7 @@ public class HaksaServiceImpl implements HaksaService{
 			}
 				System.out.print(job[inNum-1] + " : ");
 				value = br.readLine();
-				register(new HaksaDto(age, name, inNum-1, value));
+				haksaDao.register(new HaksaDto(age, name, inNum, value));
 		} catch (NumberFormatException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
@@ -138,11 +139,11 @@ public class HaksaServiceImpl implements HaksaService{
 		}
 	}
 
-	@Override
-	public void register(HaksaDto haksa) {
-		list.add(haksa);
-		System.out.println("등록 되었습니다.");
-	}
+//	@Override
+//	public void register(HaksaDto haksa) {
+//		list.add(haksa);
+//		System.out.println("등록 되었습니다.");
+//	}
 
 	@Override
 	public void findNameMenu() {
