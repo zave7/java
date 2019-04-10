@@ -1,12 +1,10 @@
-package com.kitri.jdbc.v8.jdbcimpl;
+package com.kitri.jdbc;
 
 import java.sql.*;
 
-import com.kitri.jdbc.v8.jdbcinterface.ConnectionMaker;
-
 public class OracleConnectionMaker implements ConnectionMaker{
 
-	public Connection makeConnection() {
+	public Connection getConnection() {
 		Connection c = null;
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");

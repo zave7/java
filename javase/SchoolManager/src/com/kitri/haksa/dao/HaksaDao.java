@@ -15,7 +15,7 @@ public class HaksaDao {
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			c = DriverManager.getConnection(
-					"jdbc:oracle:thin:@localhost:1521:orcl", "kitri", "kitri");
+					"jdbc:oracle:thin:@localhost:1521:orcl", "kitri", "kitri"); // localhost 자기 컴터 127.0.0.1 자기 컴터 000.000.000.000
 			ps = c.prepareStatement(
 					"insert into haksa_main(name, age, job_code, job_value) values(?,?,?,?)");
 			ps.setString(1, haksa.getName());
@@ -49,9 +49,7 @@ public class HaksaDao {
 	public HaksaDto findName(String name) {
 		return null;
 	}
-	public int delete(String name) {
-		return 0;
-	}
+	
 	public ArrayList<HaksaDto> selectAllList() {
 		ArrayList<HaksaDto> list = null;
 		return list;
