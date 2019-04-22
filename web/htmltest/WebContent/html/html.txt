@@ -1,0 +1,29 @@
+html : httpserver(Web Server)
+html + java : Web Application Server (웹서버역할뿐아니라 어플리케이션까지 수행)
+
+apache 7하고 8은 차이가 큼
+8하고 9는 비슷함
+
+weblosic이 전세계 was 1위 (비쌈)
+2위가 ibm 웹스피어
+우리나라는 jeus정도? 티맥스에서 만들었음
+
+html4의 불편한점
+- 다른것 들이많이있다
+
+가능하면 속성은 "로
+
+자바의 주석은 컴파일시에 제외하지만
+html의 주석은 보이지 않게하는것이다(소스보기하면 다보임)
+
+meta - 부가적인 데이터를 의미
+span 은 그 부분만 묶음
+p 는 단락 단위 해당 라인을 묶음
+
+자바스크립트에서는 id 중복되면 어레가 난다
+
+html은 화면에보일때 하나이상의 공백은 무시한다
+<br> -> breaking
+&apos ' 
+&nbsp  
+& -> built in entaty

@@ -152,7 +152,6 @@ public class Login extends JFrame implements ActionListener, Runnable, ListSelec
 	}
 
 	private void paperProcess() {
-		uuid = UUID.randomUUID().toString();
 		sendMassage(
 				ChatConstance.CS_PAPER + "|" + paper.to.getText() + "|" + paper.letter.getText().replace("\n", "`z]>$&`*"));
 		clearPaper();
@@ -311,14 +310,19 @@ public class Login extends JFrame implements ActionListener, Runnable, ListSelec
 				case ChatConstance.SC_RENAME: {
 					String oldName = st.nextToken();
 					String newName = st.nextToken();
-					viewMassage("[알림] " + "<" + oldName + "> 님이 닉네임을 <" + newName + ">으로 변경하였습니다.");
-					for(String s : chat.listData) {
-						if(s.equals(oldName)) // 벡터에 저장한후
-							s = newName;
-					}
-					System.out.println(1);
+					viewMassage("[알림] <" + oldName + "> 님이 닉네임을 <" + newName + ">으로 변경하였습니다.");
+//					for(String s : chat.listData) {
+//						if(s.equals(oldName)) // 벡터에 저장한후
+//							s = newName;
+//					}
+//					int size = chat.listData.size();
+//					for (int i = 0; i < size; i++) {
+//						if(chat.listData.get(i).equals(oldName)) // 벡터에 저장한후
+//						chat.listData.set(i, newName);
+//						break;
+//					}
+					chat.listData.set(chat.listData.indexOf(oldName), newName);
 					chat.list.setListData(chat.listData);
-					System.out.println(2);
 					for(String s : chat.listData) {
 							System.out.println("바꾼 벡터 : "+s);
 					}
@@ -345,6 +349,7 @@ public class Login extends JFrame implements ActionListener, Runnable, ListSelec
 				}
 			} catch (IOException e) {
 				e.printStackTrace();
+				break;
 			}
 		}
 	}
