@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function myOpen() {
+		open("/js/chap4/my.html", "test", "width=400,height=300");
+		// test라는 이름의 창이있으면 새로 창을 띄워도 열려있는 창을 띄운다
+	}
+	function alertOpen() {
+		alert("알림창입니다");
+	}
+	function confirmOpen() {
+		if (confirm("진짜 삭제??")) {
+			console.log("삭제되었습니다!!");
+		} else {
+			console.log("취소되었습니다");
+		}
+	}
+	function promptOpen() {
+		var txt = prompt("이름입력", "");
+		console.log("당신의 이름은" + txt + "입니다");
+	}
+</script>
+</head>
+<body>
+	<button onclick="javascript:alertOpen()">알림</button>
+	<button onclick="javascript:confirmOpen()">확인</button>
+	<button onclick="javascript:promptOpen()">입력</button>
+
+	<button onclick="javascript:myOpen()">새창열기</button><br>
+	<span id="view"></span>
+</body>
+</html>
