@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	#static {
+		display: inline-block;
+		background-color: gray;
+		border: solid 2px;
+		color: white;
+		width: 400px;
+		height: 400px;
+		top: 250px;
+		left: 250px;
+	}
+	#relative {
+		position: relative;
+		display: inline-block;
+		background-color: gray;
+		border: solid 2px;
+		color: white;
+		width: 400px;
+		height: 400px;
+		top: 250px;
+		left: 250px;
+		z-index: 1;
+	}
+	#absolute1 {
+		position: absolute;
+		display: inline-block;
+		background-color: orange;
+		border: solid 2px;
+		width: 100px;
+		height: 100px;
+		top: 50px;
+		left: 60px;
+		z-index: 2;
+	}
+	#absolute2 {
+		position: absolute;
+		display: inline-block;
+		background-color: orange;
+		border: solid 2px;
+		width: 100px;
+		height: 100px;
+		top: 30px;
+		left: 50px;
+		z-index: 1;
+	}
+	#fixed {
+		position: absolute;
+		display: inline-block;
+		background-color: black;
+		color: white;
+		width: 100px;
+		height: 100px;
+		bottom: 0px;
+		right: 0px;
+	}
+	span {
+		position: static;
+	}
+</style>
+</head>
+<body>
+	<div id="static">
+		<span>base</span>
+	</div>
+	<div id="relative">
+		<span>base</span>
+		<div id="absolute1">
+			absolute1
+		</div>
+		<div id="absolute2">
+			absolute2
+		</div>
+	</div>
+	<div id="fixed">
+		fixed
+	</div>
+</body>
+</html>
