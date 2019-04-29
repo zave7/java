@@ -60,5 +60,4 @@ public class UpdateTest {
 		}
 		System.out.println(cnt + "개 update!!!!");
 	}
-
 }
