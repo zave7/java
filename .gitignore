@@ -2,3 +2,5 @@
 /**/*.class
 /**/*.classpath
 /**/*.project
+/web/Servers/.settings/org.eclipse.wst.server.core.prefs
+/web/Servers/Tomcat v8.5 Server at localhost-config/server.xml
