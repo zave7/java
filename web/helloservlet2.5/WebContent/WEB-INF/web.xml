@@ -4,7 +4,7 @@
   
   
   <!-- 필수 설정 -->
-  <!-- 스프링은 서블릿을 쓰지 않는다!!? -->
+  <!-- 스프링은 서블릿을 쓰지 않는다!!? server + letter 서버에서 돌아가는 최소사양-->
   <servlet>
   	<servlet-name>hs</servlet-name>
   	<servlet-class>com.kitri.hello.HelloServlet</servlet-class>
