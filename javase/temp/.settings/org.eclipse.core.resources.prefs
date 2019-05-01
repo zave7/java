@@ -1,6 +1,0 @@
-eclipse.preferences.version=1
-encoding//src/com/kitri/jdbc/ConnectionMaker.java=MS949
-encoding//src/com/kitri/jdbc/DataSource.java=MS949
-encoding//src/com/kitri/jdbc/FoodDto.java=MS949
-encoding//src/com/kitri/jdbc/MenuDao.java=MS949
-encoding//src/com/kitri/jdbc/OracleConnectionMaker.java=MS949
