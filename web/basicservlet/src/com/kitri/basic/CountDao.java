@@ -25,17 +25,21 @@ public class CountDao {
 		PreparedStatement psmt = null;
 		Properties prop = null;
 		try {
-			prop = new Properties();
-			prop.load(new FileReader(new File("src/com/kitri/basic/jdbc.properties")));
-			conn = DriverManager.getConnection("jdbc:oracle:thin:@172.30.1.38:1521:xe", prop);
+//			prop = new Properties();
+//			prop.load(new FileReader("src/com/kitri/basic/jdbc.properties")); //이 경로가 틀렸다??
+//			conn = DriverManager.getConnection("jdbc:oracle:thin:@192.168.14.52:1521:orcl", prop); 
+			conn = DriverManager.getConnection("jdbc:oracle:thin:@192.168.14.52:1521:orcl", "kitri", "kitri");
 			System.out.println("connection success!!");
 			String sql = "update counter set no = no+1";
 			psmt = conn.prepareStatement(sql);
-			psmt.executeUpdate();
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
+			if(psmt.executeUpdate()==1)
+				System.out.println("조회수 1회 증가");
+			else 
+				System.out.println("???");
+//		} catch (FileNotFoundException e) {
+//			e.printStackTrace();
+//		} catch (IOException e) {
+//			e.printStackTrace();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
