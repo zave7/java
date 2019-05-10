@@ -1,70 +1,108 @@
 package com.kitri.member.controller;
 
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.List;
-
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.*;
 
 import com.kitri.member.model.MemberDetailDto;
-import com.kitri.member.model.ZipcodeDto;
-import com.kitri.member.model.dao.MemberDao;
+import com.kitri.member.model.MemberDto;
 import com.kitri.member.model.service.MemberServiceImpl;
-import com.kitri.util.SiteConstance;
 
-@WebServlet("/user")
-public class MemberController extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-    
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String act = request.getParameter("act");
-		if("mvjoin".equals(act)) {
-			response.sendRedirect("/membermvc/user/member/member.jsp");
-		} else if("mvlogin".equals(act)) {
-			response.sendRedirect("/membermvc/user/login/login.jsp");
-		} else if("idcheck".equals(act)) {
-			String sid = request.getParameter("sid");
-			String resultXML = MemberServiceImpl.getMemberService().idCheck(sid);
-			
-			response.setContentType("text/xml;charset=utf-8");
-			PrintWriter out = response.getWriter();
-			out.println(resultXML);
-		} else if("zipsearch".equals(act)) {
-			System.out.println("들어옴");
-			String doro = request.getParameter("doro");
-			String resultXML = MemberServiceImpl.getMemberService().zipSearch(doro);
-			
-			response.setContentType("text/xml;charset=utf-8"); //xml은 무조건 utf-8
-			PrintWriter out = response.getWriter();
-			out.println(resultXML);
-		} else if("register".equals(act)) {
-			MemberDetailDto memberDetailDto = new MemberDetailDto();
-			memberDetailDto.setName(request.getParameter("name"));
-			memberDetailDto.setId(request.getParameter("id"));
-			memberDetailDto.setPass(request.getParameter("pass"));
-			memberDetailDto.setEmailId(request.getParameter("emailid"));
-			memberDetailDto.setEmailDomain(request.getParameter("emaildomain"));
-			memberDetailDto.setTel1(request.getParameter("tel1"));
-			System.out.println("tel1 = "+memberDetailDto.getTel1());
-			memberDetailDto.setTel2(request.getParameter("tel2"));
-			memberDetailDto.setTel3(request.getParameter("tel3"));
-			memberDetailDto.setZipcode(request.getParameter("zipcode"));
-			memberDetailDto.setAddress(request.getParameter("address"));
-			memberDetailDto.setAddressDetail(request.getParameter("address_detail"));
-			int cnt = MemberServiceImpl.getMemberService().registerMember(memberDetailDto);
-			System.out.println("cnt = " + cnt);
-		}
+public class MemberController {
+	
+	private static MemberController memberController;
+	
+	static {
+		memberController = new MemberController();
+	}
+	
+	private MemberController() {
+	}
+	
+	public static MemberController getMemberController() {
+		return memberController;
+	}
+	
+	public String register(HttpServletRequest request, HttpServletResponse response) {
+		String path = "index.jsp";
+		MemberDetailDto memberDetailDto = new MemberDetailDto();
+		memberDetailDto.setName(request.getParameter("name"));
+		memberDetailDto.setId(request.getParameter("id"));
+		memberDetailDto.setPass(request.getParameter("pass"));
+		memberDetailDto.setEmailId(request.getParameter("emailid"));
+		memberDetailDto.setEmailDomain(request.getParameter("emaildomain"));
+		memberDetailDto.setTel1(request.getParameter("tel1"));
+		System.out.println("tel1 = "+memberDetailDto.getTel1());
+		memberDetailDto.setTel2(request.getParameter("tel2"));
+		memberDetailDto.setTel3(request.getParameter("tel3"));
+		memberDetailDto.setZipcode(request.getParameter("zipcode"));
+		memberDetailDto.setAddress(request.getParameter("address"));
+		memberDetailDto.setAddressDetail(request.getParameter("address_detail"));
 		
+		int cnt = MemberServiceImpl.getMemberService().registerMember(memberDetailDto);
+		if(cnt != 0) {
+			request.setAttribute("userInfo", memberDetailDto);
+			path = "/user/member/registerok.jsp";
+		} else {
+			path = "/user/member/registerfail.jsp";
+		}
+		return path;
+	}
+
+	public String login(HttpServletRequest request, HttpServletResponse response) {
+		String path = "index.jsp";
+		String id = request.getParameter("id");
+		String pass = request.getParameter("pass");
+		
+		MemberDto memberDto = MemberServiceImpl.getMemberService().loginMember(id, pass);
+		if(memberDto != null) {
+			/////////////////////Cookie///////////////////////
+			String idsave = request.getParameter("isave");
+			if("idsave".equals(idsave)) {
+				Cookie cookie = new Cookie("kid_inf", id); //쿠키는 여러개 가능
+				cookie.setDomain("localhost"); // 도메인
+				cookie.setPath(request.getContextPath()); // 프로젝트 컨텍스트 패스
+				//마지막으로 엑세스는 브라우져가 우리는 만료날짜만
+				cookie.setMaxAge(60*60*24*365*50);
+				response.addCookie(cookie); // 서버에서 만들어서 들어온 친구한테 주자
+				
+//				Cookie cookie2 = new Cookie("kid_inf", id);
+//				cookie.setDomain("localhost");
+//				cookie.setPath(request.getContextPath());
+//				cookie.setMaxAge(60*60*24*365*50);
+//				response.addCookie(cookie);
+			} else {
+				Cookie[] cookie = request.getCookies();
+				if(cookie != null) {
+					for(Cookie c : cookie) {
+						if("kid_inf".equals(c.getName())) {
+							c.setDomain("localhost"); // 도메인
+							c.setPath(request.getContextPath()); // 프로젝트 컨텍스트 패스
+							//마지막으로 엑세스는 브라우져가 우리는 만료날짜만
+							c.setMaxAge(0);
+							response.addCookie(c); // 서버에서 만들어서 들어온 친구한테 주자
+							break;
+						}
+					}
+				}
+			}
+			//////////////////////////////////////////////////
 			
+			/////////////////////Session//////////////////////
+			HttpSession session = request.getSession();
+			session.setAttribute("userInfo", memberDto);
+			//////////////////////////////////////////////////
+			path = "/user/login/loginok.jsp";
+		} else {
+			path = "/user/login/loginfail.jsp";
+		}
+		return path;
 	}
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.setCharacterEncoding(SiteConstance.ENCODE);
-		doGet(request, response);
+	public String logout(HttpServletRequest request, HttpServletResponse response) {
+		HttpSession session = request.getSession();
+//		session.setAttribute("userInfo", null);
+//		session.removeAttribute("userInfo");
+		session.invalidate();//세션안의 전부를 지운다
+		//세션을 마지막으로 접근한 시간을 기준으로 카운트다운이 된다
+		return "/user/login/login.jsp";
 	}
-
 }
