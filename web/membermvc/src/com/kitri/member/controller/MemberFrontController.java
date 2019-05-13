@@ -47,6 +47,9 @@ public class MemberFrontController extends HttpServlet {
 		} else if("login".equals(act)) {
 			path = MemberController.getMemberController().login(request, response);
 			MoveUrl.forward(request, response, path);
+		} else if("mvmodify".equals(act)) {
+			path = MemberController.getMemberController().getMember(request, response);
+			MoveUrl.forward(request, response, path);
 		}
 			
 	}

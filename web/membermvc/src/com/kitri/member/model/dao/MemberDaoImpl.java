@@ -172,7 +172,40 @@ public class MemberDaoImpl implements MemberDao {
 
 	@Override
 	public MemberDetailDto getMember(String id) {
-		return null;
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		MemberDetailDto	memberDetailDto = null;
+		try {
+			conn = DBConnection.makeConnection();
+			System.out.println("커넥션 만들어 졌음!!");
+			StringBuffer sql = new StringBuffer();
+			sql.append("select m.name, m.id, m.emailid, m.emaildomain, d.tel1, d.tel2, d.tel3, d.zipcode, d.address, d.address_detail \n");
+			sql.append("from member m, member_detail d \n");
+			sql.append("where m.id = ?");
+			pstmt = conn.prepareStatement(sql.toString());
+			pstmt.setString(1, id);
+			rs = pstmt.executeQuery();
+			if(rs.next()) {
+				memberDetailDto = new MemberDetailDto();
+				memberDetailDto.setName(rs.getString("name"));
+				memberDetailDto.setId(rs.getString("id"));
+				memberDetailDto.setEmailId(rs.getString("emailid"));
+				memberDetailDto.setEmailDomain(rs.getString("emaildomain"));
+				memberDetailDto.setTel1(rs.getString("tel1"));
+				memberDetailDto.setTel2(rs.getString("tel2"));
+				memberDetailDto.setTel3(rs.getString("tel3"));
+				memberDetailDto.setZipcode(rs.getString("zipcode"));
+				memberDetailDto.setAddress(rs.getString("address"));
+				memberDetailDto.setAddressDetail(rs.getString("address_detail"));
+				System.out.println("zipcode = "+rs.getString("zipcode"));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			DBClose.close(conn, pstmt, rs);
+		}
+		return memberDetailDto;
 	}
 
 	@Override

@@ -39,6 +39,7 @@ public class MemberController {
 		
 		int cnt = MemberServiceImpl.getMemberService().registerMember(memberDetailDto);
 		if(cnt != 0) {
+			System.out.println("레지스터 메소드");
 			request.setAttribute("userInfo", memberDetailDto);
 			path = "/user/member/registerok.jsp";
 		} else {
@@ -55,7 +56,7 @@ public class MemberController {
 		MemberDto memberDto = MemberServiceImpl.getMemberService().loginMember(id, pass);
 		if(memberDto != null) {
 			/////////////////////Cookie///////////////////////
-			String idsave = request.getParameter("isave");
+			String idsave = request.getParameter("idsave");
 			if("idsave".equals(idsave)) {
 				Cookie cookie = new Cookie("kid_inf", id); //쿠키는 여러개 가능
 				cookie.setDomain("localhost"); // 도메인
@@ -105,4 +106,32 @@ public class MemberController {
 		//세션을 마지막으로 접근한 시간을 기준으로 카운트다운이 된다
 		return "/user/login/login.jsp";
 	}
+
+	public String getMember(HttpServletRequest request, HttpServletResponse response) {
+		String path = "";
+		HttpSession session = request.getSession();
+		//1. 아이디 정보 get
+		//2. dao 호출 return type -> MemberDetail 
+		MemberDetailDto memberDetailDto = MemberServiceImpl.getMemberService().getMember(((MemberDto)(session.getAttribute("userInfo"))).getId());
+		//3. request에 넣고 페이지 이동
+		if(memberDetailDto != null) {
+			request.setAttribute("userInfo", memberDetailDto);
+			path = "/user/member/membermodify.jsp";
+		} else {
+			path = "/user/member/membermodifyfail.jsp";
+		}
+		return path;
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
+

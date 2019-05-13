@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>form.html</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script>
+//$(document).ready(function(){});
+$(function() {
+	var $formObj = $("form");
+	$formObj.submit(function() {
+			var $tObj = $("input[name=t]");
+			var $tObjValue = $tObj.val().trim();
+			if($tObjValue.length==0) {
+				alert("반드시 입력하세요");
+				$tObj.focus();
+				return false;
+			} else {
+				alert("전송되었습니다");
+				$formObj.attr("action", "http://www.naver.com");
+				$formObj.attr("method", "post");
+			}
+	});
+});
+/* window.addEventListener("load", function(){
+	//dom트리에서 Inpyt태그 중 type속성값이 submit인 객체 찾기
+	var submitObj = document.querySelector("input[type=submit]");
+	//submitObj에서 클릭이벤트핸들러 작성하기
+	submitObj.addEventListener("click", function() {
+		alert("클릭되었습니다");
+	});
+	
+	//dom트리에서 form객체 찾기
+	var formObj = document.querySelector("form");
+	//formObj에서 submit이벤트 핸들러 작성하기
+	//할일 :전송되었습니다 경고창 띄우기
+	formObj.addEventListener("submit", function(event) {
+		//input 객체중 name속성이 t인 객체 찾기
+		var tObj = document.querySelector("input[name=t]");
+		tObjValue = tObj.value.trim();
+		if(tObjValue.length==0) {
+			alert("반드시 입력하세요");
+			tObj.focus();
+			event.preventDefault();
+		} else {
+		alert("전송되었습니다");
+		}
+	});
+}); */
+</script>
+<body>
+<form action="http://www.google.co.kr">
+	<input name="t">
+	<input type="password" name="p"><br>
+	<input type="checkbox" name="c" value="1">one&nbsp;&nbsp;<!-- 기본 value = on -->
+	<input type="checkbox" name="c" value="2">two&nbsp;&nbsp;
+	<input type="checkbox" name="c" value="3">three<br>
+	<select name="s">
+		<option value="1">ONE</option><!-- value를 적지 않으면 텍스트노드를 value로 가짐 -->
+		<option value="2">TWO</option>
+		<option value="3">THREE</option>
+	</select>
+	<input type="submit" value="전송1">
+	<input type="button" value="버튼1">
+	<button>전송2</button>
+</form><!-- 폼태그에 액션 속성 값이 없을 경우 지금 사용중인 url로 요청을 보낸다 -->
+<button>버튼2</button>
+</body>
+</html>

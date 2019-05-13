@@ -7,17 +7,21 @@
 	String ckid = "";
 	if(cookie != null) {
 		for(Cookie c : cookie) {
+			System.out.println("쿠키 찾는중!");
+			System.out.println(c.getName());
 			if("kid_inf".equals(c.getName())) {
+				System.out.println("쿠키 찾음");
 				svid = c.getValue(); // 같은 쿠키 이름은 덮어 씌워진다
 				ckid = " checked";
 				break;
 			}
 		}
 	}
+	
 %>
 <script type="text/javascript">
 $(document).ready(function() {
-
+	alert(<%=ckid%>);
 });
 
 function login() {
