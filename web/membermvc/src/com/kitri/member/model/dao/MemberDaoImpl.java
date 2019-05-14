@@ -153,7 +153,9 @@ public class MemberDaoImpl implements MemberDao {
 			pstmt.setString(++idx, map.get("userid"));
 			pstmt.setString(++idx, map.get("userpwd"));
 			rs = pstmt.executeQuery();
+			System.out.println("id 찾기 쿼리 실행");
 			if(rs.next()) {
+				System.out.println("id 있음");
 				memberDto = new MemberDetailDto();
 				memberDto.setName(rs.getString("name"));
 				memberDto.setId(rs.getString("id"));

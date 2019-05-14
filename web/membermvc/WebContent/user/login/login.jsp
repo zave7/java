@@ -21,7 +21,7 @@
 %>
 <script type="text/javascript">
 $(document).ready(function() {
-	alert(<%=ckid%>);
+	//alert(<%=ckid%>);
 });
 
 function login() {

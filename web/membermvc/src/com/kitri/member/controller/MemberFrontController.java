@@ -14,6 +14,10 @@ import com.kitri.util.SiteConstance;
 @WebServlet("/user")
 public class MemberFrontController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	@Override
+	public void init() {
+		System.out.println("user 서블릿 생성!!@");
+	}
     
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String act = request.getParameter("act");
@@ -30,6 +34,7 @@ public class MemberFrontController extends HttpServlet {
 			response.setContentType("text/xml;charset=utf-8");
 			PrintWriter out = response.getWriter();
 			out.println(resultXML);
+			System.out.println(resultXML);
 		} else if("zipsearch".equals(act)) {
 			System.out.println("들어옴");
 			String doro = request.getParameter("doro");
@@ -40,7 +45,7 @@ public class MemberFrontController extends HttpServlet {
 			out.println(resultXML);
 		} else if("register".equals(act)) {
 			path = MemberController.getMemberController().register(request, response);
-			MoveUrl.forward(request, response, path); //redirect request와 response를 클리어하고 보낸다
+			MoveUrl.forward(request, response, path);
 		} else if("logout".equals(act)) {
 			path = MemberController.getMemberController().logout(request, response);
 			MoveUrl.redirect(request, response, path);
@@ -54,6 +59,7 @@ public class MemberFrontController extends HttpServlet {
 			
 	}
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.setCharacterEncoding(SiteConstance.ENCODE);
 		response.setCharacterEncoding(SiteConstance.ENCODE);
 		doGet(request, response);
 	}

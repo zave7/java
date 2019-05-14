@@ -16,7 +16,10 @@ import com.kitri.util.SiteConstance;
 @WebServlet("/admin")
 public class AdminController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
+	@Override
+    public void init() {
+    	System.out.println("어드민 서블릿 생성!!");
+    }
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String act = request.getParameter("act");
 		

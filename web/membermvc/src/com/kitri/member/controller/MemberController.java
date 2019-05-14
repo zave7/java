@@ -23,6 +23,7 @@ public class MemberController {
 	
 	public String register(HttpServletRequest request, HttpServletResponse response) {
 		String path = "index.jsp";
+		
 		MemberDetailDto memberDetailDto = new MemberDetailDto();
 		memberDetailDto.setName(request.getParameter("name"));
 		memberDetailDto.setId(request.getParameter("id"));
@@ -35,6 +36,7 @@ public class MemberController {
 		memberDetailDto.setTel3(request.getParameter("tel3"));
 		memberDetailDto.setZipcode(request.getParameter("zipcode"));
 		memberDetailDto.setAddress(request.getParameter("address"));
+		System.out.println("주소 : "+memberDetailDto.getAddress());
 		memberDetailDto.setAddressDetail(request.getParameter("address_detail"));
 		
 		int cnt = MemberServiceImpl.getMemberService().registerMember(memberDetailDto);

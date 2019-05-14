@@ -4,7 +4,7 @@
 		//dom에서 form 객체 찾기
 		$("form").submit(function(){
 			$.ajax({
-				url : 'login.do',
+				url : '/myjquery/login',
 				method : 'post',
 				data : 
 				//'id='+$('input[name=id]').val()+'pwd='+$('input[name=pwd]').val(),
@@ -13,7 +13,10 @@
 				//pwd : $('input[name=pwd]').val() }
 				$('form').serialize(),
 				success : function(result) {
-					$("section").html(result);
+					alert(result.trim());
+				},
+				error : function(jqXHR, textStatus, errorThrown) {
+					alert(errorThrown);				
 				}
 			});
 			return false;
