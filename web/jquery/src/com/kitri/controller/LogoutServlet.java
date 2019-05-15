@@ -7,26 +7,16 @@ import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 
-import com.kitri.service.CustomerService;
-
-@WebServlet("/login")
-public class LoginServlet extends HttpServlet {
+@WebServlet("/logout")
+public class LogoutServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	
+       
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String id = request.getParameter("id");
-		String pass = request.getParameter("pass");
-		System.out.println("controller id = "+id);
-		System.out.println("controller pass = "+pass);
-		String result = CustomerService.getCustomerService().login(id, pass);
-		System.out.println("result = "+result);
 		HttpSession session = request.getSession();
-		session.removeAttribute("loginInfo");
-		if("1".equals(result)) {
-			session.setAttribute("loginInfo", id);
-		}
-		request.setAttribute("result", result);
-		RequestDispatcher rd = request.getRequestDispatcher("/loginresult.jsp");
+		//session.invalidate();//세션제거
+		session.removeAttribute("loginInfo");//세션속성제거
+		String path = "/logoutresult.jsp";
+		RequestDispatcher rd = request.getRequestDispatcher(path);
 		rd.forward(request, response);
 	}
 

@@ -1,11 +1,9 @@
 package com.kitri.member.model.service;
 
-import java.sql.*;
 import java.util.*;
 
 import com.kitri.member.model.*;
 import com.kitri.member.model.dao.MemberDaoImpl;
-import com.kitri.util.DBConnection;
 
 public class MemberServiceImpl implements MemberService{
 	
