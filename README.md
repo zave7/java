@@ -1,2 +1,0 @@
-# java
-develop_java
