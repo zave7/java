@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>scope html</title>
+<script>
+	var a;
+	console.log("window.a = "+typeof(window.a));
+	console.log("a + 1 = " + (a+1));
+	var a = 10; // 덮어 써버리는..
+	console.log("a = "+a);
+	var b = function() {
+		var lv = 'hello';
+		gv = "global";
+		for(var i=0; i<10; i++) {
+			console.log(i+", " + lv);
+		}
+		console.log("in function lv = "+lv);
+		console.log("in function i = "+ i);
+		console.log("in function gv = "+ gv);
+	}
+	console.log(typeof(b));
+	console.log(b);
+	b();
+	//consloe.log("out function lv = " + lv);
+	console.log("out function gv = " + gv);
+</script>
+<script>
+	window.addEventListener("load", function() {
+		var arr = document.querySelectorAll("button");
+		for(var i=0; i<arr.length; i++) {
+			var btObj = arr[i];
+			(
+			function(j) {
+				btObj.addEventListener("click", function() {
+					var a = parseInt(document.getElementsByName("a").innerHTML);
+					var b = parseInt(document.getElementsByName("b").innerHTML);
+					switch(j) {
+					case 0: alert("결과 : " + (a + b));
+						break;
+					case 1: alert("결과 : " + (a - b));
+						break;
+					case 2: alert("결과 : " + (a * b));
+						break;
+					case 3: alert("결과 : " + (a / b));
+						break;
+					}
+				});
+			})(i);
+			console.log(j);//함수내에 함수 선언가능
+			//자바스크립트에서는 함수 호출 이후 
+		}
+	});
+	function a() {
+		
+	}
+</script>
+</head>
+<body>
+<input type="text" name="a">
+<input type="text" name="b">
+<button>+</button>
+<button>-</button>
+<button>*</button>
+<button>/</button>
+</body>
+</html>

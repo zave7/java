@@ -1,0 +1,84 @@
+** JSP (Java Server Page)
+
+- servlet(*.java) : html in java
+- jsp(*.jsp) : java in html
+	jsp는 실행이 될때 서블릿으로 바뀌어서 실행이된다.
+	
+	*	complie 기반. : servlet, jsp(run)
+			우리가 만든 코드를 바로 실행하지 않고 컴파일하여 기계어로 바꾸어 실행한다 
+				(빠르다) (프로그래밍이 복잡하다)
+		sciprt 기반. : jsp(code), asp, php
+			(프로그밍이 비교적 쉽다) (conplie 기반보다 느리다) (스크립트기반의 장점과 컴파일 기반의 장점을 갖고있다)
+	
+	apache tomcat 이 servlet 의 최종시간수정
+	
+--Script Element : <% java code %>
+	1. 선언부 : jsp 에서 사용될 변수, 메소드를 선언하는 영역
+	형식) <%! java code %>
+	예)
+	<%!
+	String name;
+	int age;
+	public void setZ() {
+	} 
+	%>
+	
+	2. 처리부 : jsp가 호출 될때마다 매번 실행 되는 영역. service method (로직)
+				request, response 관련 ,,
+	형식) <% java code %>
+	예)
+	<%
+	name = request.getParameter("name");
+	out.println(name);
+	%>
+	3. 출력부 : client 출력.(데이터 출력)
+	형식) <%= 문자열 %>
+	예)
+	<%= name %> == <% out.println(name); %>
+	<%= name; %> == <% out.println(name;); %> <- 세미콜론을 찍으면 이렇게 된다
+	문자열을 리턴하는 메소드를 호출할 수 있긴 있다
+	
+	public class ClassName [servlet] {
+	
+		선언부 (변수, 메소드(){})
+			선언부에서 코딩한 내용은 서블릿의 선언부에 들어간다
+		
+		public void service(request, response) {
+			처리부
+			
+			out.println(""); //출력부 (표현식)
+		}
+	}
+	
+-- directive (지시문) : <%@ 종류 속성1="값1" 속성2="값2" ... 속성N="값N" %> d
+pdf 참조
+1. page 
+
+2. include
+
+3. taglib
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

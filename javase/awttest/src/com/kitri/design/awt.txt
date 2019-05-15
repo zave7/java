@@ -1,0 +1,66 @@
+awt
+	- 운영체제에 영향을 받는다
+
+tui - test user interface
+gui - graphic user interface
+
+버튼
+체크박스
+초이스 - select box 
+다이얼로그 대화창
+파일다이얼로그
+라벨 - 문자열
+리스트 
+-----
+메뉴
+메뉴바
+메뉴아이템
+-----
+textConponent
+text field 한줄
+text area 여러줄
+
+container 
+	- panal 
+		- 단독 x window(frame)에 종속
+		  frame은 하나의 창이기 때문에 frame을 베이스로 여러 패널을 정해서 구현한다	
+		- applet
+			브라우져에서 띄울 수 있다
+	- window (추상)
+		- frame
+		- dialog
+		
+			-filedialog
+
+component
+
+layoutManager
+	1. FlowLayout (panal 디폴트 레이아웃)
+		1) 위에서 아래 -> 왼쪽에서 오른쪽 -> 중앙 재정렬 (화면의 크기를 기준으로)
+			ex) add(b1)
+		2) 순서가 있다
+		3) 컴포넌트의 크기 조정은 안됨
+		
+	2. BorderLayout (Frame 디폴트 레이아웃)
+		1) 동, 서, 남, 북, 중앙
+			ex) add(b1, "North") South East West Center 반드시 대문자
+			- 센터의 힘이 가장 세다 
+				(하나의 컴포넌트를 다른 컴포넌트 보다 크게 만들고 싶을때)
+				(만들지 않은 영역은 센터가 먹는다)
+				
+	3. GridLayout
+		1) 행과 열 -> 위에서 아래 -> 왼쪽에서 오른쪽
+			ex) add(b1)
+			- 남는 공간은 비운다
+		2) 순서가 있다
+		3) 모든 컴포넌트의 크기를 같게 한다
+		
+	4. CardLayout
+		1) 이벤트가 발생했을때 쌓여있는것 중에서 보여주는 기능
+		
+작업순서
+	1. 그려보기 (객체명)
+	2. 패널작업
+	3. 각 컨테이너의 LayoutManager설정
+	4. 구현
+	

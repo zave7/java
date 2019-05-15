@@ -1,0 +1,58 @@
+	package : window의 folder
+	1. 비슷한 기능을 가진 class의 묶음
+	2. class 에 첫줄에 package를 지정.
+		packagename : site 주소 거꾸로.특정이름;
+	형식 ) 
+	package packagename;
+	예)
+	package com.kitri.member;
+	package com.kitri.board;
+	package com.kitri.product;
+	
+	package com.kitri.test;
+	
+	public class Car{
+	
+	}
+	
+	3. package로 지정된 클래스 사용
+		import keyword 이용.
+		단, java.lang package는 import없이 사용 가능
+	형식)
+	import package.ClassName;
+	import package.*; //all class
+	예)
+	
+	import com.kitri.test.Car;
+	//import java.lang.util.Calendar;
+	//import java.lang.util.GregorianCalendar;
+	import java.lang.util.*;
+	
+	public class CarUser{ //클래스 패스가 . 이라서 사용 하는 클래스들을 .에서 찾는다
+		Car car;
+		Calendar cal = new GregorianCalendar();
+		String s; //java.lang 는 import 없이 사용 가능 
+		// C:\Program Files\Java\jdk1.8.0_202\jre\lib 여기는 jvm이 알고있다
+		//C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext 여기는 외부에서 가져온 jar를 모아둔다
+		//환경변수에서 classpath로 연결한다. 폴더바로밑의 클래스가 있으면 폴더경로까지만해도돼고
+			클래스를jar로 압축했을 경우 jar까지 명시해야한다
+			
+		jar 를 빌드하는데 윈도우와 리눅스가 호환이 되지 않을 가능성이.. 
+		이클립스에서 설정하는것은 이클립스에 한정되는 설정이다 ex) build path
+	
+-- java의 package
+java.lang : 기본 package
+java.awt : abstract window toolkit (window창..)
+java.io : input output
+java.util : utility
+java.net : network
+java.sql : jdbc(Java Database Connetivity)
+.
+.
+.
+	
+	
+	
+	
+	
+	
