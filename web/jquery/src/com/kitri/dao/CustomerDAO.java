@@ -4,6 +4,7 @@ import java.sql.*;
 import java.util.List;
 
 import com.kitri.dto.Customer;
+import com.kitri.dto.Product;
 import com.kitri.exception.NotFoundException;
 
 public class CustomerDAO {
@@ -73,6 +74,10 @@ public class CustomerDAO {
 		
 	}
 	public List<Customer> selectAll() {
+		return null;
+	}
+	
+	public Product selectByNo(String no) {
 		return null;
 	}
 }

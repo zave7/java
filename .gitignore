@@ -3,3 +3,4 @@
 /**/*.classpath
 /**/*.project
 web/Servers/**/
+/**/.JETEmitters/

@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/hs")
+@WebServlet("/hello")
 /*<servlet>
   	<servlet-name>hs</servlet-name>
   	<servlet-class>com.kitri.hello.HelloServlet</servlet-class>
@@ -22,7 +22,7 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class HelloServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
+	
     public HelloServlet() {
         super();
         // TODO Auto-generated constructor stub
