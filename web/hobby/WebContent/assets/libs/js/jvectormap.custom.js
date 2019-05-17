@@ -48,8 +48,8 @@ $(function() {
     });
 
 
-    $('#india').vectorMap({
-        map: 'in_mill',
+    $('#korea').vectorMap({
+        map: 'kr_mill',
         backgroundColor: 'transparent',
         zoomOnScroll: false,
         regionStyle: {
@@ -60,7 +60,7 @@ $(function() {
     });
 
 
-    $('#usa').vectorMap({
+    /*$('#usa').vectorMap({
         map: 'us_aea_en',
         backgroundColor: 'transparent',
         zoomOnScroll: false,
@@ -69,11 +69,11 @@ $(function() {
                 fill: '#f87ca1'
             }
         }
-    });
+    });*/
 
 
 
-    $('#australia').vectorMap({
+    /*$('#australia').vectorMap({
         map: 'au_mill',
         backgroundColor: 'transparent',
         zoomOnScroll: false,
@@ -82,9 +82,9 @@ $(function() {
                 fill: '#ffe174'
             }
         }
-    });
+    });*/
 
-    $('#uk').vectorMap({
+    /*$('#uk').vectorMap({
         map: 'uk_mill_en',
         backgroundColor: 'transparent',
         zoomOnScroll: false,
@@ -93,6 +93,5 @@ $(function() {
                 fill: '#ffa47f'
             }
         }
-    });
-
+    });*/
 });

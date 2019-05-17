@@ -5,63 +5,17 @@
     <%
     	List<Product> productList = (List<Product>) request.getAttribute("list");
     %>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-<style>
-
-	#main {
-		text-align: center;
-		align-content: center;
-	}
-	#main>.productlist {
-		margin: 0 auto;
-	}
-	.productlist>.content {
-		display: inline-block;
-		width: 200px;
-		height: 300px;
-		border: 1px solid gray;
-		margin: 20px auto;
-	}
-	.productlist>.content:hover {
-		cursor: pointer;
-	}
-	img {
-		width: 200px;
-		height: 200px;
-	}
-	.productdetail {
-		display: inline-block;
-		border: 1px solid gray;
-		width: 700px;
-		margin: 20px auto;
-		text-align: left;
-	}
-	.productdetail>img {
-		float: left;
-		width: 300px;
-		height: 300px;
-	}
-	.productdetail>div {
-		display: inline-block;
-		margin-left: 30px;
-	}
-</style>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
 	$(function() {
 		var $divProduct = $("div[class=content]");
 		$divProduct.click(function() {
 			//alert($(this).find("span.prod_no").text());
 			$.ajax({
-				url : '/myjquery/productinfo?no=' + $(this).find("span.prod_no").text(),
+				url : '/myjquery/productinfo?',
 				method : 'get',
+				data : 'no=' + $(this).find("span.prod_no").text(),
 				success : function(result) {
-					//alert(result);
-					$("#main").html(result);
+					$("section").html(result.trim());
 				},
 				error : function() {
 					alert("에러!!");
@@ -70,8 +24,6 @@
 		});
 	});
 </script>
-</head>
-<body>
 <div id="main">
 	<div class="productlist">
 	<%	int i = 0;
@@ -79,7 +31,7 @@
 			i++;
 	%>
 		<div class="content">
-		<img src="/myjquery/img/<%=i%>.PNG"/><br>
+		<img src="/myjquery/img/<%=i%>.PNG" alt="<%=product.getProd_name()%>"/><br>
 		<span>카테고리 : <%=product.getProductCategory().getCate_name()%></span><br>
 		<span>상품번호 : <span class="prod_no"><%=product.getProd_no()%></span></span><br>
 		<span>상품명 : <%=product.getProd_name()%></span><br>
@@ -90,5 +42,3 @@
 	%>
 	</div>
 </div>
-</body>
-</html>

@@ -559,6 +559,7 @@
                             </div>
                         </div>
                     </div>
+                    <jsp:include page="/template/paging.jsp"/>
                     <a href="/hobby/adminview/adregister.jsp" class="btn btn-outline-primary" style="float: right;">광고 등록</a>
                     <!-- ============================================================== -->
                     <!-- end basic table  -->

@@ -11,7 +11,7 @@ var ziplistView;
 			return;
 		} else {
 			var params = "act=zipsearch&doro=" + doro;
-			sendRequest("<%=root%>/user", params, zipsearchResult, "GET"); // 실행시점에서는 에러가 나지 않는다
+			//sendRequest("<%=root%>/user", params, zipsearchResult, "GET"); // 실행시점에서는 에러가 나지 않는다
 		}
 	}
 	function zipsearchResult() {

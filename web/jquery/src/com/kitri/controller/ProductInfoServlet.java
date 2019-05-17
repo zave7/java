@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.kitri.dto.Product;
+import com.kitri.exception.NotFoundException;
 import com.kitri.service.ProductService;
 
 @WebServlet("/productinfo")
@@ -19,11 +20,16 @@ public class ProductInfoServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String prod_no = request.getParameter("no");
 		System.out.println("prod_no = " + prod_no);
-		Product product = ProductService.getProductService().findByNo(prod_no);
-		request.setAttribute("product", product);
-		String path = "productinforesult.jsp";
-		RequestDispatcher rd = request.getRequestDispatcher(path);
-		rd.forward(request, response);
+		Product product;
+		try {
+			product = ProductService.getProductService().findByNo(prod_no);
+			request.setAttribute("product", product);
+			String path = "productinforesult.jsp";
+			RequestDispatcher rd = request.getRequestDispatcher(path);
+			rd.forward(request, response);
+		} catch (NotFoundException e) {
+			e.printStackTrace();
+		}
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

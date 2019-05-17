@@ -25,12 +25,8 @@ public class ProductService {
 	public List<Product> findAll() {
 		return ProductDAO.getProductDAO().selectAll();
 	}
-	public Product findByNo(String prod_no) {
-		try {
+	public Product findByNo(String prod_no) throws NotFoundException {
 			return ProductDAO.getProductDAO().selectByNo(prod_no);
-		} catch (NotFoundException e) {
-			e.printStackTrace();
-			return null;
-		}
+
 	}
 }

@@ -83,7 +83,7 @@
                                                         <a class="nav-link" href="/hobby/adminview/statlessonteac.jsp">강사</a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="ecommerce-product-single.html">지역</a>
+                                                        <a class="nav-link" href="/hobby/adminview/map-korea.jsp">지역</a>
                                                     </li>
                                                 </ul>
                                             </div>
