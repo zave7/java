@@ -105,6 +105,8 @@
         <script src="../assets/vendor/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
         <script src="../assets/vendor/jvectormap/jquery-jvectormap-kr-mill.js"></script>
         <script src="../assets/libs/js/jvectormap.custom.js"></script>
+        <!-- 지역 클릭시 ajax 통신해서 값 얻어오기 -->
+        <script src="../adminjs/map-korea.js"></script>
 </body>
  
 </html>
