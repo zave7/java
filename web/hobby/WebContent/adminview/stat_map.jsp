@@ -46,14 +46,14 @@
                 <div class="row">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="page-header">
-                            <h2 class="pageheader-title">지역별 </h2>
+                            <h2 class="pageheader-title">지역별 레슨 통계</h2>
                             <p class="pageheader-text">Proin placerat ante duiullam scelerisque a velit ac porta, fusce sit amet vestibulum mi. Morbi lobortis pulvinar quam.</p>
                             <div class="page-breadcrumb">
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
-                                        <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Dashboard</a></li>
-                                        <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Maps</a></li>
-                                        <li class="breadcrumb-item active" aria-current="page">Vector Map</li>
+                                        <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">통계</a></li>
+                                        <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">레슨</a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">지역</li>
                                     </ol>
                                 </nav>
                             </div>
@@ -62,6 +62,13 @@
                 </div>
                 <!-- ============================================================== -->
                 <!-- end pageheader -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- ======================== 조건 검색 ===================== -->
+                <!-- ============================================================== -->
+                <jsp:include page="../template/searchcondition.jsp"/>
+                <!-- ============================================================== -->
+                <!-- ======================== 조건 검색 끝 ===================== -->
                 <!-- ============================================================== -->
                 <div class="row">
                     <!-- ============================================================== -->

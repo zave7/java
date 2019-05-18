@@ -20,10 +20,10 @@
                                             <a class="nav-link" href="#">수강생관리</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="dashboard-finance.html">강사관리</a>
+                                            <a class="nav-link" href="#">강사관리</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="dashboard-sales.html">컴플레인 관리</a>
+                                            <a class="nav-link" href="#">컴플레인 관리</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -33,10 +33,10 @@
                                 <div id="submenu-2" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/general.html">강의관리</a>
+                                            <a class="nav-link" href="#">강의관리</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/carousel.html">강의신고관리</a>
+                                            <a class="nav-link" href="#">강의신고관리</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -47,10 +47,10 @@
                                 <div id="submenu-3" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="/hobby/adminview/admanagement.jsp">광고관리</a>
+                                            <a class="nav-link" href="/hobby/adminview/ad_management.jsp">광고관리</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="/hobby/adminview/adownermanagement.jsp">광고주관리</a>
+                                            <a class="nav-link" href="/hobby/adminview/ad_ownermanagement.jsp">광고주관리</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -60,10 +60,10 @@
                                 <div id="submenu-4" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="/hobby/adminview/paymentmanagement.jsp">결제관리</a>
+                                            <a class="nav-link" href="/hobby/adminview/payment_management.jsp">결제관리</a>
                                         </li>
                                          <li class="nav-item">
-                                            <a class="nav-link" href="/hobby/adminview/refundmanagement.jsp">환불요청관리</a>
+                                            <a class="nav-link" href="/hobby/adminview/payment_refund.jsp">환불요청관리</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -72,34 +72,40 @@
                                 <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-5" aria-controls="submenu-5"><i class="fas fa-fw fa-chart-pie"></i>통계</a>
                                 <div id="submenu-5" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
+                                    <li class="nav-item">
+                                            <a class="nav-link" href="/hobby/adminview/stat_user.jsp">유저</a>
+                                        </li>
                                     	<li class="nav-item">
                                             <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1-2" aria-controls="submenu-1-2">레슨</a>
                                             <div id="submenu-1-2" class="collapse submenu" style="">
                                                 <ul class="nav flex-column">
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="/hobby/adminview/statlessonstu.jsp">수강생</a>
+                                                        <a class="nav-link" href="/hobby/adminview/stat_lesson_stu.jsp">수강생</a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="/hobby/adminview/statlessonteac.jsp">강사</a>
+                                                        <a class="nav-link" href="/hobby/adminview/stat_lesson_teac.jsp">강사</a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="/hobby/adminview/map-korea.jsp">지역</a>
+                                                        <a class="nav-link" href="/hobby/adminview/stat_map.jsp">지역</a>
                                                     </li>
                                                 </ul>
                                             </div>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/chart-c3.html">광고</a>
+                                            <a class="nav-link" href="/hobby/adminview/stat_ad.jsp">광고</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1-1" aria-controls="submenu-1-1">회계</a>
+                                            <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1-1" aria-controls="submenu-1-1">재무</a>
                                             <div id="submenu-1-1" class="collapse submenu" style="">
                                                 <ul class="nav flex-column">
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="index.html">수강생</a>
+                                                        <a class="nav-link" href="/hobby/adminview/stat_finance_stu.jsp">수강생</a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="ecommerce-product.html">강사</a>
+                                                        <a class="nav-link" href="/hobby/adminview/stat_finance_teac.jsp">강사</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="/hobby/adminview/stat_finance_sales.jsp">매출</a>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -112,7 +118,7 @@
                                 <div id="submenu-6" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/general-table.html">채팅관리</a>
+                                            <a class="nav-link" href="/hobby/adminview/chat-management.jsp">채팅관리</a>
                                         </li>
                                     </ul>
                                 </div>

@@ -1,0 +1,22 @@
+{
+<<<<<<< HEAD
+  "ecmaVersion": 5,
+=======
+>>>>>>> 71b65f3ae3ed42c43a2426dc59e5ceb87112769f
+  "plugins": {
+    "guess-types": {
+      
+    },
+    "outline": {
+      
+    }
+<<<<<<< HEAD
+  },
+  "libs": [
+    "browser",
+    "jquery"
+  ]
+=======
+  }
+>>>>>>> 71b65f3ae3ed42c43a2426dc59e5ceb87112769f
+}

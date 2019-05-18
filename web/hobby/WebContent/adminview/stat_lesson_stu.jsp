@@ -43,9 +43,9 @@
                             <div class="page-breadcrumb">
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
-                                        <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Dashboard</a></li>
-                                        <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Charts</a></li>
-                                        <li class="breadcrumb-item active" aria-current="page">C3 Charts</li>
+                                        <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">통계</a></li>
+                                        <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">레슨</a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">수강생</li>
                                     </ol>
                                 </nav>
                             </div>
@@ -56,6 +56,13 @@
                 <!-- end pageheader -->
                 <!-- ============================================================== -->
                 
+                <!-- ============================================================== -->
+                <!-- ======================== 조건 검색 ===================== -->
+                <!-- ============================================================== -->
+                <jsp:include page="../template/searchcondition.jsp"/>
+                <!-- ============================================================== -->
+                <!-- ======================== 조건 검색 끝 ===================== -->
+                <!-- ============================================================== -->
                 <div class="row">
                     <!-- ============================================================== -->
                     <!--  zoom chart  -->
@@ -93,6 +100,9 @@
     <script src="../assets/vendor/charts/c3charts/d3-5.4.0.min.js"></script>
     <script src="../assets/vendor/charts/c3charts/C3chartjs.js"></script>
     <script src="../assets/libs/js/main-js.js"></script>
+    <!-- datepicker javacript -->
+    <script src="../adminjs/bootstrap-datepicker.min.js"></script>
+	<script src="../adminjs/searchdatepicker.js"></script>
 </body>
  
 </html>
