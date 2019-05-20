@@ -26,7 +26,8 @@ div.viewcartresult>table, div.viewcartresult>table th, div.viewcartresult>table 
 </style>
 <script>
 $(function(){
-	var $btRemoveCart = $("div.viewcartresult>table tr>td>button.removecart");
+	alert("!!");
+	var $btRemoveCart = $("div.viewcartresult>div>button.removecart");
 	$btRemoveCart.click(function(){
 		alert("장바구니비우기 클릭!");
 		/* $.ajax({
@@ -38,16 +39,22 @@ $(function(){
 		}); */
 		return false;
 	});
-	var $btAddOrder = $("div.viewcartresult>table tr>td>button.addorder");
+	var $btAddOrder = $("div.viewcartresult>div>button.addorder");
 	$btAddOrder.click(function(){
-
-		alert("주문하기 클릭!");
-		/* $.ajax({
+		$.ajax({
 			url:"addorder",
 			method:"get",
 			success:function(result){
+				if(result.trim() == '1') {
+					alert(result + '성공');
+				} else if(result.trim() == '-1') {
+					alert(result + '실패');
+				}
+			},
+			error : function() {
+				
 			}
-		}); */
+		});
 		return false;
 	});
 });
@@ -71,17 +78,14 @@ Map<Product,Integer> rc = (Map)request.getAttribute("reqCart");
      <td><%=rc.get(p)%></td>
    </tr>
    
-   <tr>
-     <td colspan="4" style="text-align:center;">
+   <%}//end for
+   %>  
+ </table>
+     <div style="text-align:center;">
        <button style="margin:10px;" class="removecart">장바구니 비우기</button>
    <%if(session.getAttribute("loginInfo") != null){ //로그인한 경우만 주문하기 버튼보여주기
    %>
        <button style="margin:10px;"class="addorder">주문하기</button>
    <%}%>       
-     </td>
-   </tr>
-   <%}//end for
-   %>  
-   
- </table>
+     </div>
 </div>

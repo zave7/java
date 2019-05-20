@@ -47,10 +47,10 @@
                                 <div id="submenu-3" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="/hobby/adminview/ad_management.jsp">광고관리</a>
+                                            <a class="nav-link" href="/hobby/admin/adminview/ad_management.jsp">광고관리</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="/hobby/adminview/ad_ownermanagement.jsp">광고주관리</a>
+                                            <a class="nav-link" href="/hobby/admin/adminview/ad_ownermanagement.jsp">광고주관리</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -60,10 +60,10 @@
                                 <div id="submenu-4" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="/hobby/adminview/payment_management.jsp">결제관리</a>
+                                            <a class="nav-link" href="/hobby/admin/adminview/payment_management.jsp">결제관리</a>
                                         </li>
                                          <li class="nav-item">
-                                            <a class="nav-link" href="/hobby/adminview/payment_refund.jsp">환불요청관리</a>
+                                            <a class="nav-link" href="/hobby/admin/adminview/payment_refund.jsp">환불요청관리</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -73,39 +73,39 @@
                                 <div id="submenu-5" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                     <li class="nav-item">
-                                            <a class="nav-link" href="/hobby/adminview/stat_user.jsp">유저</a>
+                                            <a class="nav-link" href="/hobby/admin/adminview/stat_user.jsp">유저</a>
                                         </li>
                                     	<li class="nav-item">
                                             <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1-2" aria-controls="submenu-1-2">레슨</a>
                                             <div id="submenu-1-2" class="collapse submenu" style="">
                                                 <ul class="nav flex-column">
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="/hobby/adminview/stat_lesson_stu.jsp">수강생</a>
+                                                        <a class="nav-link" href="/hobby/admin/adminview/stat_lesson_stu.jsp">수강생</a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="/hobby/adminview/stat_lesson_teac.jsp">강사</a>
+                                                        <a class="nav-link" href="/hobby/admin/adminview/stat_lesson_teac.jsp">강사</a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="/hobby/adminview/stat_map.jsp">지역</a>
+                                                        <a class="nav-link" href="/hobby/admin/adminview/stat_map.jsp">지역</a>
                                                     </li>
                                                 </ul>
                                             </div>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="/hobby/adminview/stat_ad.jsp">광고</a>
+                                            <a class="nav-link" href="/hobby/admin/adminview/stat_ad.jsp">광고</a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1-1" aria-controls="submenu-1-1">재무</a>
                                             <div id="submenu-1-1" class="collapse submenu" style="">
                                                 <ul class="nav flex-column">
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="/hobby/adminview/stat_finance_stu.jsp">수강생</a>
+                                                        <a class="nav-link" href="/hobby/admin/adminview/stat_finance_stu.jsp">수강생</a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="/hobby/adminview/stat_finance_teac.jsp">강사</a>
+                                                        <a class="nav-link" href="/hobby/admin/adminview/stat_finance_teac.jsp">강사</a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="/hobby/adminview/stat_finance_sales.jsp">매출</a>
+                                                        <a class="nav-link" href="/hobby/admin/adminview/stat_finance_sales.jsp">매출</a>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -118,7 +118,7 @@
                                 <div id="submenu-6" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="/hobby/adminview/chat-management.jsp">채팅관리</a>
+                                            <a class="nav-link" href="/hobby/admin/adminview/chat-management.jsp">채팅관리</a>
                                         </li>
                                     </ul>
                                 </div>

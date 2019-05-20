@@ -27,7 +27,7 @@
         <!-- ============================================================== -->
         <!-- navbar -->
         <!-- ============================================================== -->
-        <jsp:include page="/template/header.jsp"/>
+        <jsp:include page="../template/header.jsp"/>
         <!-- ============================================================== -->
         <!-- end navbar -->
         <!-- ============================================================== -->
@@ -49,13 +49,13 @@
                 <div class="row">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="page-header">
-                            <h2 class="pageheader-title">광고주 관리</h2>
+                            <h2 class="pageheader-title">결제관리</h2>
                             <p class="pageheader-text">Proin placerat ante duiullam scelerisque a velit ac porta, fusce sit amet vestibulum mi. Morbi lobortis pulvinar quam.</p>
                             <div class="page-breadcrumb">
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
-                                        <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">광고</a></li>
-                                        <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">광고주관리</a></li>
+                                        <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">결제</a></li>
+                                        <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">결제관리</a></li>
                                     </ol>
                                 </nav>
                             </div>
@@ -69,11 +69,11 @@
                 <!-- ============================================================== -->
                 <!-- ======================== 조건 검색 ===================== -->
                 <!-- ============================================================== -->
+                
                 <jsp:include page="../template/searchcondition.jsp"/>
                 <!-- ============================================================== -->
                 <!-- ======================== 조건 검색 끝 ===================== -->
                 <!-- ============================================================== -->
-                
                 <div class="row">
                     <!-- ============================================================== -->
                     <!-- basic table  -->
@@ -567,11 +567,11 @@
                             </div>
                         </div>
                     </div>
+                    
                     <!-- ============================================================== -->
                     <!-- end basic table  -->
                     <!-- ============================================================== -->
-                    <jsp:include page="/template/paging.jsp"/>
-                    <a href="/hobby/adminview/adregister.jsp" class="btn btn-outline-primary" style="float: right;">광고주 등록</a>
+                    <jsp:include page="../template/paging.jsp"/>
                 </div>
             </div>
             <!-- ============================================================== -->
