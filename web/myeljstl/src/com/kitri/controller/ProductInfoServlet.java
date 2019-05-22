@@ -18,6 +18,7 @@ public class ProductInfoServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		System.out.println("들어왔니");
 		String prod_no = request.getParameter("no");
 		System.out.println("prod_no = " + prod_no);
 		Product product;

@@ -6,6 +6,8 @@
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
     <style>
     	section>div.vieworder>table td, th {
 			border: 1px solid gray;
@@ -27,7 +29,25 @@
     <tr>
     	<th>주문번호</th><th>주문일자</th><th>주문상품번호</th><th>상품명</th><th>가격</th><th>주문수량</th>
     </tr>
-<% List<OrderInfo> list = (List)request.getAttribute("orderList");
+    <c:set var="list" value="${requestScope.orderList}"></c:set>
+    <c:forEach var="info" items="${list}">
+    	<c:set var="lines" value="${info.lines}"></c:set>
+    	<c:set var="size" value="${fn:length(lines)}"></c:set> 
+    	<tr>
+    		<td rowspan="${size}">${info.order_no}</td>
+    		<td rowspan="${size}">${info.order_dt}</td>
+    		
+    		<c:forEach var="line" items="${lines}">
+    			<c:set var="p" value="${line.product}"></c:set>
+    			<td>${p.prod_no}</td>
+    			<td>${p.prod_name}</td>
+    			<td>${p.prod_price}</td>
+    			<td>${line.order_quantity}</td>
+    	</tr>
+    		</c:forEach>
+    	
+    </c:forEach>
+<%-- <% List<OrderInfo> list = (List)request.getAttribute("orderList");
 	for(OrderInfo info : list) {
 %>
 	<tr>
@@ -55,6 +75,6 @@
 %>	
 <%	
 	}//end info
-%>
+%> --%>
 </table>
 </div>

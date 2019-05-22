@@ -2,6 +2,8 @@
 <%@page import="com.kitri.dto.Product"%>
 <%@page import="java.util.Map"%>
 <%@ page contentType="text/html; charset=UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <style>
 div.viewcartresult{
     text-align: center;
@@ -61,15 +63,23 @@ $(function(){
 </script>
 <div class="viewcartresult">
  <h3>장바구니 내용</h3>
-<%
+<%-- <%
 Map<Product,Integer> rc = (Map)request.getAttribute("reqCart");
   Set<Product> keys = rc.keySet();
-%>    
+%>     --%>
  <table>
    <tr>
      <th>상품번호</th><th>상품명</th><th>상품가격</th><th>수량</th>     
    </tr>
-   <%   
+   <c:forEach var="p" items="${requestScope.reqCart}">
+   		<tr>
+   			<td>${p.key.prod_no}</td>
+   			<td>${p.key.prod_name}</td>
+   			<td>${p.key.prod_price}</td>
+   			<td>${p.value}</td>
+   		</tr>
+   </c:forEach>
+<%--    <%   
    for(Product p:keys){ %>
    <tr>
      <td><%=p.getProd_no() %></td>
@@ -78,14 +88,18 @@ Map<Product,Integer> rc = (Map)request.getAttribute("reqCart");
      <td><%=rc.get(p)%></td>
    </tr>
    
-   <%}//end for
-   %>  
+   <%}//end for 
+   %>  --%>
  </table>
      <div style="text-align:center;">
        <button style="margin:10px;" class="removecart">장바구니 비우기</button>
-   <%if(session.getAttribute("loginInfo") != null){ //로그인한 경우만 주문하기 버튼보여주기
+       <c:if test="${!empty sessionScope.loginInfo}">
+       	<button style="margin:10px;"class="addorder">주문하기</button>
+       </c:if>
+       
+   <%-- <%if(session.getAttribute("loginInfo") != null){ //로그인한 경우만 주문하기 버튼보여주기
    %>
        <button style="margin:10px;"class="addorder">주문하기</button>
-   <%}%>       
+   <%}%>  --%>      
      </div>
 </div>

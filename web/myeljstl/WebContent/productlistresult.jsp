@@ -10,7 +10,7 @@
 		$divProduct.click(function() {
 			//alert($(this).find("span.prod_no").text());
 			$.ajax({
-				url : '/myjquery/productinfo?',
+				url : '/myeljstl/productinfo',
 				method : 'get',
 				data : 'no=' + $(this).find("span.prod_no").text(),
 				success : function(result) {
@@ -28,7 +28,7 @@ ${requestScope.servletContext.contextPath}
 	<div class="productlist">
 	<c:forEach var="product" items="${productlist}" varStatus="i">
 		<div class="content">
-		<img src="${requestScope.servletContext.contextPath}/img${i.count}.PNG" alt="${product.prod_name}"/><br>
+		<img src="/myeljstl/img/${i.count}.PNG" alt="${product.prod_name}"/><br>
 		<span>카테고리 : ${product.productCategory.cate_name}</span><br>
 		<span>상품번호 : <span class="prod_no">${product.prod_no}</span></span><br>
 		<span>상품명 : ${product.prod_name}</span><br>
