@@ -21,7 +21,6 @@ $(function(){
 			url:url,
 			method:'get',
 			success:function(result){
-				alert(result);
 				$("section").html(result.trim());
 			}
 		});
@@ -35,6 +34,7 @@ $(function(){
 <ul>
   <li><a href="write.html">글쓰기</a>
   <li><a href="boardlist">글목록</a>
+  <li><a href="upload.html">파일업로드</a>
 </ul>
 </nav>
 <section>

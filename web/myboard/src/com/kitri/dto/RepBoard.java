@@ -108,5 +108,13 @@ public class RepBoard {
 	public void setBoard_viewCount(int board_viewCount) {
 		this.board_viewCount = board_viewCount;
 	}
+
+	@Override
+	public String toString() {
+		return "RepBoard [board_seq=" + board_seq + ", parent_seq=" + parent_seq + ", board_subject=" + board_subject
+				+ ", board_writer=" + board_writer + ", board_contents=" + board_contents + ", board_date=" + board_date
+				+ ", board_password=" + board_password + ", board_viewCount=" + board_viewCount + "]";
+	}
+	
 	
 }

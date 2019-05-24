@@ -1,5 +1,7 @@
 package com.kitri.service;
 
+import java.util.List;
+
 import com.kitri.dao.RepBoardDao;
 import com.kitri.dto.RepBoard;
 import com.kitri.exception.AddException;
@@ -19,4 +21,14 @@ public class RepBoardService {
 		}
 		dao.insert(repBoard);
 	}
+	public List<RepBoard> findByRows(int startRow, int endRow) {
+		return dao.selectByRows(startRow, endRow);
+	}
+	public int getTotalCnt() {
+		return dao.selectTotalCnt();
+	}
+	public RepBoard viewBoard(String board_seq) { //게시글 상세페이지
+		return dao.viewByBoardSeq(board_seq);
+	}
+	
 }
