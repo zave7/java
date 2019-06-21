@@ -8,7 +8,7 @@
 		select m.name name, m.id id, m.emailid emailid, m.emaildomain emaildomain,
 		m.joindate joindate,
 		d.tel1 tel1, d.tel2 tel2, d.tel3 tel3, d.zipcode zipcode, d.address address,
-		d.address_detail address_detail
+		d.address_detail addressDetail
 		from member m, member_detail d
 		where m.id = d.id
 		<if test="word != null and word != ''">

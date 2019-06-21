@@ -16,23 +16,25 @@ $(document).ready(function() {
 
 function memberList() {
 	$("#mlist").empty();
+	var $key = $("#key").val();
+	var $word = $("#word").val();
 	$.ajax({
-		url:"${root}/admin",	
+		url:"${root}/admin/memberlist.kitri",	
 		type : "get",			//form의 type 비슷하다 //경로 "xml/03.xml" 파일을 만들자 
-		dataType : "xml",
+		dataType : "json",
 		timeout : 30000,
-		data : "act=getmemberlist&key=" + $("#key").val() + "&word=" + $("#word").val() , 
+		data : {"key" : $key, "word" : $word},
 		cache:false,
-		success:function(xml){	// 성공
-			var member = $(xml).find("member");
-			var len = member.length;
+		success:function(result){	// 성공
+			var memberList = result.memberList;
+			var len = memberList.length;
 			for(var i=0; i<len; i++) {
-				var id = $(member[i]).find("id").text();
-				var name = $(member[i]).find("name").text();
-				var email = $(member[i]).find("email").text();
-				var tel = $(member[i]).find("tel").text();
-				var address = $(member[i]).find("address").text();
-				var joindate = $(member[i]).find("joindate").text();
+				var id = memberList[i].id;
+				var name = memberList[i].name
+				var email = memberList[i].email + " " + memberList[i].emailDomain;
+				var tel = memberList[i].tel1 + "-" + memberList[i].tel2 + "-" + memberList[i].tel3;
+				var address = memberList[i].address + " " + memberList[i].addressDetail;
+				var joindate = memberList[i].joindate;
 				
 				var tr = $("<tr>").attr("class", "table-active");
 				var td1 = $("<td>").text(id);

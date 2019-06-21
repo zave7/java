@@ -9,6 +9,7 @@
 		from member
 		where id = #{id}
 	</select>
+	
 	<select id="zipsearch" parameterType="string"
 		resultType="zipcodedto">
 		select 	case
@@ -26,6 +27,7 @@
 		where doro_kor like '%'||#{doro}||'%'
 		or sigugun_building_name like '%'||#{doro}||'%'
 	</select>
+	
 	<insert id="registerMember" parameterType="memberdetaildto">
 	insert all
 	into member (id, name, pass, emailid, emaildomain, joindate)
@@ -34,17 +36,20 @@
 	values (#{id}, #{zipcode}, #{address}, #{addressDetail}, #{tel1}, #{tel2}, #{tel3})
 	select * from dual
 	</insert>
+	
 	<select id="loginMember" parameterType="map" resultType="memberdto">
 		select name, id, emailid, emaildomain, joindate 
 		from member 
-		where id = #{userid} and pass = #{userpwd}
+		where id = #{id} and pass = #{pass}
 	</select>
+	
 	<select id="getMember" parameterType="string" resultType="memberdetaildto">
 		select m.name, m.id, m.emailid, m.emaildomain, d.tel1, d.tel2, d.tel3, d.zipcode, d.address, d.address_detail
 		from member m, member_detail d
 		where m.id = d.id 
 		and m.id = #{id}
 	</select>
+	
 	<update id="updateByMemberId" parameterType="memberdetaildto">
 		update
 		    member m, member_detail md
