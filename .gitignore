@@ -7,3 +7,4 @@ web/Servers/**/
 /**/.settings/
 /spring/**/target/
 /**/.tern-project
+/**/Servers/
