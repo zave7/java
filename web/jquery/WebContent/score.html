@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(function() {
+	$("form").submit(function() {
+		var data = $("form").serialize();
+		$.ajax({
+			url : 'score.jsp',
+			data : data,
+			success : function(result) {
+				$("#divResult").html(result.trim());
+			},
+			error : function() {
+				alert("에러발생!!");
+			}
+			
+		});
+		return false;
+	});
+});
+</script>
+</head>
+<body>
+<div>
+<img src="noel.jpg" style="width: 200px; height: 200px;">
+</div>
+<div>
+	<form>
+		<input type="radio" name="star" value="1">★☆☆☆☆<br>
+		<input type="radio" name="star" value="1">★★☆☆☆<br>
+		<input type="radio" name="star" checked value="3">★★★☆☆<br>
+		<input type="radio" name="star" value="4">★★★★☆<br>
+		<input type="radio" name="star" value="5">★★★★★<br>
+		<button>별점주기</button>
+	</form>
+</div>
+<div id="divResult"></div>
+</body>
+</html>

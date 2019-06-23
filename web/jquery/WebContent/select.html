@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>select.html</title>
+<style>
+	#car {
+		color: red;
+	}
+	#engine, #body {
+		display: none;
+	}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script>
+	$(function() {
+		$("#car").change(function() {
+			//dom 에서 id가 engine인 객체 찾기
+			//var $engineObj = $("#engine");
+			var $engineObj = $("#div2");
+			var data = '<select id="engine">';
+			//선택된 객체의 value속성값 얻기
+			var car = $(this).val();
+			if(car == '소나타'){
+				data += '<option>SmartStream G2.0</option>';
+				data += '</select>';
+			$engineObj.html(data);
+			//var $selectObj = $engineObj.children("#engine");
+			var $selectObj = $engineObj.find("#engine");
+				$selectObj.show();
+			} else if(car == '펠리세이드') {
+				data += '<option>가솔린 3.8</option>';
+				data += '<option>디젤 2.2</option>';
+				data += '</select>';
+			$engineObj.html(data);
+			var $selectObj = $engineObj.find("#engine");
+				$selectObj.show();
+				
+			} else {
+				console.log("hide");
+			var $selectObj = $engineObj.find("#engine");
+				$selectObj.hide();
+			}
+			//engine객체의 innerHtml로 data 대입
+			
+			//engine객체 스타일 display를 inline-block으로 설정하기
+		});
+		
+		//id가 engine 인 객체의 click이벤트핸들러
+		//할일 : value속성값을 경고창에 출력
+		
+		/* $("#engine").click(function() {
+			alert($(this).val());
+		}); */
+		//향후 추가될 DOM 객체의 이벤트핸들러 등록방법 : on()
+		$("#div2").on("click", "#engine", function() {
+			alert($(this).val());
+		});
+	});
+</script>
+</head>
+<body>
+	<div>
+		<!-- 자동차 종류 -->
+		<select id="car"><!-- 셀렉트에는 체인지 이벤트가 있다 , select 이 친구 inline-block요소!!-->
+			<option>선택하세요</option>
+			<option>소나타</option><!-- Smartstream G2.0 -->
+			<option>펠리세이드</option><!-- 가솔린 3.8, 디젤 2.2 -->
+		</select>
+	</div>
+	<div id="div2">
+	<!-- 엔진 종류 
+		<select id="engine">
+
+		</select>
+		-->
+	</div>
+	<!-- 바디타입 -->
+	<div>
+		<select id="body">
+
+		</select>
+	</div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+select count(id)
+from member 
+where id = ?
+
+
+select 	case
+		when length(new_post_code) = 4 then '0'||new_post_code 
+		else new_post_code 
+	end zipcode,  
+	sido_kor sido, gugun_kor gugun,  
+	nvl(upmyon_kor, ' ') upmyon, doro_kor doro,  
+	case 
+		when building_refer_number != '0' 
+		then building_origin_number||'-'||building_refer_number  
+		else trim(to_char(building_origin_number, '99999')) 
+	end building_number, sigugun_building_name 
+from postcode 
+where doro_kor like '%'||?||'%' 
+or sigugun_building_name like '%'||?||'%'
+
+
+
+insert all
+	into member (id, name, pass, emailid, emaildomain, joindate)
+	values (?, ?, ?, ?, ?, sysdate)
+	into member_detail (id, zipcode, address, address_detail, tel1, tel2, tel3)
+	values (?, ?, ?, ?, ?, ?, ?)
+select * from dual
+
+
+
+select name, id, emailid, emaildomain, joindate 
+from member 
+where id = ? and pass = ?
+
+
+select m.name name, m.id id, m.emailid emailid, m.emaildomain emaildomain, m.joindate joindate,
+d.tel1 tel1, d.tel2 tel2, d.tel3 tel3, d.zipcode zipcode, d.address address, d.address_detail address_detail
+from member m, member_detail d
+where m.id = d.id
+String key = map.get("key");
+String word = map.get("word");
+System.out.println("key = " + key);
+System.out.println("word = " + word);
+if(word != null && !word.isEmpty()) { //true && true 값이 있을때
+				System.out.println("여길들어온다고??");
+				if("id".equals(key)) {
+					System.out.println("id로 들어옴");
+					and m.id = ?
+				} else {
+					System.out.println("id아닌거로로 들어옴");
+					and d."+ key +" like '%'||?||'%'");
+				}
+			}
+
+
+
+
+
+

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function startTime() {
+		window.setInterval(function() {
+			showtime();
+		}, 1000)
+	}
+	
+	function showtime() {
+		var date = new Date();
+		var view = document.getElementById("viewtime");
+		view.innerHTML = "<font color='steelblue' size='15'>" + date + "</font>";
+	}
+</script>
+</head>
+<body>
+	<div id="viewtime" align="center">
+	</div>
+	<button onclick="startTime();">시간</button>
+	<!-- 자바스크립트에서의 이벤트 리스너는 on으로 시작한다 -->
+</body>
+</html>
