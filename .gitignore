@@ -1,8 +1,9 @@
 /**/.metadata/
 /**/*.class
 /**/.classpath
-/**/*.project
+/**/.project
 web/Servers/**/
 /**/.JETEmitters/
 /**/.settings/
 /spring/**/target/
+/**/.tern-project
