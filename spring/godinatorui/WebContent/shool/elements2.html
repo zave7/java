@@ -11,8 +11,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<style>
-			h1 {
+			.mogyoH1 {
 				text-align: center;
+			}
+			.mogyoH2 {
+				text-align: right;
 			}
 		</style>
 	</head>
@@ -40,34 +43,30 @@
 							<!-- Content -->
 								<section>
 									<header class="main">
-										<h1>고등학교 및 대학교 평가</h1>
+										<h1 class="mogyoH1">고등학교 및 대학교 평가</h1>
 									</header>
-									<div class="container">
-									    <div class="row">    
-									        <div class="col-xs-8 col-xs-offset-2">
-											    <div class="input-group">
-									                <div class="input-group-btn search-panel">
-									                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-									                    	<span id="search_concept">Filter by</span> <span class="caret"></span>
-									                    </button>
-									                    <ul class="dropdown-menu" role="menu">
-									                      <li><a href="#all">전체</a></li>
-									                      <li class="divider"></li>
-									                      <li><a href="#contains">고등학교</a></li>
-									                      <li><a href="#its_equal">대학교</a></li>
-									                    </ul>
-									                </div>
-									                <input type="hidden" name="search_param" value="all" id="search_param">         
-									                <input type="text" class="form-control" name="x" placeholder="Search term...">
-									                <span class="input-group-btn">
-									                    <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
-									                </span>
-									            </div>
-									        </div>
+									<div class="row">
+										<div class="col-10 col-12-small">
+										</div>
+										<div class="col-2 col-12-small">
+											<h3 class="mogyoH2">모교 검색</h3>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-7 col-12-small">
+										</div>
+										<div class="col-2 col-12-small">
+										<select name="test">
+											<option value="high">고등학교</option>
+											<option value="uni">대학교</option>
+										</select>
+										</div>
+										<div class="col-3 col-12-small">
+										<input type="text"/>
 										</div>
 									</div>
 									<!-- Content -->
-										<h2 id="content">Sample Content</h2>
+										<h2 id="content">항목 평가</h2>
 										<p>Praesent ac adipiscing ullamcorper semper ut amet ac risus. Lorem sapien ut odio odio nunc. Ac adipiscing nibh porttitor erat risus justo adipiscing adipiscing amet placerat accumsan. Vis. Faucibus odio magna tempus adipiscing a non. In mi primis arcu ut non accumsan vivamus ac blandit adipiscing adipiscing arcu metus praesent turpis eu ac lacinia nunc ac commodo gravida adipiscing eget accumsan ac nunc adipiscing adipiscing lorem ipsum dolor sit amet nullam veroeros adipiscing.</p>
 										<div class="row">
 											<div class="col-6 col-12-small">
