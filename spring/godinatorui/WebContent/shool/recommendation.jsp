@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE HTML>
 <!--
 	Editorial by HTML5 UP
@@ -11,16 +13,41 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<style>
-			h1.newsH1C {
+			div.school-recommendation p {
+				margin: 3px;
 				text-align: center;
 			}
-			h3.newsH3C {
+			p.simpleInfo {
 				text-align: center;
 			}
-			div.newsarea {
-				margin: 4%;
-				padding: 3%;
-				border: 1px solid red;
+			div.img {
+				margin-bottom: 3px;
+			}
+			hr {
+				margin: 3px;
+			}
+			p.url:hover {
+				cursor: pointer;
+				text-decoration: underline;
+			}
+			p.url {
+				margin-bottom: 20px;
+			}
+			div.school-recommendation>div {
+				padding: 0px 0px 0px 0px;
+				border-left: 1px solid;
+				border-right: 1px solid;
+			}
+			p.shcool-name:hover {
+				cursor: pointer; 
+				color: black;
+				font-weight: bold;
+			}
+			div.school-recommendation img {
+				cursor: pointer;
+			}
+			.image {
+				margin: 0px 0px 2px 0px !important;
 			}
 		</style>
 	</head>
@@ -35,83 +62,52 @@
 
 							<!-- Header -->
 								<header id="header">
-									<a href="index.html" class="logo"><strong>학교 뉴스</strong></a>
-									<ul class="icons">
-										<!-- <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-										<li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
-										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li> -->
-									</ul>
+									<a href="index.html" class="logo"><strong>학교 상세 정보</strong></a>
 								</header>
 
 							<!-- Content -->
 								<section>
-									<header class="main">
-										<h1 class="newsH1C">학교 뉴스 종합</h1>
-									</header>
-									<div class="row">
-										<div class="col-10 col-12-small">
-										</div>
-										<div class="col-2 col-12-small">
-											<h3 class="mogyoH2R">모교 검색</h3>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-7 col-12-small">
-										</div>
-										<div class="col-2 col-12-small">
-										</div>
-										<div class="col-3 col-12-small">
-										<input type="text"/>
-										</div>
-									</div>
-									<br>
-									<div class="newsarea">
-										<h3 class="newsH3C">인천전자마이스터고</h3>
-										<hr class="major" />
-										<div class="row">
-											<div class="col-4 col-4-small">
-												<span class="image main"><img src="images/pic11.jpg" alt="" /></span>
+										<h2>추천 학교</h2>
+										<div class="row school-recommendation">
+											<div class="col-3 col-12-small">
+												<div class="img"><span class="image main"><img src="images/pic11.jpg" alt="" /></span></div>
+												<p class="shcool-name"><span>대덕소프트웨어마이스터고등학교</span></p>
+												<hr>
+												<p><span class="juris">서울특별시교육청</span>&#9475;<span class="estab">국립</span></p>
+												<hr>
+												<p><span class="kind">일반고등학교</span>&#9475;<span class="coeducation">남고</span></p>
+												<hr>
+												<p class="url">http://www.naver.com</p>
 											</div>
-											<div class="col-8 col-8-small">
-												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+											<div class="col-3 col-12-small">
+												<div class="img"><span class="image main"><img src="images/pic11.jpg" alt="" /></span></div>
+												<p class="shcool-name"><span>대덕소프트웨어마이스터고등학교</span></p>
+												<hr>
+												<p><span class="juris">서울특별시교육청</span>&#9475;<span class="estab">국립</span></p>
+												<hr>
+												<p><span class="kind">일반고등학교</span>&#9475;<span class="coeducation">남고</span></p>
+												<hr>
+												<p class="url">http://www.naver.com</p>
 											</div>
-										</div>
-										<hr class="major" />
-										<div class="row">
-											<div class="col-4 col-4-small">
-												<span class="image main"><img src="images/pic11.jpg" alt="" /></span>
+											<div class="col-3 col-12-small">
+												<div class="img"><span class="image main"><img src="images/pic11.jpg" alt="" /></span></div>
+												<p class="shcool-name"><span>대덕소프트웨어마이스터고등학교</span></p>
+												<hr>
+												<p><span class="juris">서울특별시교육청</span>&#9475;<span class="estab">국립</span></p>
+												<hr>
+												<p><span class="kind">일반고등학교</span>&#9475;<span class="coeducation">남고</span></p>
+												<hr>
+												<p class="url">http://www.naver.com</p>
 											</div>
-											<div class="col-8 col-8-small">
-												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-											</div>
-										</div>
-										<hr class="major" />
-										<div class="row">
-											<div class="col-4 col-4-small">
-												<span class="image main"><img src="images/pic11.jpg" alt="" /></span>
-											</div>
-											<div class="col-8 col-8-small">
-												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-											</div>
-										</div>
-										<hr class="major" />
-										<div class="row">
-									    <div class="col-5 col-12-small" style="background-color:red;">테스트</div>
-									    <div class="col-3 col-12-small" style="background-color:blue">테스트</div>
-									    <div class="col-2 col-12-small" style="padding:0px">
-									      <div class="short-div" style="background-color:green">테스트</div>
-									      <div class="short-div" style="background-color:purple">테스트</div>
-									    </div>
-									    <div class="ccol-2 col-12-small" style="background-color:yellow">테스트</div>
-									  </div>
-								  </div>
-								  	<div class="row main-school-news">
-											<div class="col-5 col-12-small">
-											</div>
-											<div class="col-2 col-1-small">
-												<a href="#" class="button primary" id="submit">메인으로</a>
+											<div class="col-3 col-12-small">
+												<div class="img"><span class="image main"><img src="images/pic11.jpg" alt="" /></span></div>
+												<p class="shcool-name"><span>대덕소프트웨어마이스터고등학교</span></p>
+												<hr>
+												<p><span class="juris">서울특별시교육청</span>&#9475;<span class="estab">국립</span></p>
+												<hr>
+												<p><span class="kind">일반고등학교</span>&#9475;<span class="coeducation">남고</span></p>
+												<hr>
+												<p class="url">http://www.naver.com</p>
 											</div>
 										</div>
 								</section>
@@ -213,12 +209,11 @@
 
 			</div>
 
-		<!-- Scripts -->
+			<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
 	</body>
 </html>
