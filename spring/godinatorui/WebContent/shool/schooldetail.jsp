@@ -323,15 +323,9 @@
 			<!-- 모리스 chart -->
 			<script src="assets/js/raphael.min.js"></script>
 		    <script src="assets/js/morris.js"></script>
-		    <script src="assets/js/Morrisjs.js"></script>
+		    <!-- <script src="assets/js/Morrisjs.js"></script> -->
 			<script>
 				$(document).ready(function() {
-					function les_user_date(dataValues) {
-						/* $('#morris_line').remove();
-						$('div.dateLineChart').append(
-						$('<div/>', {
-							id : 'morris_line'
-						})); */
 						if ($('#morris_line').length) {
 				            // Use Morris.Area instead of Morris.Line
 				            Morris.Line({
@@ -353,8 +347,7 @@
 				            });
 				
 				        }
-						$('#subChart span.subDate').text(dataValues[0].y);
-					}
+						//$('#subChart span.subDate').text(dataValues[0].y);
 					$("span.adis").click(function() {
 						$(this).css("color", "black").css("font-weight", "bold").siblings().css("color", "gray").css("font-weight", "normal");
 					});

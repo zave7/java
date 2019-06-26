@@ -2,8 +2,8 @@ package com.kitri.cafe.board.model;
 
 public class BoardDto {
 	private int seq;
-	private String userid;
-	private String username;
+	private String id;
+	private String name;
 	private String email;
 	private String subject;
 	private String content;
@@ -16,17 +16,17 @@ public class BoardDto {
 	public void setSeq(int seq) {
 		this.seq = seq;
 	}
-	public String getUserid() {
-		return userid;
+	public String getId() {
+		return id;
 	}
-	public void setUserid(String userid) {
-		this.userid = userid;
+	public void setId(String id) {
+		this.id = id;
 	}
-	public String getUsername() {
-		return username;
+	public String getName() {
+		return name;
 	}
-	public void setUsername(String username) {
-		this.username = username;
+	public void setName(String name) {
+		this.name = name;
 	}
 	public String getEmail() {
 		return email;
@@ -64,4 +64,10 @@ public class BoardDto {
 	public void setBcode(int bcode) {
 		this.bcode = bcode;
 	}
+	@Override
+	public String toString() {
+		return "BoardDto [seq=" + seq + ", id=" + id + ", name=" + name + ", email=" + email + ", subject=" + subject
+				+ ", content=" + content + ", hit=" + hit + ", logtime=" + logtime + ", bcode=" + bcode + "]";
+	}
+	
 }

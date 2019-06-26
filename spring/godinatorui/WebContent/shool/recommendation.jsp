@@ -40,8 +40,6 @@
 			}
 			p.shcool-name:hover {
 				cursor: pointer; 
-				color: black;
-				font-weight: bold;
 			}
 			div.school-recommendation img {
 				cursor: pointer;
