@@ -7,6 +7,12 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="${root}/css/skin_purple.css" type="text/css">
+<style>
+	label.moveListBtn:hover {
+		cursor: pointer;
+		font-weight: bold;
+	}
+</style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>

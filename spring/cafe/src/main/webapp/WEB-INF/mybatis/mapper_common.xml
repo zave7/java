@@ -2,10 +2,40 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-  
-	<mapper namespace="com.kitri.cafe.common.dao.CommonDao">
-		<select id="getNextSeq" resultType="int">
-			SELECT board_seq.nextval 
-			FROM dual
-		</select>
-	</mapper>
+
+<mapper namespace="com.kitri.cafe.common.dao.CommonDao">
+	<select id="getNextSeq" resultType="int">
+		SELECT board_seq.nextval
+		FROM dual
+	</select>
+
+	<update id="updateHit" parameterType="int">
+		UPDATE board
+		SET hit = hit+1
+		WHERE seq = #{seq}
+	</update>
+
+	<select id="getNewArticeCount" parameterType="int"
+		resultType="int">
+		SELECT count(seq)
+		FROM board
+		WHERE bcode = #{bcode}
+		AND
+		to_char(logtime, 'yymmdd') = to_char(sysdate, 'yymmdd')
+	</select>
+
+	<select id="getTotalArticleCount" parameterType="map"
+		resultType="int">
+		SELECT count(seq)
+		FROM board
+		WHERE bcode = #{bcode}
+		<if test="word != null and word != ''">
+			<if test="key == 'subject'">
+				and subject like '%'||#{word}||'%'
+			</if>
+			<if test="key != 'subject'">
+				and ${key} = #{word}
+			</if>
+		</if>
+	</select>
+</mapper>

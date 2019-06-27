@@ -13,7 +13,11 @@
 			$("#commonForm").attr("method", "GET").attr("action", "${root}/reboard/view").submit();
 		});
 		$("#listBtn").click(function() {
-			
+			$("#bcode").val("${bcode}");
+			$("#pg").val("1");
+			$("#key").val("");
+			$("#word").val("");
+			$("#commonForm").attr("method", "GET").attr("action", "${root}/reboard/list").submit();
 		});
 	});
 </script>

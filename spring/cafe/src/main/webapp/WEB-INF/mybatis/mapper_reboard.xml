@@ -19,7 +19,7 @@
   		AND b.seq = #{seq}
   	</select>
   	<select id="listArticle" parameterType="map" resultType="reboardDto">
-  		<![CDATA[
+  		
 	  		SELECT a.seq, a.id, a.name, a.email, a.subject, a.content, a.hit, a.bcode, 
 	        decode(to_char(a.logtime, 'yymmdd'), to_char(sysdate, 'yymmdd'), 
 	        to_char(a.logtime, 'hh24:mi:ss'), to_char(a.logtime, 'yy/mm/dd')) logtime,
@@ -31,8 +31,18 @@
 			                FROM board b, reboard r
 			                WHERE b.seq = r.seq
 			                AND b.bcode = #{bcode}
+			                
+			                <if test="word != null and word != ''">
+			                	<if test="key == 'subject'">
+			                		and b.subject like '%'||#{word}||'%'
+			                	</if>
+			                	<if test="key != 'subject'">
+			                		and b.${key} = #{word}
+			                	</if>
+			                </if>
+			               
 			                ORDER BY b.seq DESC) b
-			        WHERE rownum < #{endRow}
+			<![CDATA[WHERE rownum < #{endRow}
 			        ) a
 			WHERE a.r >= #{startRow}]]>
   	</select>
