@@ -131,6 +131,7 @@
      
      </td-->
 		<td style="word-break: break-all;">
+			<img src="${root}/img/board/blank.gif" width="${article.lev * 15}" height="1" />
 			<a href="" class="link_board_03 viewBtn" data-seq="${article.seq}">${article.subject.replace('<', '&lt')}&nbsp;&nbsp;&nbsp;</a></td>
 		<td></td>
 		<td style="word-break: break-all;"><a href="javascript:;"

@@ -41,9 +41,29 @@
 			                	</if>
 			                </if>
 			               
-			                ORDER BY b.seq DESC) b
+			                ORDER BY ref DESC, step) b
 			<![CDATA[WHERE rownum < #{endRow}
 			        ) a
 			WHERE a.r >= #{startRow}]]>
   	</select>
+  	
+  	<update id="udpateStep" parameterType="reboardDto">
+  		update reboard set step = step+1 
+  		WHERE ref = #{ref}
+  		AND step > #{step}
+  	</update>
+  	
+  	<insert id="replyArticle" parameterType="reboardDto">
+ 		insert all
+  			into board (seq, id, name, email, subject, content, hit, logtime, bcode)
+  			values (#{seq}, #{id}, #{name}, #{email}, #{subject}, #{content}, 0, sysdate, #{bcode})
+  			into reboard (rseq, seq, ref, lev, step, pseq, reply)
+  			values (reboard_rseq.nextval, #{seq}, #{ref}, #{lev}+1, #{step}+1, #{pseq}, 0)
+  		select * from dual
+  	</insert>
+  	
+  	<update id="updateReply" parameterType="int">
+  		update reboard set reply = reply+1
+  		WHERE seq = #{pseq}
+  	</update>
   </mapper>

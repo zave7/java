@@ -156,6 +156,12 @@
 												<option value="3">여고</option>
 											</select>
 										</div>
+										<div class="col-2 col-12-small">
+										</div>
+										<div class="col-2 col-12-small" style="text-align: right;">
+											<label>&nbsp;</label>
+											<a href="#" class="button primary">검색</a>
+										</div>
 									</div>
 
 									<div class="hr-sect">검색결과</div>

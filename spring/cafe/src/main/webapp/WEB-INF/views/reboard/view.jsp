@@ -14,7 +14,12 @@
 			$("#commonForm").attr("method", "GET").attr("action", "${root}/reboard/write").submit();
 		});
 		$(".moveReplyBtn").click(function() {
-			
+			$("#bcode").val("${bcode}");
+			$("#pg").val("${pg}");
+			$("#key").val("${key}");
+			$("#word").val("${word}");
+			$("#seq").val("${article.seq}");
+			$("#commonForm").attr("method", "GET").attr("action", "${root}/reboard/reply").submit();
 		});
 		
 		$(".firstListBtn").click(function() {
@@ -32,6 +37,7 @@
 			$("#word").val("${word}");
 			$("#commonForm").attr("method", "GET").attr("action", "${root}/reboard/list").submit();
 		});
+		$("#pcontent").attr("text","3513215");
 	});
 </script>
 <table width="100%" cellpadding="0" cellspacing="0" border="0">
@@ -120,7 +126,7 @@
 
 
 
-		<P>${article.content.replace('<', '&lt')}</P>
+		<p id="pcontent"></p>
 
 
 

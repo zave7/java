@@ -12,6 +12,17 @@
 		cursor: pointer;
 		font-weight: bold;
 	}
+	a:hover {
+		color: black;
+		font-weight: bold;
+		text-decoration: none !important;
+	}
+	img.moveWriteBtn:hover,
+	img#myListBtn:hover,
+	img#searchBtn:hover {
+		cursor: pointer;
+	}
+	
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>

@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ include file="/WEB-INF/views/commons/template/top.jsp" %>
+<%@ include file="/WEB-INF/views/commons/logincheck.jsp" %>
+<%@ include file="/WEB-INF/views/commons/board_common.jsp" %>
 <script>
 	$(document).ready(function() {
 		$("#writeBtn").click(function() {
@@ -87,12 +89,11 @@
 		<td height="10" style="padding: 0px"></td>
 	</tr>
 	<tr>
-		<td align="center"><img id="writeBtn"
-			src="${root}/img/board/btn_register.gif" width="42" height="21"
-			border="0" name="register" value="" alt="등록"><a
-			href="javascript:history.back();"><img
-			src="${root}/img/board/b_cancel.gif" width="42" height="21"
-			border="0" id="cencel" name="cencel" value="" alt="취소"></a></td>
+		<td align="center">
+		<img id="writeBtn" src="${root}/img/board/btn_register.gif" width="42" height="21"
+			border="0" name="register" value="" alt="등록">
+		<img src="${root}/img/board/b_cancel.gif" width="42" height="21"
+			border="0" id="cencel" name="cencel" value="" alt="취소"></td>
 	</tr>
 </table>
 </form>

@@ -30,7 +30,7 @@
 		<script>
 			$(document).ready(function() {
 				$("div.submit-school-evaluation a#submit").click(function() {
-					boolean check = confirm("입력 확인 시 수정이 불가합니다. 신중히 작성해주시길 바랍니다.\n작성 완료하시겠습니까?");
+					var check = confirm("입력 확인 시 수정이 불가합니다. 신중히 작성해주시기 바랍니다.\n작성 완료하시겠습니까?");
 					return false;
 				});
 			});

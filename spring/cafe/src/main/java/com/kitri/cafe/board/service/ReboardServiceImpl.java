@@ -24,6 +24,7 @@ public class ReboardServiceImpl implements ReboardService{
 		//클라이언트단에서 유효성검사를 했지만 서버측에서도 해줘야한다.
 		//클라이언트 쪽에서 스트립트 조작가능
 		//spring validation 이용
+		System.out.println("reboardDto.getContent() : "+reboardDto.getContent());
 		int cnt = sqlSession.getMapper(ReboardDao.class).writeArticle(reboardDto);
 		return cnt != 0 ? reboardDto.getSeq() : 0;
 	}
@@ -47,17 +48,32 @@ public class ReboardServiceImpl implements ReboardService{
 		reboardDto.setContent(reboardDto.getContent().replace("\n", "<br>"));
 		return reboardDto;
 	}
+	
+	@Override
+	public ReboardDto getArticle(int seq) {
+		return sqlSession.getMapper(ReboardDao.class).viewArticle(seq);
+	}
 
 	@Override
 	public int modifyArticle(ReboardDto reboardDto) {
-		// TODO Auto-generated method stub
+		// TODO 글수정
 		return 0;
 	}
 
 	@Override
 	public void deleteArticle(int seq) {
-		// TODO Auto-generated method stub
+		// TODO 글삭제
 		
+	}
+
+	@Override
+	@Transactional
+	public int replyArticle(ReboardDto reboardDto) {
+		ReboardDao reboardDao = sqlSession.getMapper(ReboardDao.class);
+		reboardDao.udpateStep(reboardDto);
+		reboardDao.replyArticle(reboardDto);
+		reboardDao.updateReply(reboardDto.getPseq());
+		return reboardDto.getSeq();
 	}
 
 }
