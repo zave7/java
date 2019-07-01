@@ -38,6 +38,102 @@
 			$("#commonForm").attr("method", "GET").attr("action", "${root}/reboard/list").submit();
 		});
 		$("#pcontent").attr("text","3513215");
+		
+		function getMemoList() {
+			$.ajax({
+				url : '${root}/memo',
+				type : 'GET',
+				contentType : 'application/json',
+				dataType : 'JSON',
+				data : {seq : '${article.seq}'},
+				success : function(result) {
+					makeMemoList(result.memolist);
+					$("#mcontent").val('');
+				},
+			});
+		}
+		getMemoList();
+		$("#memoBtn").click(function() {
+			if(false) {
+				alert("로그인하시오");
+			} else {
+				var seq = '${article.seq}';
+				var mcontent = $("#mcontent").val();
+				var param = JSON.stringify({"seq":seq, "mcontent":mcontent});
+				if(mcontent.trim().length != 0) {
+					$.ajax({
+						url : '${root}/memo',
+						type : 'POST',
+						contentType : 'application/json',
+						dataType : 'JSON',
+						data : param,
+						success : function(result) {
+							makeMemoList(result.memolist);
+							$("#mcontent").val('');
+						},
+					});
+				}
+			}
+		});
+		
+		function makeMemoList(memos) {
+			var memocnt = memos.length;
+			var memostr = '';
+			for(var i=0; i<memocnt; i++) {
+				var memo = memos[i];
+				memostr += '<tr>';
+				memostr += '<td>'+memo.name+'</td>';
+				memostr += '<td style="padding: 10px">';
+				memostr += memo.mcontent;
+				memostr += '</td>';
+				memostr += '<td width="100" style="padding: 10px">';
+				memostr += memo.mtime;
+				memostr += '</td>';
+				if('${sessionScope.userInfo.id}' == memo.id) {
+					memostr += '<td data-seq="'+memo.seq+'" data-mseq="'+memo.mseq+'">';
+					memostr += '<input type="button" class="mmodifyBtn" value="수정"/>';
+					memostr += '<input type="button" class="mdeleteBtn" value="삭제"/>';
+					memostr += '<input type="hidden" value="'+i+'"/>';
+					memostr += '</td>';
+				}
+				memostr += '</td>';
+				memostr += '</tr>';
+				
+				memostr += '<tr style="display: none;">';
+				memostr += '<td colspan="3" style="padding: 10px">';
+				memostr += '<textarea class="mcontent" cols="160" rows="5"></textarea>';
+				memostr += memo.mcontent;
+				memostr += '</td>';
+				memostr += '<td width="100" style="padding: 10px">';
+				memostr += '<input type="button" class="mmodify" value="수정"/>';
+				memostr += '<input type="button" class="mcancel" value="취소"/>';
+				memostr += '</td>';
+				memostr += '</tr>';
+				
+				memostr += '<tr>';
+				memostr += '<td class="bg_board_title_02" colspan="4" height="1"';
+				memostr += '	style="overflow: hidden; padding: 0px"></td>';
+				memostr += '</tr>';
+			}
+			$("#mlist").empty();
+			$("#mlist").append(memostr);
+		}
+		
+		$(document).on("click", ".mdeleteBtn", function() {
+			alert("hi");
+			var $seq = $(this).parent("td").attr("data-seq");
+			var $mseq = $(this).parent("td").attr("data-mseq");
+			$.ajax({
+				url : '${root}/memo/'+$seq+'/'+$mseq,
+				type : 'DELETE',
+				contentType : 'application/json',
+				dataType : 'JSON',
+				success : function(result) {
+					makeMemoList(result.memolist);
+					$("#mcontent").val('');
+				},
+			});	
+		});
 	});
 </script>
 <table width="100%" cellpadding="0" cellspacing="0" border="0">
@@ -172,6 +268,39 @@
 			src="${root}/img/board/icon_down.gif" border="0" align="absmiddle"
 			hspace="3"></a></td>
 	</tr>
+</table>
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+		<td colspan="2" height="5" style="padding: 0px"></td>
+	</tr>
+	<tr>
+		<td class="bg_board_title_02" colspan="2" height="1"
+			style="overflow: hidden; padding: 0px"></td>
+	</tr>
+	<tr>
+		<td style="padding: 10px">
+		<textarea id="mcontent" cols="160" rows="5"></textarea>
+		</td>
+		<td width="100" style="padding: 10px">
+		<input type="button" id="memoBtn" value="글작성"/>
+		</td>
+	</tr>
+	<tr>
+		<td class="bg_board_title_02" colspan="2" height="1"
+			style="overflow: hidden; padding: 0px"></td>
+	</tr>
+</table>
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+		<td colspan="4" height="5" style="padding: 0px"></td>
+	</tr>
+	<tr>
+		<td class="bg_board_title_02" colspan="4" height="1"
+			style="overflow: hidden; padding: 0px"></td>
+	</tr>
+	<tbody id="mlist">
+	</tbody>
 </table>
 <br>
 <%@ include file="/WEB-INF/views/commons/template/bottom.jsp" %>
