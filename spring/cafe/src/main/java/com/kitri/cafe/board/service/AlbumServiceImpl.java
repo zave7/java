@@ -7,6 +7,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.kitri.cafe.board.dao.AlbumDao;
 import com.kitri.cafe.board.model.AlbumDto;
 @Service
 public class AlbumServiceImpl implements AlbumService{
@@ -16,8 +17,8 @@ public class AlbumServiceImpl implements AlbumService{
 	
 	@Override
 	public int writeArticle(AlbumDto albumDto) {
-		// TODO Auto-generated method stub
-		return 0;
+		System.out.println("사진올리기");
+		return sqlSession.getMapper(AlbumDao.class).writeArticle(albumDto);
 	}
 
 	@Override

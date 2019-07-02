@@ -2,39 +2,39 @@ package com.kitri.cafe.board.model;
 
 public class AlbumDto extends BoardDto{
 	private int aseq;
-	private String saveolder;
-	private String originalpicture;
-	private String savepicture;
-	private int picturemode;
+	private String saveFolder;
+	private String originPicture;
+	private String savePicture;
+	private int pictureMode;
 	public int getAseq() {
 		return aseq;
 	}
 	public void setAseq(int aseq) {
 		this.aseq = aseq;
 	}
-	public String getSaveolder() {
-		return saveolder;
+	public String getSaveFolder() {
+		return saveFolder;
 	}
-	public void setSaveolder(String saveolder) {
-		this.saveolder = saveolder;
+	public void setSaveFolder(String saveFolder) {
+		this.saveFolder = saveFolder;
 	}
-	public String getOriginalpicture() {
-		return originalpicture;
+	public String getOriginPicture() {
+		return originPicture;
 	}
-	public void setOriginalpicture(String originalpicture) {
-		this.originalpicture = originalpicture;
+	public void setOriginPicture(String originPicture) {
+		this.originPicture = originPicture;
 	}
-	public String getSavepicture() {
-		return savepicture;
+	public String getSavePicture() {
+		return savePicture;
 	}
-	public void setSavepicture(String savepicture) {
-		this.savepicture = savepicture;
+	public void setSavePicture(String savePicture) {
+		this.savePicture = savePicture;
 	}
-	public int getPicturemode() {
-		return picturemode;
+	public int getPictureMode() {
+		return pictureMode;
 	}
-	public void setPicturemode(int picturemode) {
-		this.picturemode = picturemode;
+	public void setPictureMode(int pictureMode) {
+		this.pictureMode = pictureMode;
 	}
-	
+
 }
