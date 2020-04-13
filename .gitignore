@@ -4,3 +4,4 @@
 /**/*.project
 web/Servers/**/
 /**/.JETEmitters/
+/**/bin/*
