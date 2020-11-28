@@ -1,0 +1,42 @@
+Collection FrameWork
+
+Since 2.0
+
+
+
+                        interface Iterator
+                        ---------------------
+                        + hasNext() : boolean
+                        + next() : Object
+
+                                 ↑ 의존
+
+                        interface Collection
+                        -----------------------
+                        + add(Object) : boolean
+                        + iterator() : iterator
+                        + size() : int
+
+                                 ↑ 상속
+
+            interface List              interface Set
+            -------------------         --------------------------------------------------------
+            + get(int) : Object         + add(Object) : boolean
+
+
+                    ↑ 구현                        ↑ 구현                        ↑ 의존
+
+            class ArrayList             class HashSet               interface Map
+            --------------------        -----------------------     ----------------------------
+            + add(Object) : boolean     + add(Object) : boolean     + get(Object) : Object
+            + get(int) : Object         + iterator() : iterator     + keySet() : Set
+            + iterator() : iterator     + size() : int              + put(Object, Object) : void
+            + size() : int
+
+                                                                            ↑ 구현
+
+                                                                    class HashMap
+                                                                    ----------------------------
+                                                                    + get(Object) : Object
+                                                                    + keySet() : Set
+                                                                    + put(Object, Object) : void
