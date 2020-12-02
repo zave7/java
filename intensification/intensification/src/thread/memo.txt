@@ -1,0 +1,24 @@
+하나의 프로세스에서 여러개의 실행 흐름이 동작하는것 = Thread
+
+스레드 상태 종류 : Runnable, Running, Blocked, Dead
+
+스레드가 start 되면 runnable 과 running 상태를 왔다갔다 한다.
+
+wait(), sleep() 호출 시 blocked 상태가 된다.
+
+sleep() : 특정 시간이 지나면 다시 runnable 과 running 상태를 가지게 된다.
+
+wait() : 다른 스레드가 notify() 나 notifyAll() 을 호출하기 전까지는 blocked 상태를 빠져나올 수 없다.
+    - wait와 notify는 동기화 블럭 안에서 사용해아한다.
+    - wait 만나게 되면 해당 스레드ㅡㄴ 해달 객체의 모니터링 락의 권한을 놓고 대기하게 된다
+run() : 메서드가 종료되면 Dead 상태가 된다.
+
+yield() : 해당 스레드는 다른 스레드에게 자원을 양보하게 된다.
+
+join() : 해당 스레드가 종료 될때까지 대기한다.
+
+deprecated method list
+suspend()
+stop()
+resume()
+
