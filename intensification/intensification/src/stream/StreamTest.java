@@ -20,7 +20,8 @@ import java.util.stream.Stream;
 public class StreamTest {
 
     public static void main(String[] args) {
-        컬렉션();
+//        컬렉션();
+        제너레이트();
     }
 
     private static void 배열() {
@@ -62,7 +63,21 @@ public class StreamTest {
      * 람다에서 리턴하는 값이 들어간다.
      */
     private static void 제너레이트() {
+        Stream<String> generatedStream =
+                Stream.generate(() -> {
+                    return "test";
+                }).limit(5);
+        generatedStream.forEach(System.out::println);
+    }
 
+    /*
+     * 비어 있는 스트림도 생성할 수 있다.
+     * 빈 스트림은 요소가 없을 때 null 대신 사용가능하다.
+     *
+     */
+    private static Stream<String> 비어있는_스트림(List<String> list) {
+        Stream<String> stream = list.stream();
+        return stream;
     }
 
 
